@@ -1,0 +1,66 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Telas/InfoScreen131" itemID="506c79f4-000003be" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="InfoScreen131" sourceFlashFilepath="./LAL.fla" sourceLibraryItemHRef="InstructionScreen" sourceLastModified="1286502021" lastModified="1349286604" isSpriteSubclass="true" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="InfoScreen131">
+      <layers>
+        <DOMLayer name="Instruções" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Buttons/CloseButton" name="closeButton" symbolType="button">
+                  <matrix>
+                    <Matrix a="0.76922607421875" d="0.76922607421875" tx="286.95" ty="-209.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMStaticText left="63.45" width="476.4" height="15.6" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-301.65" ty="-137.1"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Algo sobre a AI-0131.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="justify" aliasText="false" autoKern="false" rotation="true" lineSpacing="1.2" size="14" bitmapSize="280" face="ArialMT"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText width="325.15" height="22.35" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-162.55" ty="-188.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Polarização elétrica</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" lineSpacing="1.2" size="20" bitmapSize="400" face="Arial-BoldMT"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Board" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Base/Board" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="0.25" y="0.3"/>
+                  </transformationPoint>
+                  <color>
+                    <Color/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

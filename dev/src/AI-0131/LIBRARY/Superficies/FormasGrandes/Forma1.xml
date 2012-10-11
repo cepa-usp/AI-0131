@@ -1,0 +1,61 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Superficies/FormasGrandes/Forma1" itemID="4e9ec70c-000001d5" linkageExportForAS="true" linkageIdentifier="Forma1" linkageBaseClass="Forma" linkageClassName="Forma1" lastModified="1320082745" lastUniqueIdentifier="14" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="Forma1">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Condutor" selected="true" centerPoint3DX="124.5" centerPoint3DY="-173.55">
+                  <matrix>
+                    <Matrix tx="66" ty="-141.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="58.4" y="-32"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0.28497314453125" d="0.28497314453125" tx="0.05"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0.694117647058824" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="1"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1730 -3033[2801 -2448 3296 -1319!3296 -1319[3777 -224 4082 926!4082 926[4416 2189 3431 3020!3431 3020[2569 3746 1399 3613!1399 3613[298 3482 -807 3435!-807 3435[-1887 3397 -2705 2757!-2705 2757[-3631 2032 -3819 839!-3819 839[-4002 -325
+ -4151 -1495!-4151 -1495[-4260 -2347 -3553 -2866!-3553 -2866[-2562 -3595 -1314 -3631!-1314 -3631[-159 -3665 945 -3345!945 -3345[1352 -3226 1730 -3033"/>
+                    <Edge cubics="!945 -3345(;1216,-3266 1478,-3162 1730,-3033q945 -3345Q1352 -3226q1730 -3033);"/>
+                    <Edge cubics="!1730 -3033(1730,-3033;2444,-2643 2966,-2072 3296,-1319q1730 -3033Q2801 -2448q3296 -1319);"/>
+                    <Edge cubics="!-4151 -1495(-4151,-1495;-4224,-2063 -4024,-2520 -3553,-2866q-4151 -1495Q-4260 -2347q-3553 -2866);"/>
+                    <Edge cubics="!-3553 -2866(-3553,-2866;-2892,-3352 -2146,-3607 -1314,-3631q-3553 -2866Q-2562 -3595q-1314 -3631)-1314,-3631;"/>
+                    <Edge cubics="!-807 3435(-807,3435;-1527,3410 -2160,3184 -2705,2757q-807 3435Q-1887 3397q-2705 2757)-2705,2757;"/>
+                    <Edge cubics="!-2705 2757(;-3322,2274 -3694,1634 -3819,839q-2705 2757Q-3631 2032q-3819 839);"/>
+                    <Edge cubics="!4082 926(4082,926;4305,1768 4088,2466 3431,3020q4082 926Q4416 2189q3431 3020);"/>
+                    <Edge cubics="!3431 3020(3431,3020;2856,3504 2179,3702 1399,3613q3431 3020Q2569 3746q1399 3613);"/>
+                    <Edge cubics="!3296 -1319(3296,-1319;3617,-589 3879,159 4082,926q3296 -1319Q3777 -224q4082 926);"/>
+                    <Edge cubics="!-3819 839(-3819,839;-3941,63 -4052,-715 -4151,-1495q-3819 839Q-4002 -325q-4151 -1495);"/>
+                    <Edge cubics="!-1314 -3631(-1314,-3631;-544,-3654 209,-3558 945,-3345q-1314 -3631Q-159 -3665q945 -3345);"/>
+                    <Edge cubics="!1399 3613(1399,3613;665,3526 -70,3466 -807,3435q1399 3613Q298 3482q-807 3435);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

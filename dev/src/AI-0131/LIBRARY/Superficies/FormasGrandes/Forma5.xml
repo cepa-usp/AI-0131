@@ -1,0 +1,68 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Superficies/FormasGrandes/Forma5" itemID="4ea6e407-0000080d" linkageExportForAS="true" linkageBaseClass="Forma" linkageClassName="Forma5" lastModified="1320082746" lastUniqueIdentifier="4" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="Forma5">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Condutor" selected="true" centerPoint3DX="120.5" centerPoint3DY="-156.55">
+                  <matrix>
+                    <Matrix tx="62" ty="-124.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="58.4" y="-32"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0.29962158203125" d="0.29962158203125" tx="2" ty="-7"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0.694117647058824" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="1"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!3866 -465.5[#CA2.3A #1F7.FC 3518 932.5!3518 932.5[#ED9.E2 #551.0F 3894 1757.5!3894 1757.5[#F92.11 #869.F2 3837 2656!3837 2656[3687 #C53.E4 3225 3583.5!3225 3583.5[#ACB.01 #FAB.5E 2154 4075!2154 4075[#608.F8 #102A.88 1070 3663!1070 3663
+[#253.0F #C73.4E 218.5 2888!218.5 2888[#FFFF61.EC #A1D.0A -1302.5 3221.5!-1302.5 3221.5[#FFF671.06 #F0D.F3 -2806 3064!-2806 3064[-3152 2308 -3567 1587!-3567 1587[-4000 810 -4106 146!-4106 146[-4212 -519 -3917 -1262!-3917 -1262[-3623 -2006
+ -3317 -2406!-3317 -2406[-3011 -2808 -2528 -3077!-2528 -3077[-2407 -3144 -865 -3821!-865 -3821[676 -4498 1389 -3381!1389 -3381[2101 -2265 3436 -1768!3436 -1768[#1191.8A #FFFA64.E8 3866 -465.5"/>
+                    <Edge cubics="!1389 -3381(1389,-3381;1864,-2637 2546,-2099 3436,-1768q1389 -3381Q2101 -2265q3436 -1768)3436,-1768;"/>
+                    <Edge cubics="!-3917 -1262(-3917,-1262;-3721,-1757 -3521,-2139 -3317,-2406q-3917 -1262Q-3623 -2006q-3317 -2406);"/>
+                    <Edge cubics="!-2528 -3077(-2528,-3077;-2447,-3121 -1894,-3370 -865,-3821q-2528 -3077Q-2407 -3144q-865 -3821);"/>
+                    <Edge cubics="!-3317 -2406(-3317,-2406;-3113,-2674 -2850,-2897 -2528,-3077q-3317 -2406Q-3011 -2808q-2528 -3077)-2528,-3077;"/>
+                    <Edge cubics="!-2806 3064(-2806,3064;-3036,2560 -3290,2068 -3567,1587q-2806 3064Q-3152 2308q-3567 1587);"/>
+                    <Edge cubics="!-3567 1587(-3567,1587;-3855,1069 -4036,589 -4106,146q-3567 1587Q-4000 810q-4106 146);"/>
+                    <Edge cubics="!-4106 146(-4106,146;-4177,-298 -4114,-767 -3917,-1262q-4106 146Q-4212 -519q-3917 -1262);"/>
+                    <Edge cubics="!-865 -3821(-865,-3821;162,-4272 913,-4126 1389,-3381q-865 -3821Q676 -4498q1389 -3381)1389,-3381;"/>
+                    <Edge cubics="!3436 -1768(3436,-1768;4144,-1546 4287,-1112 3866,-465q3436 -1768Q4498 -1435q3866 -465)3866,-465;"/>
+                    <Edge cubics="!3518 933(3518,933;3707,1218 3833,1493 3894,1758q3518 933Q3802 1361q3894 1758);"/>
+                    <Edge cubics="!3894 1758(;3955,2022 3936,2321 3837,2656q3894 1758Q3986 2154q3837 2656);"/>
+                    <Edge cubics="!1070 3663(;753,3346 470,3087 219,2888q1070 3663Q595 3187q219 2888);"/>
+                    <Edge cubics="!2154 4075(2154,4075;1748,4118 1387,3980 1070,3663q2154 4075Q1545 4139q1070 3663);"/>
+                    <Edge cubics="!3225 3584(3225,3584;2917,3869 2560,4032 2154,4075q3225 3584Q2763 4011q2154 4075);"/>
+                    <Edge cubics="!3837 2656(3837,2656;3737,2989 3533,3299 3225,3584q3837 2656Q3687 3156q3225 3584);"/>
+                    <Edge cubics="!3866 -465(3866,-465;3445,181 3329,647 3518,933q3866 -465Q3234 504q3518 933);"/>
+                    <Edge cubics="!-1302 3222(-1302,3222;-2065,3643 -2567,3591 -2806,3064q-1302 3222Q-2447 3854q-2806 3064);"/>
+                    <Edge cubics="!219 2888(219,2888;-32,2689 -539,2800 -1302,3222q219 2888Q-158 2589q-1302 3222);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

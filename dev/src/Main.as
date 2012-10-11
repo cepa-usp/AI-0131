@@ -1,0 +1,815 @@
+package{
+	import cepa.ai.AI;
+	import cepa.ai.AIObserver;
+	import cepa.utils.Angle;
+	import cepa.utils.ToolTip;
+	import fl.transitions.easing.None;
+	import fl.transitions.Tween;
+	import flash.display.MovieClip;
+	import flash.display.Sprite;
+	import flash.events.Event;
+	import flash.events.KeyboardEvent;
+	import flash.events.MouseEvent;
+	import flash.events.TimerEvent;
+	import flash.external.ExternalInterface;
+	import flash.filters.GlowFilter;
+	import flash.geom.Point;
+	import flash.geom.Rectangle;
+	import flash.text.TextField;
+	import flash.text.TextFieldAutoSize;
+	import flash.text.TextFormat;
+	import flash.text.TextFormatAlign;
+	import flash.ui.Keyboard;
+	import flash.utils.getDefinitionByName;
+	import flash.utils.Timer;
+	import graph.Coord;
+	import pipwerks.SCORM;
+	
+	/**
+	 * ...
+	 * @author Alexandre
+	 */
+	public class Main extends MovieClip implements AIObserver
+	{
+		private var ai:AI;
+		
+		private var valendoNota:Boolean;
+		
+		//Layers:
+		private var background_layer:Sprite;
+		private var field_layer:Sprite;
+		private var shape_layer:Sprite;
+		private var answer_layer:Sprite;
+		private var dipolo_layer:Sprite;
+		
+		//Vetores contendo os objetos dipolo no palco:
+		private var dipolos:Vector.<Dipolo> = new Vector.<Dipolo>();
+		
+		//Vetor com os objetos dipolo de resposta.
+		private var dipolosAnswer:Vector.<DipoloAnswer> = new Vector.<DipoloAnswer>();
+		
+		//Campo atual:
+		private var field:ICampo;
+		private var spr_field:Sprite;
+		
+		//Forma atual:
+		private var shape:MovieClip;
+		
+		//Coordenadas para os cálculos do campo:
+		private var coord:Coord;
+		
+		//Variável utilizada para adicionar dipolos ao palco.
+		private var dipoloDrag:Dipolo;
+		
+		//Testes apenas:
+		private var testando:Boolean = false;
+		private var drawCampo:DrawCampo;
+		
+		//Tela de aviso:
+		private var warningScreen:WarningScreen;
+		private var resultScreen:FeedBackScreen;
+		
+		private var nota:NotaNova;
+		private var txPontos:TextField = new TextField();
+		private var txNota:TextField = new TextField();
+		
+		public function Main() 
+		{
+			if (stage) init();
+			else addEventListener(Event.ADDED_TO_STAGE, init);
+		}
+		
+		/* INTERFACE cepa.ai.AIObserver */
+		
+		public function onResetClick():void 
+		{
+			reset();
+		}
+		
+		public function onScormFetch():void 
+		{
+			
+		}
+		
+		public function onScormSave():void 
+		{
+			
+		}
+		
+		public function onStatsClick():void 
+		{
+			
+		}
+		
+		public function onTutorialClick():void 
+		{
+			
+		}
+		
+		public function onScormConnected():void 
+		{
+			
+		}
+		
+		public function onScormConnectionError():void 
+		{
+			
+		}
+		
+		/**
+		 * Função inicial que constrói a cena.
+		 */
+		private function init(e:Event = null):void 
+		{
+			removeEventListener(Event.ADDED_TO_STAGE, init);
+			
+			this.scrollRect = new Rectangle(0, 0, 700, 500);
+			
+			btnValNota.visible = false;
+			
+			ai = new AI(this);
+			ai.container.messageLabel.visible = false;
+			ai.addObserver(this);
+			ai.container.setAboutScreen(new AboutScreen131());
+			ai.container.setInfoScreen(new InfoScreen131());
+			
+			cretaeLayers();
+			addButtons();
+			criarPontuacoes();
+			//addPointingArrow();
+			configAi();
+			
+			if(testando){
+				drawCampo = new DrawCampo(coord, field);
+				addChild(drawCampo);
+			}
+			
+			stage.addEventListener(KeyboardEvent.KEY_UP, bindKeys);
+			
+			if (ExternalInterface.available) initLMSConnection();
+			
+			if (!completed) btnValNota.visible = true;
+		}
+		
+		private var pointingArrow:PointingArrow;
+		private function addPointingArrow():void 
+		{
+			pointingArrow = new PointingArrow();
+			pointingArrow.x = 640 - 25;
+			pointingArrow.y = 25;
+			pointingArrow.filters = [new GlowFilter(0x800000, 1, 15, 15)];
+			stage.addChild(pointingArrow);
+			stage.addEventListener(MouseEvent.MOUSE_DOWN, removeArrow);
+		}
+		
+		private function removeArrow(e:MouseEvent):void
+		{
+			stage.removeEventListener(MouseEvent.MOUSE_DOWN, removeArrow);
+			stage.removeChild(pointingArrow);
+			pointingArrow = null;
+		}
+		
+		private function criarPontuacoes():void {
+			nota = new NotaNova();
+		
+			var def:TextFormat = new TextFormat("arial", 18, 0x000000, true, null, null, null, null, TextFormatAlign.CENTER, null, null, null, null)
+			var def2:TextFormat = new TextFormat("arial", 12, 0x000000, true, null, null, null, null, TextFormatAlign.CENTER, null, null, null, null)
+			txPontos.defaultTextFormat = def;			
+			txNota.defaultTextFormat = def2;			
+			shape_layer.addChild(nota);
+			nota.x = 10;
+			nota.y = 10;
+			nota.addChild(txPontos);
+			nota.addChild(txNota)
+			
+			txNota.autoSize = TextFieldAutoSize.CENTER;
+			txNota.multiline = false;
+			txNota.selectable = false;
+			txNota.x = 72;
+			txNota.y = 29;
+			txNota.text = "0,0";
+
+			txPontos.autoSize = TextFieldAutoSize.CENTER;
+			txPontos.multiline = false;
+			txPontos.selectable = false;
+			txPontos.x = 64;
+			txPontos.y = 4;
+			txPontos.text = "0,0";
+		}
+		
+		/**
+		 * Função para testes que utiliza o teclado como atalho para chamada funções, evitando a criação de botões desnecessários.
+		 * Essa função é desativada na versão de produção.
+		 */
+		private function bindKeys(e:KeyboardEvent):void 
+		{
+			trace("code: " + e.charCode);
+			switch(e.charCode) {
+				case 127: // delete
+					deleteSelected();
+					break;
+				//case 122: //ctrl+z
+					//if (e.ctrlKey) {
+					//}
+					//break;
+				//case 109: //m
+				//case 77:  //M
+					//trace(timeLine.getAnswer());
+					//break;
+				//case 65:
+				//case 97:
+					//break;
+				//case 82: //R
+				//case 114://r
+					//reset();
+					//break;
+				//case 83: //S
+				//case 115://s
+					//aval();
+					//break;
+				//case 87: //W
+				//case 119://w
+					//unmarshalObjects(mementoSerialized);
+					//break;
+				//case 50: //2
+				//
+					//addAnswerEx2();
+					//break;
+				
+			}
+		}
+		
+		private function deleteSelected(e:MouseEvent = null):void 
+		{
+			for (var i:int = dipolos.length - 1; i >= 0; i--) 
+			{
+				if (dipolos[i].selected) {
+					dipolo_layer.removeChild(dipolos[i]);
+					dipolos.splice(i, 1);
+				}
+			}
+		}
+		
+		private function removeSelection():void
+		{
+			for (var i:int = dipolos.length - 1; i >= 0; i--) 
+			{
+				if (dipolos[i].selected) {
+					dipolos[i].selected = false;
+				}
+			}
+		}
+		
+		/**
+		 * Cria as camadas que serão utilizadas na atividade.
+		 */
+		private function cretaeLayers():void 
+		{
+			//Cria as camadas
+			background_layer = new Sprite();
+			field_layer = new Sprite();
+			shape_layer = new Sprite();
+			answer_layer = new Sprite();
+			dipolo_layer = new Sprite();
+			
+			//Ordena as camadas no palco adicionando-as na ordem necessária
+			stage.addChild(background_layer);
+			stage.addChild(field_layer);
+			stage.addChild(shape_layer);
+			stage.addChild(answer_layer);
+			stage.addChild(dipolo_layer);
+			
+			stage.setChildIndex(dipolo_layer, 0);
+			stage.setChildIndex(answer_layer, 0);
+			stage.setChildIndex(shape_layer, 0);
+			stage.setChildIndex(field_layer, 0);
+			stage.setChildIndex(background_layer, 0);
+			
+			warningScreen = new WarningScreen();
+			addChild(warningScreen);
+			
+			resultScreen = new FeedBackScreen();
+			addChild(resultScreen);
+			
+			answer_layer.alpha = 0;
+			
+			background_layer.addChild(new Background());
+		}
+		
+		//private var btDel:BtDel;
+		//private var btAvaliar:BtAvaliar;
+		private var btNovamente:BtNovamente;
+		private var btVerResposta:BtVerResposta;
+		//private var dipoloBtn:DipoloBtn;
+		
+		/**
+		 * Adiciona os botões à barra de menu e event listeners aos botões, inclusive o botão reset.
+		 */
+		private function addButtons():void 
+		{
+			//btDel = new BtDel();
+			//btDel.gotoAndStop(1);
+			//btDel.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btDel.gotoAndStop(2) } )
+			//btDel.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btDel.gotoAndStop(1) } )
+			//
+			//btAvaliar = new BtAvaliar();
+			//btAvaliar.gotoAndStop(1);
+			//btAvaliar.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btAvaliar.gotoAndStop(2) } )
+			//btAvaliar.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btAvaliar.gotoAndStop(1) } )
+			//
+			//btNovamente = new BtNovamente();
+			//btNovamente.gotoAndStop(1);
+			//btNovamente.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btNovamente.gotoAndStop(2) } )
+			//btNovamente.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btNovamente.gotoAndStop(1) } )
+			//
+			//btVerResposta = new BtVerResposta();
+			//btVerResposta.gotoAndStop(1);
+			//btVerResposta.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btVerResposta.gotoAndStop(2) } )
+			//btVerResposta.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btVerResposta.gotoAndStop(1) } )
+			//
+			//dipoloBtn = new DipoloBtn();
+			
+			var ttDel:ToolTip = new ToolTip(btDel, "Remover selecionados", 12, 0.8, 200, 0.6, 0.6);
+			var ttAvaliar:ToolTip = new ToolTip(btAvaliar, "Avaliar exercício", 12, 0.8, 200, 0.6, 0.6);
+			//var ttNovamente:ToolTip = new ToolTip(btNovamente, "Nova tentativa", 12, 0.8, 200, 0.6, 0.6);
+			//var ttResposta:ToolTip = new ToolTip(btVerResposta, "Ver/ocultar respostas", 12, 0.8, 200, 0.6, 0.6);
+			var ttAddDipolo:ToolTip = new ToolTip(dipoloBtn, "Adicionar dipolo elétrico", 12, 0.8, 200, 0.6, 0.6);
+			//
+			stage.addChild(ttDel);
+			stage.addChild(ttAvaliar);
+			//stage.addChild(ttNovamente);
+			//stage.addChild(ttResposta);
+			stage.addChild(ttAddDipolo);
+			//
+			//btVerResposta.verexerc.visible = false;
+			//btVerResposta.visible = false;
+			//btNovamente.visible = false;
+			//
+			//Adição de botões no menu:
+			//menuBar.addButton(dipoloBtn, initAddDipolo, 0, true);
+			//menuBar.addButton(btDel, deleteSelected, 0, true);
+			//menuBar.addButton(btAvaliar, aval, 15);
+			//menuBar.addButton(btVerResposta, showHideAnswer, 10);
+			//menuBar.addButton(btNovamente, reset, 14);
+			//
+			//eventListener do botão reset da moldura.
+			//btnReset.addEventListener(MouseEvent.CLICK, reset);
+			
+			btDel.buttonMode = true;
+			btAvaliar.buttonMode = true;
+			btnValNota.buttonMode = true;
+			
+			btDel.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btDel.gotoAndStop(2) } );
+			btDel.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btDel.gotoAndStop(1) } );
+			btAvaliar.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btAvaliar.gotoAndStop(2) } );
+			btAvaliar.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btAvaliar.gotoAndStop(1) } );
+			
+			btnValNota.addEventListener(MouseEvent.MOUSE_DOWN, function () { valendoNota = true; btnValNota.alpha = 0.5; btnValNota.buttonMode = false; } );
+			
+			dipoloBtn.addEventListener(MouseEvent.MOUSE_DOWN, initAddDipolo);
+			btDel.addEventListener(MouseEvent.MOUSE_DOWN, deleteSelected);
+			btAvaliar.addEventListener(MouseEvent.MOUSE_DOWN, aval);
+		}
+		
+		/**
+		 * Cria um novo dipolo que é arrastado com o mouse.
+		 */
+		private function initAddDipolo(e:MouseEvent):void 
+		{
+			dipoloDrag = new Dipolo();
+			dipoloDrag.x = stage.mouseX;
+			dipoloDrag.y = stage.mouseY;
+			dipolo_layer.addChild(dipoloDrag);
+			dipoloDrag.startDrag();
+			stage.addEventListener(MouseEvent.MOUSE_UP, addDipolo);
+		}
+		
+		/**
+		 * Adiciona ou não o dipolo à cena ao final do arraste.
+		 */
+		private function addDipolo(e:MouseEvent):void 
+		{
+			dipoloDrag.stopDrag();
+			stage.removeEventListener(MouseEvent.MOUSE_UP, addDipolo);
+			//if (menuBar.hitTestPoint(dipoloDrag.x, dipoloDrag.y, true) || dipoloDrag.x > 640 || dipoloDrag.x < 0 || dipoloDrag.y < 0 || dipoloDrag.y > 480) {
+			if (!shape.hitTestPoint(dipoloDrag.x, dipoloDrag.y, true)) {
+				dipolo_layer.removeChild(dipoloDrag);
+			}else {
+				dipolos.push(dipoloDrag);
+				dipoloDrag.addEventListener(Event.CHANGE, verifyPosition);
+			}
+			
+			dipoloDrag = null;
+		}
+		
+		/**
+		 * Verifica a posição final de um dipolo quando arrastado, caso não esteja dentro do shape ele é removido do palco.
+		 * @param	e Evento disparado pelo dipolo ao término do arraste.
+		 */
+		private function verifyPosition(e:Event):void 
+		{
+			var dip:Dipolo = Dipolo(e.target);
+			if (!shape.hitTestPoint(dip.x, dip.y, true)) {
+				dipolo_layer.removeChild(dip);
+				dipolos.splice(dipolos.indexOf(dip), 1);
+			}
+		}
+		
+		/**
+		 * Inicia uma nova configuração para a atividade.
+		 */
+		private function configAi():void 
+		{
+			//Cria um novo campo:
+			var sort:int = Math.ceil(Math.random() * 13);
+			//var sort:int = 5;
+			var classe:Class = getClass(sort);
+			field = new classe();
+			
+			//Cria o sistema de coordenadas:
+			//if (coord != null) {
+				//background_layer.removeChild(coord);
+			//}
+			coord = new Coord(field.xmin, field.xmax, 700, field.ymin, field.ymax, 500);
+			//background_layer.addChild(coord);
+			
+			//Cria um novo sprite do campo:
+			if (spr_field != null) {
+				field_layer.removeChild(spr_field);
+				spr_field = null;
+			}
+			spr_field = field.image;
+			field_layer.addChild(spr_field);
+			field_layer.alpha = 0.3;
+			
+			//Cria uma nova forma:
+			if (shape != null) {
+				background_layer.removeChild(Forma(shape).condutor);
+				shape_layer.removeChild(shape);
+				shape = null;
+			}
+			var rand:int = (Math.random() * 10) + 1;
+			shape = new (getDefinitionByName("Forma" + String(rand)));
+			shape.x = 700 / 2;
+			shape.y = 500 / 2;
+			shape_layer.addChild(shape);
+			
+			var pos:Point = shape.localToGlobal(new Point(shape.condutor.x, shape.condutor.y));
+			shape.removeChild(Forma(shape).condutor);
+			background_layer.addChild(Forma(shape).condutor);
+			Forma(shape).condutor.x = pos.x;
+			Forma(shape).condutor.y = pos.y;
+		}
+		
+		/**
+		 * Retorna a classe do campo de acordo com o número sorteado.
+		 * @param	sort Número aleatório sorteado.
+		 * @return Classe referente ao número sorteado.
+		 */
+		private function getClass(sort:int):Class 
+		{
+			var classe:Class;
+			
+			switch(sort) {
+				case 1:
+					classe = Campo1;
+					break;
+				case 2:
+					classe = Campo2;
+					break;
+				case 3:
+					classe = Campo3;
+					break;
+				case 4:
+					classe = Campo4;
+					break;
+				case 5:
+					classe = Campo5;
+					break;
+				case 6:
+					classe = Campo6;
+					break;
+				case 7:
+					classe = Campo7;
+					break;
+				case 8:
+					classe = Campo8;
+					break;
+				case 9:
+					classe = Campo9;
+					break;
+				case 10:
+					classe = Campo10;
+					break;
+				case 11:
+					classe = Campo11;
+					break;
+				case 12:
+					classe = Campo12;
+					break;
+				case 13:
+					classe = Campo13;
+					break;
+				
+			}
+			
+			return classe;
+		}
+		
+		/**
+		 * Reinicia a atividade com uma nova configuração aleatória.
+		 */
+		private function reset(e:MouseEvent = null):void 
+		{
+			//Remove os dipolos que estão no palco.
+			for each (var item:Dipolo in dipolos) 
+			{
+				dipolo_layer.removeChild(item);
+			}
+			dipolos.splice(0, dipolos.length);
+			
+			for each (var item2:DipoloAnswer in dipolosAnswer) 
+			{
+				answer_layer.removeChild(item2);
+			}
+			dipolosAnswer.splice(0, dipolosAnswer.length);
+			
+			configAi();
+			answer_layer.alpha = 0;
+			btAvaliar.visible = true;
+			//btVerResposta.verexerc.visible = false;
+			//btVerResposta.verresp.visible = true;
+			//btVerResposta.visible = false;
+			//btNovamente.visible = false;
+			dipolo_layer.alpha = 1;
+			answer_layer.alpha = 0;
+			btDel.mouseEnabled = true;
+			btDel.alpha = 1;
+			dipoloBtn.mouseEnabled = true;
+			dipoloBtn.alpha = 1;
+			
+			scoreAtual = 0;
+			txPontos.text = "0,0";
+			
+			if (testando) {
+				removeChild(drawCampo);
+				drawCampo = new DrawCampo(coord, field);
+				addChild(drawCampo);
+			}
+		}
+		
+		private var tolerance:Number = 10;
+		private var scoreAtual:Number = 0;
+		
+		/**
+		 * Faz a avaliação da atividade.
+		 */
+		private function aval(e:MouseEvent):void
+		{
+			if (dipolos.length < 5) {
+				warningScreen.openScreen();
+			}else {
+				btDel.mouseEnabled = false;
+				btDel.alpha = 0.5;
+				dipoloBtn.mouseEnabled = false;
+				dipoloBtn.alpha = 0.5;
+				
+				for each (var item2:DipoloAnswer in dipolosAnswer) 
+				{
+					answer_layer.removeChild(item2);
+				}
+				dipolosAnswer.splice(0, dipolosAnswer.length);
+				
+				removeSelection();
+				lockAll();
+				
+				scoreAtual = 0;
+				
+				for each (var item:Dipolo in dipolos) 
+				{
+					var dipAnswer:DipoloAnswer = new DipoloAnswer(field, coord);
+					dipAnswer.mover.position = dipAnswer.mover.returnPositionFromPixels(new Point(item.x, item.y));
+					dipAnswer.rotate();
+					dipAnswer.alpha = 0.5;
+					dipolosAnswer.push(dipAnswer);
+					answer_layer.addChild(dipAnswer);
+					if (compareDipolos(item, dipAnswer)) scoreAtual += 100 / dipolos.length;
+				}
+				
+				resultScreen.openScreen();
+				resultScreen.resultado = "Sua pontuação foi " + scoreAtual.toFixed(2) + "%.";
+				txPontos.text = scoreAtual.toFixed(1).replace(".",",");
+				
+				btAvaliar.visible = false;
+				//btVerResposta.visible = true;
+				//btNovamente.visible = true;
+				
+				if(valendoNota && ExternalInterface.available){
+					/*if (!completed) {
+						score = scoreAtual;
+						completed = true;
+						commit();
+					}else*/ if (scoreAtual > score) {
+						score = scoreAtual;
+						txNota.text = score.toFixed(1).replace(".",",");
+						completed = true;
+						commit();
+					}
+				}
+			}
+		}
+		
+		private var alphaTweenAnswer:Tween;
+		private var alphaTweenExe:Tween;
+		
+		private function showHideAnswer(e:MouseEvent = null):void
+		{
+			if (alphaTweenAnswer != null) {
+				if (alphaTweenAnswer.isPlaying) alphaTweenAnswer.stop();
+			}
+			if (alphaTweenExe != null) {
+				if (alphaTweenExe.isPlaying) alphaTweenExe.stop();
+			}
+			
+			if (btVerResposta.verresp.visible) {
+				btVerResposta.verexerc.visible = true;
+				btVerResposta.verresp.visible = false;
+				alphaTweenAnswer = new Tween(answer_layer, "alpha", None.easeNone, answer_layer.alpha, 1, 0.5, true);
+				alphaTweenExe = new Tween(dipolo_layer, "alpha", None.easeNone, dipolo_layer.alpha, 0, 0.5, true);
+			}
+			else {
+				btVerResposta.verexerc.visible = false;
+				btVerResposta.verresp.visible = true;
+				alphaTweenAnswer = new Tween(answer_layer, "alpha", None.easeNone, answer_layer.alpha, 0, 0.5, true);
+				alphaTweenExe = new Tween(dipolo_layer, "alpha", None.easeNone, dipolo_layer.alpha, 1, 0.5, true);
+			}
+		}
+		
+		private function lockAll():void 
+		{
+			for (var i:int = dipolos.length - 1; i >= 0; i--) 
+			{
+				dipolos[i].locked = true;
+			}
+		}
+		
+		private function compareDipolos(dipolo:Dipolo, answer:DipoloAnswer):Boolean
+		{
+			var aDipolo:Angle = new Angle();
+			var aAnswer:Angle = new Angle();
+			var aFinal:Angle = new Angle();
+			
+			aDipolo.degrees = dipolo.rotation;
+			aAnswer.degrees = answer.rotation;
+			
+			aFinal.degrees = Math.abs(aAnswer.degrees - aDipolo.degrees);
+			
+			var certo:Boolean = false;
+			certo = (Math.abs(aFinal.degrees) <= tolerance);
+			
+			if (certo) {
+				dipolo.filters = [new GlowFilter(0x008000)];
+			}else {
+				dipolo.filters = [new GlowFilter(0xFF0000)];
+			}
+			
+			return certo;
+		}
+		
+		
+		
+		/*------------------------------------------------------------------------------------------------*/
+		//SCORM:
+		
+		private const PING_INTERVAL:Number = 5 * 60 * 1000; // 5 minutos
+		private var completed:Boolean;
+		private var scorm:SCORM;
+		private var scormExercise:int;
+		private var connected:Boolean;
+		private var score:int;
+		private var pingTimer:Timer;
+		private var mementoSerialized:String = "";
+		
+		/**
+		 * @private
+		 * Inicia a conexão com o LMS.
+		 */
+		private function initLMSConnection () : void
+		{
+			completed = false;
+			connected = false;
+			scorm = new SCORM();
+			
+			pingTimer = new Timer(PING_INTERVAL);
+			pingTimer.addEventListener(TimerEvent.TIMER, pingLMS);
+			
+			connected = scorm.connect();
+			
+			if (connected) {
+				// Verifica se a AI já foi concluída.
+				var status:String = scorm.get("cmi.completion_status");	
+				mementoSerialized = String(scorm.get("cmi.suspend_data"));
+				var stringScore:String = scorm.get("cmi.score.raw");
+			 
+				switch(status)
+				{
+					// Primeiro acesso à AI
+					case "not attempted":
+					case "unknown":
+					default:
+						completed = false;
+						break;
+					
+					// Continuando a AI...
+					case "incomplete":
+						completed = false;
+						break;
+					
+					// A AI já foi completada.
+					case "completed":
+						completed = true;
+						//setMessage("ATENÇÃO: esta Atividade Interativa já foi completada. Você pode refazê-la quantas vezes quiser, mas não valerá nota.");
+						break;
+				}
+				
+				//unmarshalObjects(mementoSerialized);
+				scormExercise = 1;
+				score = Number(stringScore.replace(",", "."));
+				
+				var success:Boolean = scorm.set("cmi.score.min", "0");
+				if (success) success = scorm.set("cmi.score.max", "100");
+				
+				if (success)
+				{
+					scorm.save();
+					pingTimer.start();
+				}
+				else
+				{
+					//trace("Falha ao enviar dados para o LMS.");
+					connected = false;
+				}
+			}
+			else
+			{
+				trace("Esta Atividade Interativa não está conectada a um LMS: seu aproveitamento nela NÃO será salvo.");
+			}
+			
+			//reset();
+		}
+		
+		/**
+		 * @private
+		 * Salva cmi.score.raw, cmi.location e cmi.completion_status no LMS
+		 */ 
+		private function commit()
+		{
+			if (connected)
+			{
+				// Salva no LMS a nota do aluno.
+				var success:Boolean = scorm.set("cmi.score.raw", score.toString());
+
+				// Notifica o LMS que esta atividade foi concluída.
+				success = scorm.set("cmi.completion_status", (completed ? "completed" : "incomplete"));
+
+				// Salva no LMS o exercício que deve ser exibido quando a AI for acessada novamente.
+				success = scorm.set("cmi.location", scormExercise.toString());
+				
+				// Salva no LMS a string que representa a situação atual da AI para ser recuperada posteriormente.
+				//mementoSerialized = marshalObjects();
+				success = scorm.set("cmi.suspend_data", mementoSerialized.toString());
+
+				if (success)
+				{
+					scorm.save();
+				}
+				else
+				{
+					pingTimer.stop();
+					//setMessage("Falha na conexão com o LMS.");
+					connected = false;
+				}
+			}
+		}
+		
+		/**
+		 * @private
+		 * Mantém a conexão com LMS ativa, atualizando a variável cmi.session_time
+		 */
+		private function pingLMS (event:TimerEvent)
+		{
+			//scorm.get("cmi.completion_status");
+			commit();
+		}
+		
+		private function saveStatus():void
+		{
+			if(ExternalInterface.available){
+				//mementoSerialized = marshalObjects();
+				scorm.set("cmi.suspend_data", mementoSerialized);
+			}
+		}
+		
+	}
+
+}

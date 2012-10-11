@@ -1,0 +1,53 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Superficies/FormasGrandes/Forma8" itemID="4ea6e67d-0000082a" linkageExportForAS="true" linkageBaseClass="Forma" linkageClassName="Forma8" lastModified="1320082746" lastUniqueIdentifier="6" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="Forma8">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Condutor" selected="true" centerPoint3DX="71.5" centerPoint3DY="-194.55">
+                  <matrix>
+                    <Matrix tx="13" ty="-162.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="58.4" y="-32"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0.3204345703125" d="0.3204345703125" tx="-14" ty="-4"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0.694117647058824" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="1"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1370 -3433[5823 -1035 3958 336!3958 336|756 2784!756 2784[-3093 5724 -4028 2930!-4028 2930[-4989 16 -4028 -2259!-4028 -2259[-2089 -5609 1370 -3433"/>
+                    <Edge cubics="!3946 1079(;3946,1079 744,3527 744,3527q3946 1079 744 3527);"/>
+                    <Edge cubics="!1358 -2690(;4327,-1092 5190,165 3946,1079q1358 -2690Q5811 -292q3946 1079);"/>
+                    <Edge cubics="!-4040 3673(;-4681,1730 -4681,1 -4040,-1516q-4040 3673Q-5001 759q-4040 -1516);"/>
+                    <Edge cubics="!-4040 -1516(;-2747,-3749 -948,-4141 1358,-2690q-4040 -1516Q-2101 -4866q1358 -2690);"/>
+                    <Edge cubics="!744 3527(744,3527;-1822,5487 -3416,5536 -4040,3673q744 3527Q-3105 6467q-4040 3673)-4040,3673;"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

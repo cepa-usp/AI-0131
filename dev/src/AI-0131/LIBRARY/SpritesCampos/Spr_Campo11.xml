@@ -1,0 +1,142 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo11" itemID="4ea708b5-00000307" linkageExportForAS="true" linkageIdentifier="Spr_Campo11" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo11" lastModified="1320078498" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="Spr_Campo11">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" locked="true" visible="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMRectangleObject objectWidth="639.95" objectHeight="479.95" x="0" y="0" selected="true" lockFlag="true">
+                  <matrix>
+                    <Matrix a="0.984405517578125" d="0.984405517578125" tx="5" ty="3.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="319.45" y="239.95"/>
+                  </transformationPoint>
+                  <fill>
+                    <SolidColor color="#FFFFFF"/>
+                  </fill>
+                </DOMRectangleObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#FF800A" parentLayerIndex="0" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#FFFFFF" alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!12862 9003S4|-41 9003!12862 8402|-41 8402!12862 7802|-41 7802!12862 7202|-41 7202!12862 6602|-41 6602!12862 6002|-41 6002!12862 5402|-41 5402!12862 4802|-41 4802!12862 4201|-41 4201!12862 3601|-41 3601!12862 3001|-41 3001!12862 2401
+|-41 2401!12862 1801|-41 1801!12862 1201|-41 1201!12862 600|-41 600"/>
+                  </edges>
+                </DOMShape>
+                <DOMGroup>
+                  <members>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="-0.91473388671875" b="-0.403457641601563" c="0.403457641601563" d="-0.91473388671875" tx="535.75" ty="330.55"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#ED3337"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!5305 2758|5670 2740!5670 2740|5422 3008!5422 3008|5436 2849!5436 2849|5305 2758"/>
+                            <Edge cubics="!5670 2740(;5670,2740 5422,3008 5422,3008q5670 2740 5422 3008);"/>
+                            <Edge cubics="!5422 3008(;5422,3008 5436,2849 5436,2849q5422 3008 5436 2849);"/>
+                            <Edge cubics="!5436 2849(;5436,2849 5305,2758 5305,2758q5436 2849 5305 2758);"/>
+                            <Edge cubics="!5305 2758(;5305,2758 5670,2740 5670,2740q5305 2758 5670 2740);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="-0.91473388671875" b="-0.403457641601563" c="0.403457641601563" d="-0.91473388671875" tx="535.75" ty="419.55"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#ED3337"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!5305 2758|5670 2740!5670 2740|5422 3008!5422 3008|5436 2849!5436 2849|5305 2758"/>
+                            <Edge cubics="!5670 2740(;5670,2740 5422,3008 5422,3008q5670 2740 5422 3008);"/>
+                            <Edge cubics="!5422 3008(;5422,3008 5436,2849 5436,2849q5422 3008 5436 2849);"/>
+                            <Edge cubics="!5436 2849(;5436,2849 5305,2758 5305,2758q5436 2849 5305 2758);"/>
+                            <Edge cubics="!5305 2758(;5305,2758 5670,2740 5670,2740q5305 2758 5670 2740);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="-0.91473388671875" b="-0.403457641601563" c="0.403457641601563" d="-0.91473388671875" tx="535.75" ty="509.6"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#ED3337"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!5305 2758|5670 2740!5670 2740|5422 3008!5422 3008|5436 2849!5436 2849|5305 2758"/>
+                            <Edge cubics="!5670 2740(;5670,2740 5422,3008 5422,3008q5670 2740 5422 3008);"/>
+                            <Edge cubics="!5422 3008(;5422,3008 5436,2849 5436,2849q5422 3008 5436 2849);"/>
+                            <Edge cubics="!5436 2849(;5436,2849 5305,2758 5305,2758q5436 2849 5305 2758);"/>
+                            <Edge cubics="!5305 2758(;5305,2758 5670,2740 5670,2740q5305 2758 5670 2740);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape isDrawingObject="true">
+                          <matrix>
+                            <Matrix a="-0.91473388671875" b="-0.403457641601563" c="0.403457641601563" d="-0.91473388671875" tx="535.75" ty="599.6"/>
+                          </matrix>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#ED3337"/>
+                            </FillStyle>
+                          </fills>
+                          <edges>
+                            <Edge fillStyle1="1" edges="
+!5305 2758|5670 2740!5670 2740|5422 3008!5422 3008|5436 2849!5436 2849|5305 2758"/>
+                            <Edge cubics="!5670 2740(;5670,2740 5422,3008 5422,3008q5670 2740 5422 3008);"/>
+                            <Edge cubics="!5422 3008(;5422,3008 5436,2849 5436,2849q5422 3008 5436 2849);"/>
+                            <Edge cubics="!5436 2849(;5436,2849 5305,2758 5305,2758q5436 2849 5305 2758);"/>
+                            <Edge cubics="!5305 2758(;5305,2758 5670,2740 5670,2740q5305 2758 5670 2740);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

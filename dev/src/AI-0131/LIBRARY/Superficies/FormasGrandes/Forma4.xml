@@ -1,0 +1,67 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Superficies/FormasGrandes/Forma4" itemID="4e9ed1cd-00000239" linkageExportForAS="true" linkageIdentifier="Forma4" linkageBaseClass="Forma" linkageClassName="Forma4" lastModified="1320082745" lastUniqueIdentifier="3" isSpriteSubclass="true">
+  <timeline>
+    <DOMTimeline name="Forma4">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0.3182373046875" d="0.3182373046875" tx="-5" ty="4"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0.694117647058824" ratio="0"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="1"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!2735 -1598[#B8D.D4 #FFFBCF.E9 3444 -577.5!3444 -577.5[#F5A.34 #FFFFAC.FF 4222 265!4222 265[#11A1.A7 #265.24 4610.5 1041!4610.5 1041[#1263.4C #5BC.D6 4536 2066!4536 2066[#110C.E7 #A67.0E 3863 3146!3863 3146[3360 3627 2882 3662!2882 3662
+[1879 3733 886 3814!886 3814[596 3839 336 3984!336 3984[-625 4516 -1557 3927!-1557 3927[-2352 3427 -2745 2562!-2745 2562[-3124 1735 -3578 946!-3578 946[-4052 95 -4426 -805!-4426 -805[-4856 -1836 -4388 -2822!-4388 -2822[-4121 -3387 -3527
+ -3634!-3527 -3634[-2970 -3867 -2441 -4161!-2441 -4161[-2309 -4234 -2055 -4250!-2055 -4250[#FFFD98.A1 #FFF19A.DA 803 -3247!803 -3247[#8AD.5F #FFF507.26 2735 -1598"/>
+                    <Edge cubics="!803 -3247(803,-3247;1748,-2955 2384,-2388 2709,-1545q803 -3247Q2221 -2809q2709 -1545);"/>
+                    <Edge cubics="!4528 2115(4528,2115;4419,2480 4198,2824 3863,3146q4528 2115Q4365 2663q3863 3146);"/>
+                    <Edge cubics="!4596 1130(;4659,1421 4637,1749 4528,2115q4596 1130Q4691 1566q4528 2115);"/>
+                    <Edge cubics="!2882 3662(2882,3662;2213,3709 1548,3760 886,3814q2882 3662Q1879 3733q886 3814);"/>
+                    <Edge cubics="!3863 3146(3863,3146;3528,3467 3201,3639 2882,3662q3863 3146Q3360 3627q2882 3662)2882,3662;"/>
+                    <Edge cubics="!886 3814(886,3814;693,3831 509,3887 336,3984q886 3814Q596 3839q336 3984);"/>
+                    <Edge cubics="!-4388 -2822(-4388,-2822;-4210,-3199 -3923,-3469 -3527,-3634q-4388 -2822Q-4121 -3387q-3527 -3634);"/>
+                    <Edge cubics="!-4426 -805(-4426,-805;-4713,-1492 -4700,-2165 -4388,-2822q-4426 -805Q-4856 -1836q-4388 -2822)-4388,-2822;"/>
+                    <Edge cubics="!-3527 -3634(-3527,-3634;-3156,-3789 -2794,-3965 -2441,-4161q-3527 -3634Q-2970 -3867q-2441 -4161)-2441,-4161;"/>
+                    <Edge cubics="!-1557 3927(-1557,3927;-2087,3594 -2483,3139 -2745,2562q-1557 3927Q-2352 3427q-2745 2562);"/>
+                    <Edge cubics="!-2745 2562(;-2998,2011 -3275,1472 -3578,946q-2745 2562Q-3124 1735q-3578 946);"/>
+                    <Edge cubics="!-3578 946(-3578,946;-3894,379 -4177,-205 -4426,-805q-3578 946Q-4052 95q-4426 -805);"/>
+                    <Edge cubics="!336 3984(336,3984;-305,4339 -936,4320 -1557,3927q336 3984Q-625 4516q-1557 3927);"/>
+                    <Edge cubics="!2709 -1545(2709,-1545;2875,-1230 3120,-907 3444,-577q2709 -1545Q2958 -1072q3444 -577);"/>
+                    <Edge cubics="!4215 306(4215,306;4405,565 4532,839 4596,1130q4215 306Q4500 694q4596 1130);"/>
+                    <Edge cubics="!3444 -577(3444,-577;3768,-248 4025,47 4215,306q3444 -577Q3930 -83q4215 306);"/>
+                    <Edge cubics="!-2441 -4161(-2441,-4161;-2353,-4210 -2224,-4239 -2055,-4250q-2441 -4161Q-2309 -4234q-2055 -4250);"/>
+                    <Edge cubics="!-2055 -4250(-2055,-4250;-1095,-3873 -142,-3539 803,-3247q-2055 -4250Q-615 -3685q803 -3247)803,-3247;"/>
+                  </edges>
+                </DOMShape>
+                <DOMSymbolInstance libraryItemName="Condutor" selected="true" centerPoint3DX="85.5" centerPoint3DY="-168.55">
+                  <matrix>
+                    <Matrix tx="27" ty="-136.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="58.4" y="-32"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
