@@ -52,6 +52,7 @@
   <!-- SWC Libraries -->
   <libraryPaths>
     <element path="lib\menuMoldura.swc" />
+    <element path="..\..\cepa-framework\cepa\eval\ProgEvalStats.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

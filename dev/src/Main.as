@@ -1,6 +1,11 @@
 package{
 	import cepa.ai.AI;
+	import cepa.ai.AIConstants;
+	import cepa.ai.AIInstance;
 	import cepa.ai.AIObserver;
+	import cepa.ai.IPlayInstance;
+	import cepa.eval.ProgressiveEvaluator;
+	import cepa.eval.StatsScreen;
 	import cepa.utils.Angle;
 	import cepa.utils.ToolTip;
 	import fl.transitions.easing.None;
@@ -29,7 +34,7 @@ package{
 	 * ...
 	 * @author Alexandre
 	 */
-	public class Main extends MovieClip implements AIObserver
+	public class Main extends MovieClip implements AIObserver, AIInstance
 	{
 		private var ai:AI;
 		
@@ -41,6 +46,8 @@ package{
 		private var shape_layer:Sprite;
 		private var answer_layer:Sprite;
 		private var dipolo_layer:Sprite;
+		private var eval:ProgressiveEvaluator;
+		private var stats:StatsScreen;
 		
 		//Vetores contendo os objetos dipolo no palco:
 		private var dipolos:Vector.<Dipolo> = new Vector.<Dipolo>();
@@ -98,7 +105,7 @@ package{
 		
 		public function onStatsClick():void 
 		{
-			
+			stats.openStatScreen();
 		}
 		
 		public function onTutorialClick():void 
@@ -116,6 +123,23 @@ package{
 			
 		}
 		
+		/* INTERFACE cepa.ai.AIInstance */
+		
+		public function getData():Object 
+		{
+			return new Object();
+		}
+		
+		public function readData(obj:Object) 
+		{
+			
+		}
+		
+		public function createNewPlayInstance():IPlayInstance 
+		{
+			return new Play131();
+		}
+		
 		/**
 		 * Função inicial que constrói a cena.
 		 */
@@ -130,6 +154,10 @@ package{
 			ai = new AI(this);
 			ai.container.messageLabel.visible = false;
 			ai.addObserver(this);
+			eval = new ProgressiveEvaluator(ai);
+			ai.evaluator = eval;
+			stats = new StatsScreen(eval, ai);
+			
 			ai.container.setAboutScreen(new AboutScreen131());
 			ai.container.setInfoScreen(new InfoScreen131());
 			
@@ -145,9 +173,6 @@ package{
 			}
 			
 			stage.addEventListener(KeyboardEvent.KEY_UP, bindKeys);
-			
-			if (ExternalInterface.available) initLMSConnection();
-			
 			if (!completed) btnValNota.visible = true;
 		}
 		
@@ -296,65 +321,20 @@ package{
 			background_layer.addChild(new Background());
 		}
 		
-		//private var btDel:BtDel;
-		//private var btAvaliar:BtAvaliar;
 		private var btNovamente:BtNovamente;
 		private var btVerResposta:BtVerResposta;
-		//private var dipoloBtn:DipoloBtn;
 		
 		/**
 		 * Adiciona os botões à barra de menu e event listeners aos botões, inclusive o botão reset.
 		 */
 		private function addButtons():void 
 		{
-			//btDel = new BtDel();
-			//btDel.gotoAndStop(1);
-			//btDel.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btDel.gotoAndStop(2) } )
-			//btDel.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btDel.gotoAndStop(1) } )
-			//
-			//btAvaliar = new BtAvaliar();
-			//btAvaliar.gotoAndStop(1);
-			//btAvaliar.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btAvaliar.gotoAndStop(2) } )
-			//btAvaliar.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btAvaliar.gotoAndStop(1) } )
-			//
-			//btNovamente = new BtNovamente();
-			//btNovamente.gotoAndStop(1);
-			//btNovamente.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btNovamente.gotoAndStop(2) } )
-			//btNovamente.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btNovamente.gotoAndStop(1) } )
-			//
-			//btVerResposta = new BtVerResposta();
-			//btVerResposta.gotoAndStop(1);
-			//btVerResposta.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btVerResposta.gotoAndStop(2) } )
-			//btVerResposta.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btVerResposta.gotoAndStop(1) } )
-			//
-			//dipoloBtn = new DipoloBtn();
-			
 			var ttDel:ToolTip = new ToolTip(btDel, "Remover selecionados", 12, 0.8, 200, 0.6, 0.6);
 			var ttAvaliar:ToolTip = new ToolTip(btAvaliar, "Avaliar exercício", 12, 0.8, 200, 0.6, 0.6);
-			//var ttNovamente:ToolTip = new ToolTip(btNovamente, "Nova tentativa", 12, 0.8, 200, 0.6, 0.6);
-			//var ttResposta:ToolTip = new ToolTip(btVerResposta, "Ver/ocultar respostas", 12, 0.8, 200, 0.6, 0.6);
 			var ttAddDipolo:ToolTip = new ToolTip(dipoloBtn, "Adicionar dipolo elétrico", 12, 0.8, 200, 0.6, 0.6);
-			//
 			stage.addChild(ttDel);
 			stage.addChild(ttAvaliar);
-			//stage.addChild(ttNovamente);
-			//stage.addChild(ttResposta);
 			stage.addChild(ttAddDipolo);
-			//
-			//btVerResposta.verexerc.visible = false;
-			//btVerResposta.visible = false;
-			//btNovamente.visible = false;
-			//
-			//Adição de botões no menu:
-			//menuBar.addButton(dipoloBtn, initAddDipolo, 0, true);
-			//menuBar.addButton(btDel, deleteSelected, 0, true);
-			//menuBar.addButton(btAvaliar, aval, 15);
-			//menuBar.addButton(btVerResposta, showHideAnswer, 10);
-			//menuBar.addButton(btNovamente, reset, 14);
-			//
-			//eventListener do botão reset da moldura.
-			//btnReset.addEventListener(MouseEvent.CLICK, reset);
-			
 			btDel.buttonMode = true;
 			btAvaliar.buttonMode = true;
 			btnValNota.buttonMode = true;
@@ -364,11 +344,19 @@ package{
 			btAvaliar.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btAvaliar.gotoAndStop(2) } );
 			btAvaliar.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btAvaliar.gotoAndStop(1) } );
 			
-			btnValNota.addEventListener(MouseEvent.MOUSE_DOWN, function () { valendoNota = true; btnValNota.alpha = 0.5; btnValNota.buttonMode = false; } );
+			btnValNota.addEventListener(MouseEvent.MOUSE_DOWN, onValendoNotaClick);
 			
 			dipoloBtn.addEventListener(MouseEvent.MOUSE_DOWN, initAddDipolo);
 			btDel.addEventListener(MouseEvent.MOUSE_DOWN, deleteSelected);
 			btAvaliar.addEventListener(MouseEvent.MOUSE_DOWN, aval);
+		}
+		
+		private function onValendoNotaClick(e:MouseEvent):void 
+		{
+			valendoNota = true; 
+			btnValNota.alpha = 0.5; 
+			btnValNota.buttonMode = false;
+			eval.currentPlayMode = AIConstants.PLAYMODE_EVALUATE;
 		}
 		
 		/**
@@ -422,17 +410,10 @@ package{
 		{
 			//Cria um novo campo:
 			var sort:int = Math.ceil(Math.random() * 13);
-			//var sort:int = 5;
 			var classe:Class = getClass(sort);
 			field = new classe();
-			
-			//Cria o sistema de coordenadas:
-			//if (coord != null) {
-				//background_layer.removeChild(coord);
-			//}
 			coord = new Coord(field.xmin, field.xmax, 700, field.ymin, field.ymax, 500);
-			//background_layer.addChild(coord);
-			
+
 			//Cria um novo sprite do campo:
 			if (spr_field != null) {
 				field_layer.removeChild(spr_field);
@@ -468,53 +449,52 @@ package{
 		 */
 		private function getClass(sort:int):Class 
 		{
-			var classe:Class;
-			
+				var classe:Class;
+
 			switch(sort) {
-				case 1:
-					classe = Campo1;
-					break;
-				case 2:
-					classe = Campo2;
-					break;
-				case 3:
-					classe = Campo3;
-					break;
-				case 4:
-					classe = Campo4;
-					break;
-				case 5:
-					classe = Campo5;
-					break;
-				case 6:
-					classe = Campo6;
-					break;
-				case 7:
-					classe = Campo7;
-					break;
-				case 8:
-					classe = Campo8;
-					break;
-				case 9:
-					classe = Campo9;
-					break;
-				case 10:
-					classe = Campo10;
-					break;
-				case 11:
-					classe = Campo11;
-					break;
-				case 12:
-					classe = Campo12;
-					break;
-				case 13:
-					classe = Campo13;
-					break;
-				
+			case 1:
+			classe = Campo1;
+			break;
+			case 2:
+			classe = Campo2;
+			break;
+			case 3:
+			classe = Campo3;
+			break;
+			case 4:
+			classe = Campo4;
+			break;
+			case 5:
+			classe = Campo5;
+			break;
+			case 6:
+			classe = Campo6;
+			break;
+			case 7:
+			classe = Campo7;
+			break;
+			case 8:
+			classe = Campo8;
+			break;
+			case 9:
+			classe = Campo9;
+			break;
+			case 10:
+			classe = Campo10;
+			break;
+			case 11:
+			classe = Campo11;
+			break;
+			case 12:
+			classe = Campo12;
+			break;
+			case 13:
+			classe = Campo13;
+			break;
+
 			}
-			
-			return classe;
-		}
+
+			return classe;		}
 		
 		/**
 		 * Reinicia a atividade com uma nova configuração aleatória.
@@ -537,10 +517,6 @@ package{
 			configAi();
 			answer_layer.alpha = 0;
 			btAvaliar.visible = true;
-			//btVerResposta.verexerc.visible = false;
-			//btVerResposta.verresp.visible = true;
-			//btVerResposta.visible = false;
-			//btNovamente.visible = false;
 			dipolo_layer.alpha = 1;
 			answer_layer.alpha = 0;
 			btDel.mouseEnabled = true;
@@ -583,8 +559,11 @@ package{
 				removeSelection();
 				lockAll();
 				
-				scoreAtual = 0;
+				var play:Play131 = new Play131()
 				
+				
+				
+				scoreAtual  0;
 				for each (var item:Dipolo in dipolos) 
 				{
 					var dipAnswer:DipoloAnswer = new DipoloAnswer(field, coord);
@@ -593,29 +572,24 @@ package{
 					dipAnswer.alpha = 0.5;
 					dipolosAnswer.push(dipAnswer);
 					answer_layer.addChild(dipAnswer);
-					if (compareDipolos(item, dipAnswer)) scoreAtual += 100 / dipolos.length;
+					if (compareDipolos(item, dipAnswer)) scoreAtual += 1 / dipolos.length;
 				}
+				play.setScore(scoreAtual);
+				play.evaluate();
+				eval.addPlayInstance(play);
 				
 				resultScreen.openScreen();
 				resultScreen.resultado = "Sua pontuação foi " + scoreAtual.toFixed(2) + "%.";
 				txPontos.text = scoreAtual.toFixed(1).replace(".",",");
 				
 				btAvaliar.visible = false;
-				//btVerResposta.visible = true;
-				//btNovamente.visible = true;
 				
-				if(valendoNota && ExternalInterface.available){
-					/*if (!completed) {
-						score = scoreAtual;
-						completed = true;
-						commit();
-					}else*/ if (scoreAtual > score) {
+/*				if(valendoNota && ExternalInterface.available){
+					if (scoreAtual > score) {
 						score = scoreAtual;
 						txNota.text = score.toFixed(1).replace(".",",");
-						completed = true;
-						commit();
 					}
-				}
+				}*/
 			}
 		}
 		
@@ -681,134 +655,11 @@ package{
 		/*------------------------------------------------------------------------------------------------*/
 		//SCORM:
 		
-		private const PING_INTERVAL:Number = 5 * 60 * 1000; // 5 minutos
 		private var completed:Boolean;
-		private var scorm:SCORM;
-		private var scormExercise:int;
-		private var connected:Boolean;
-		private var score:int;
-		private var pingTimer:Timer;
-		private var mementoSerialized:String = "";
-		
-		/**
-		 * @private
-		 * Inicia a conexão com o LMS.
-		 */
-		private function initLMSConnection () : void
-		{
-			completed = false;
-			connected = false;
-			scorm = new SCORM();
-			
-			pingTimer = new Timer(PING_INTERVAL);
-			pingTimer.addEventListener(TimerEvent.TIMER, pingLMS);
-			
-			connected = scorm.connect();
-			
-			if (connected) {
-				// Verifica se a AI já foi concluída.
-				var status:String = scorm.get("cmi.completion_status");	
-				mementoSerialized = String(scorm.get("cmi.suspend_data"));
-				var stringScore:String = scorm.get("cmi.score.raw");
-			 
-				switch(status)
-				{
-					// Primeiro acesso à AI
-					case "not attempted":
-					case "unknown":
-					default:
-						completed = false;
-						break;
-					
-					// Continuando a AI...
-					case "incomplete":
-						completed = false;
-						break;
-					
-					// A AI já foi completada.
-					case "completed":
-						completed = true;
-						//setMessage("ATENÇÃO: esta Atividade Interativa já foi completada. Você pode refazê-la quantas vezes quiser, mas não valerá nota.");
-						break;
-				}
-				
-				//unmarshalObjects(mementoSerialized);
-				scormExercise = 1;
-				score = Number(stringScore.replace(",", "."));
-				
-				var success:Boolean = scorm.set("cmi.score.min", "0");
-				if (success) success = scorm.set("cmi.score.max", "100");
-				
-				if (success)
-				{
-					scorm.save();
-					pingTimer.start();
-				}
-				else
-				{
-					//trace("Falha ao enviar dados para o LMS.");
-					connected = false;
-				}
-			}
-			else
-			{
-				trace("Esta Atividade Interativa não está conectada a um LMS: seu aproveitamento nela NÃO será salvo.");
-			}
-			
-			//reset();
-		}
-		
-		/**
-		 * @private
-		 * Salva cmi.score.raw, cmi.location e cmi.completion_status no LMS
-		 */ 
-		private function commit()
-		{
-			if (connected)
-			{
-				// Salva no LMS a nota do aluno.
-				var success:Boolean = scorm.set("cmi.score.raw", score.toString());
 
-				// Notifica o LMS que esta atividade foi concluída.
-				success = scorm.set("cmi.completion_status", (completed ? "completed" : "incomplete"));
-
-				// Salva no LMS o exercício que deve ser exibido quando a AI for acessada novamente.
-				success = scorm.set("cmi.location", scormExercise.toString());
-				
-				// Salva no LMS a string que representa a situação atual da AI para ser recuperada posteriormente.
-				//mementoSerialized = marshalObjects();
-				success = scorm.set("cmi.suspend_data", mementoSerialized.toString());
-
-				if (success)
-				{
-					scorm.save();
-				}
-				else
-				{
-					pingTimer.stop();
-					//setMessage("Falha na conexão com o LMS.");
-					connected = false;
-				}
-			}
-		}
 		
-		/**
-		 * @private
-		 * Mantém a conexão com LMS ativa, atualizando a variável cmi.session_time
-		 */
-		private function pingLMS (event:TimerEvent)
-		{
-			//scorm.get("cmi.completion_status");
-			commit();
-		}
 		
-		private function saveStatus():void
-		{
-			if(ExternalInterface.available){
-				//mementoSerialized = marshalObjects();
-				scorm.set("cmi.suspend_data", mementoSerialized);
-			}
-		}
+
 		
 	}
 

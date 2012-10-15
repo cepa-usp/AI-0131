@@ -420,9 +420,6 @@
                   <transformationPoint>
                     <Point x="0.25" y="0.3"/>
                   </transformationPoint>
-                  <color>
-                    <Color/>
-                  </color>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>

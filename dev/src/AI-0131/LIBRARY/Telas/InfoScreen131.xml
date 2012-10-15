@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Telas/InfoScreen131" itemID="506c79f4-000003be" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="InfoScreen131" sourceFlashFilepath="./LAL.fla" sourceLibraryItemHRef="InstructionScreen" sourceLastModified="1286502021" lastModified="1349286604" isSpriteSubclass="true" sourceItemID="00000000-ffffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Telas/InfoScreen131" itemID="506c79f4-000003be" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="InfoScreen131" sourceFlashFilepath="./LAL.fla" sourceLibraryItemHRef="InstructionScreen" sourceLastModified="1286502021" lastModified="1349286604" isSpriteSubclass="true" sourceItemID="00000000-7fffffff">
   <timeline>
     <DOMTimeline name="InfoScreen131">
       <layers>
@@ -52,9 +52,6 @@
                   <transformationPoint>
                     <Point x="0.25" y="0.3"/>
                   </transformationPoint>
-                  <color>
-                    <Color/>
-                  </color>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
