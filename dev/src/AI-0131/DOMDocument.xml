@@ -14,7 +14,7 @@
           <DOMFontItem name="Font 1" itemID="4ea83ce0-000002bc" font="ArialMT" size="0" id="1" sourceLastImported="1319648480" embedRanges="1|2|3|4|5|17"/>
      </fonts>
      <media>
-          <DOMBitmapItem name="Bitmap 16" itemID="507c4759-00000259" sourceLastImported="1350322009" originalCompressionType="lossless" quality="50" href="Bitmap 16" bitmapDataHRef="M 16 1350322009.dat" frameRight="3440" frameBottom="720"/>
+          <DOMBitmapItem name="Bitmap 16" itemID="507c4759-00000259" sourceLastImported="1350322009" originalCompressionType="lossless" quality="50" href="Bitmap 16" bitmapDataHRef="M 16 1350322009.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="JPGCampos/Campo1 - (sen(y3),2) (-5, 5, -15, 15).jpg" itemID="4ea849c4-000002c7" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo1 - (sen(y3)&amp;#442) (-5&amp;#44 5&amp;#44 -15&amp;#44 15).jpg" sourceLastImported="1349288646" externalFileSize="115983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo1 - (sen(y3)&amp;#0442) (-5&amp;#044 5&amp;#044 -15&amp;#044 15).jpg" bitmapDataHRef="M 14 1319634460.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="JPGCampos/Campo10 - (1,0).jpg" itemID="4ea849c4-000002c8" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo10 - (1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="72983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo10 - (1&amp;#0440).jpg" bitmapDataHRef="M 15 1319634513.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="JPGCampos/Campo11 - (-1,0).jpg" itemID="4ea849c4-000002c9" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo11 - (-1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="77251" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo11 - (-1&amp;#0440).jpg" bitmapDataHRef="M 16 1319634581.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
@@ -36,8 +36,8 @@
           <Include href="Background.xml" itemID="4ea6b348-000007c9" lastModified="1320083169"/>
           <Include href="Base/Board.xml" itemIcon="1" loadImmediate="false" itemID="4cae755c-000000d7" lastModified="1319804942"/>
           <Include href="Base/Ondas.xml" itemIcon="1" loadImmediate="false" itemID="4cafa98e-0000004f" lastModified="1298036295"/>
-          <Include href="Botões/BtAvaliar.xml" loadImmediate="false" itemID="507c4425-0000024d" lastModified="1350322157"/>
-          <Include href="Botões/BtValNota.xml" loadImmediate="false" itemID="507c4425-0000024e" lastModified="1350322237"/>
+          <Include href="Botões/Botões/BtAvaliar.xml" itemID="507c4425-0000024d" lastModified="1350416573"/>
+          <Include href="Botões/Botões/BtValNota.xml" itemID="507c4425-0000024e" lastModified="1350416608"/>
           <Include href="Buttons/BtDel.xml" itemID="4ea1cc98-00000269" lastModified="1319722706"/>
           <Include href="Buttons/BtNovamente.xml" itemID="4e9f0828-00000227" lastModified="1350321996"/>
           <Include href="Buttons/BtVerResposta.xml" itemID="4ea06365-000001e3" lastModified="1319722666"/>
@@ -86,44 +86,46 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMRectangleObject objectWidth="181.95" objectHeight="33.75" x="14" y="15.25" lockFlag="true" topLeftRadius="9.75" topRightRadius="9.75" bottomLeftRadius="9.75" bottomRightRadius="9.75">
-                                             <matrix>
-                                                  <Matrix a="1.13739013671875" d="1.27407836914063" tx="97.1" ty="-4.45"/>
-                                             </matrix>
+                                        <DOMShape isDrawingObject="true">
                                              <transformationPoint>
-                                                  <Point x="104.95" y="32.1"/>
+                                                  <Point x="127.15" y="465.2"/>
                                              </transformationPoint>
-                                             <fill>
-                                                  <SolidColor color="#CCCCCC"/>
-                                             </fill>
-                                        </DOMRectangleObject>
+                                             <fills>
+                                                  <FillStyle index="1">
+                                                       <SolidColor color="#CCCCCC"/>
+                                                  </FillStyle>
+                                             </fills>
+                                             <edges>
+                                                  <Edge fillStyle0="1" edges="!5951 8874|508 8874!508 8874[264 8874 264 9122!264 9122|264 9485!264 9485[264 9734 508 9734!508 9734|5951 9734!5951 9734|5951 9733!5951 9733[6165 9718 6165 9485!6165 9485|6165 9122!6165 9122[6165 8890 5951 8875!5951 8875|5951 8874"/>
+                                             </edges>
+                                        </DOMShape>
                                         <DOMSymbolInstance libraryItemName="Buttons/DipoloBtn" name="dipoloBtn" symbolType="button">
                                              <matrix>
-                                                  <Matrix a="1.25" d="1.24853515625" tx="148.3" ty="36.05"/>
+                                                  <Matrix a="1.25" d="1.24853515625" tx="46.65" ty="465.55"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Buttons/BtDel" name="btDel" centerPoint3DX="198.3" centerPoint3DY="36.3">
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtDel" name="btDel" centerPoint3DX="95.35" centerPoint3DY="465.8">
                                              <matrix>
-                                                  <Matrix a="1.239990234375" d="1.239990234375" tx="198.3" ty="36.3"/>
+                                                  <Matrix a="1.239990234375" d="1.239990234375" tx="95.35" ty="465.8"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Botões/BtAvaliar" name="btAvaliar" centerPoint3DX="272.8" centerPoint3DY="36.95">
+                                        <DOMSymbolInstance libraryItemName="Botões/Botões/BtAvaliar" name="btAvaliar" centerPoint3DX="138.5" centerPoint3DY="465.35">
                                              <matrix>
-                                                  <Matrix tx="295.85" ty="37"/>
+                                                  <Matrix tx="161.55" ty="465.4"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="-23" y="-0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Botões/BtValNota" name="btnValNota" centerPoint3DX="582.5" centerPoint3DY="35.75">
+                                        <DOMSymbolInstance libraryItemName="Botões/Botões/BtValNota" name="btnValNota" centerPoint3DX="234.2" centerPoint3DY="465.35">
                                              <matrix>
-                                                  <Matrix tx="605.55" ty="35.8"/>
+                                                  <Matrix tx="257.25" ty="465.4"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="-23" y="-0.05"/>

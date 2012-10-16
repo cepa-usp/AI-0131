@@ -7,19 +7,10 @@
             <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMGroup>
-                  <matrix>
-                    <Matrix tx="-71" ty="56.05"/>
-                  </matrix>
                   <members>
                     <DOMGroup selected="true">
-                      <matrix>
-                        <Matrix ty="0.05"/>
-                      </matrix>
                       <members>
                         <DOMGroup>
-                          <matrix>
-                            <Matrix ty="0.05"/>
-                          </matrix>
                           <members>
                             <DOMRectangleObject objectWidth="160.95" objectHeight="28" x="19.4" y="-9.9" lockFlag="true" topLeftRadius="2.75" topRightRadius="2.75" bottomLeftRadius="2.75" bottomRightRadius="2.75">
                               <matrix>
