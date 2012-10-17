@@ -11,8 +11,8 @@ package
 	{
 		public function FeedBackScreen() 
 		{
-			this.x = 640 / 2;
-			this.y = 480 / 2;
+			this.x = 700 / 2;
+			this.y = 500 / 2;
 			
 			this.gotoAndStop("END");
 			

@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Base/Board" itemID="4cae755c-000000d7" sourceFlashFilepath="./LAL.fla" sourceLibraryItemHRef="Board" sourceLastModified="1286501726" symbolType="graphic" lastModified="1319804942" lastUniqueIdentifier="2" sourceItemID="00000000-7fffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Base/Board" itemID="4cae755c-000000d7" sourceFlashFilepath="../AI-0131/LAL.fla" sourceLibraryItemHRef="Board" sourceLastModified="1286501726" symbolType="graphic" lastModified="1350497785" lastUniqueIdentifier="2" sourceItemID="00000000-7fffffff">
   <timeline>
     <DOMTimeline name="Board">
       <layers>
-        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+        <DOMLayer name="Layer 1" color="#4FFF4F">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -50,16 +50,16 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="fundo" color="#9933CC" autoNamed="false">
+        <DOMLayer name="fundo" color="#9933CC" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMRectangleObject objectWidth="640" objectHeight="480" x="-322.7" y="-246.55" lockFlag="true">
+                <DOMRectangleObject objectWidth="700" objectHeight="500" x="-322.7" y="-246.55" lockFlag="true">
                   <matrix>
-                    <Matrix tx="2.7" ty="6.55"/>
+                    <Matrix tx="-27.3" ty="-3.45"/>
                   </matrix>
                   <fill>
-                    <SolidColor alpha="0.6"/>
+                    <SolidColor alpha="0.498039215686275"/>
                   </fill>
                 </DOMRectangleObject>
               </elements>

@@ -27,7 +27,7 @@ package
 		private var olderPos:Vector.<Point> = new Vector.<Point>();
 		private function addParticulas():void 
 		{
-			var w:Number = 640;
+			var w:Number = 700;
 			for (var i:int = coord.xmin; i <= coord.xmax; i++) 
 			{
 				var particulaX1:Particula = new Particula(coord, field);
@@ -45,7 +45,7 @@ package
 				olderPos.push(new Point(particulaX2.x, particulaX2.y));
 			}
 			
-			var h:Number = 480;
+			var h:Number = 500;
 			for (var j:int = coord.ymin; j <= coord.ymax; j++) 
 			{
 				var particulaY1:Particula = new Particula(coord, field);

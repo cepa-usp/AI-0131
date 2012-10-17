@@ -2,6 +2,7 @@
      <folders>
           <DOMFolderItem name="Base" itemID="4cafb00f-000001ee"/>
           <DOMFolderItem name="Botões" itemID="506c7f76-000003cd" isExpanded="true"/>
+          <DOMFolderItem name="Botões/Botões" itemID="507ee91c-000002bb" isExpanded="true"/>
           <DOMFolderItem name="Buttons" itemID="4d3b4b7d-000004c3" isExpanded="true"/>
           <DOMFolderItem name="JPGCampos" itemID="4ea849aa-000002c5"/>
           <DOMFolderItem name="Objetos" itemID="4ea84a11-000002db" isExpanded="true"/>
@@ -15,29 +16,29 @@
      </fonts>
      <media>
           <DOMBitmapItem name="Bitmap 16" itemID="507c4759-00000259" sourceLastImported="1350322009" originalCompressionType="lossless" quality="50" href="Bitmap 16" bitmapDataHRef="M 16 1350322009.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo1 - (sen(y3),2) (-5, 5, -15, 15).jpg" itemID="4ea849c4-000002c7" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo1 - (sen(y3)&amp;#442) (-5&amp;#44 5&amp;#44 -15&amp;#44 15).jpg" sourceLastImported="1349288646" externalFileSize="115983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo1 - (sen(y3)&amp;#0442) (-5&amp;#044 5&amp;#044 -15&amp;#044 15).jpg" bitmapDataHRef="M 14 1319634460.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo10 - (1,0).jpg" itemID="4ea849c4-000002c8" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo10 - (1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="72983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo10 - (1&amp;#0440).jpg" bitmapDataHRef="M 15 1319634513.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo11 - (-1,0).jpg" itemID="4ea849c4-000002c9" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo11 - (-1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="77251" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo11 - (-1&amp;#0440).jpg" bitmapDataHRef="M 16 1319634581.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo12 - (0,1).jpg" itemID="4ea849c4-000002ca" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo12 - (0&amp;#441).jpg" sourceLastImported="1349288646" externalFileSize="55539" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo12 - (0&amp;#0441).jpg" bitmapDataHRef="M 17 1319634623.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo13 - (0,-1).jpg" itemID="4ea849c4-000002cb" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo13 - (0&amp;#44-1).jpg" sourceLastImported="1349288646" externalFileSize="55322" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo13 - (0&amp;#044-1).jpg" bitmapDataHRef="M 18 1319634663.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo2 - (0,5,sen(x)) (-20, -10, -8, 8).jpg" itemID="4ea849c4-000002cc" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo2 - (0&amp;#445&amp;#44sen(x)) (-20&amp;#44 -10&amp;#44 -8&amp;#44 8).jpg" sourceLastImported="1349288646" externalFileSize="170238" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo2 - (0&amp;#0445&amp;#044sen(x)) (-20&amp;#044 -10&amp;#044 -8&amp;#044 8).jpg" bitmapDataHRef="M 19 1319634706.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo3 - (y,x) (-5, 5, 2, 10).jpg" itemID="4ea849c4-000002cd" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo3 - (y&amp;#44x) (-5&amp;#44 5&amp;#44 2&amp;#44 10).jpg" sourceLastImported="1349288646" externalFileSize="90820" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo3 - (y&amp;#044x) (-5&amp;#044 5&amp;#044 2&amp;#044 10).jpg" bitmapDataHRef="M 22 1319634854.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo4 - (y,x) (-5, 5, -10, -2).jpg" itemID="4ea849c4-000002ce" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo4 - (y&amp;#44x) (-5&amp;#44 5&amp;#44 -10&amp;#44 -2).jpg" sourceLastImported="1349288646" externalFileSize="90843" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo4 - (y&amp;#044x) (-5&amp;#044 5&amp;#044 -10&amp;#044 -2).jpg" bitmapDataHRef="M 23 1319634893.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo5 - (xy,x+y) (-20, -10, -10, 10).jpg" itemID="4ea849c4-000002cf" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo5 - (xy&amp;#44x+y) (-20&amp;#44 -10&amp;#44 -10&amp;#44 10).jpg" sourceLastImported="1349288646" externalFileSize="91868" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo5 - (xy&amp;#044x+y) (-20&amp;#044 -10&amp;#044 -10&amp;#044 10).jpg" bitmapDataHRef="M 24 1319634926.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo6 - (1,1).jpg" itemID="4ea849c4-000002d0" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo6 - (1&amp;#441).jpg" sourceLastImported="1349288646" externalFileSize="183284" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo6 - (1&amp;#0441).jpg" bitmapDataHRef="M 26 1319635045.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo7 - (-1,-1).jpg" itemID="4ea849c4-000002d1" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo7 - (-1&amp;#44-1).jpg" sourceLastImported="1349288646" externalFileSize="162105" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo7 - (-1&amp;#044-1).jpg" bitmapDataHRef="M 27 1319635087.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo8 - (-1,1).jpg" itemID="4ea849c4-000002d2" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo8 - (-1&amp;#441).jpg" sourceLastImported="1349288646" externalFileSize="164030" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo8 - (-1&amp;#0441).jpg" bitmapDataHRef="M 28 1319635119.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
-          <DOMBitmapItem name="JPGCampos/Campo9 - (1,-1).jpg" itemID="4ea849c4-000002d3" sourceExternalFilepath="./LIBRARY/JPGCampos/Campo9 - (1&amp;#44-1).jpg" sourceLastImported="1349288646" externalFileSize="104824" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo9 - (1&amp;#044-1).jpg" bitmapDataHRef="M 29 1319635149.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="JPGCampos/Campo1 - (sen(y3),2) (-5, 5, -15, 15).jpg" itemID="4ea849c4-000002c7" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo1 - (sen(y3)&amp;#442) (-5&amp;#44 5&amp;#44 -15&amp;#44 15).jpg" sourceLastImported="1349288646" externalFileSize="115983" quality="50" href="JPGCampos/Campo1 - (sen(y3)&amp;#0442) (-5&amp;#044 5&amp;#044 -15&amp;#044 15).jpg" bitmapDataHRef="M 14 1319634460.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo10 - (1,0).jpg" itemID="4ea849c4-000002c8" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo10 - (1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="72983" quality="50" href="JPGCampos/Campo10 - (1&amp;#0440).jpg" bitmapDataHRef="M 15 1319634513.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo11 - (-1,0).jpg" itemID="4ea849c4-000002c9" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo11 - (-1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="77251" quality="50" href="JPGCampos/Campo11 - (-1&amp;#0440).jpg" bitmapDataHRef="M 16 1319634581.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo12 - (0,1).jpg" itemID="4ea849c4-000002ca" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo12 - (0&amp;#441).jpg" sourceLastImported="1349288646" externalFileSize="55539" quality="50" href="JPGCampos/Campo12 - (0&amp;#0441).jpg" bitmapDataHRef="M 17 1319634623.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo13 - (0,-1).jpg" itemID="4ea849c4-000002cb" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo13 - (0&amp;#44-1).jpg" sourceLastImported="1349288646" externalFileSize="55322" quality="50" href="JPGCampos/Campo13 - (0&amp;#044-1).jpg" bitmapDataHRef="M 18 1319634663.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo2 - (0,5,sen(x)) (-20, -10, -8, 8).jpg" itemID="4ea849c4-000002cc" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo2 - (0&amp;#445&amp;#44sen(x)) (-20&amp;#44 -10&amp;#44 -8&amp;#44 8).jpg" sourceLastImported="1349288646" externalFileSize="170238" quality="50" href="JPGCampos/Campo2 - (0&amp;#0445&amp;#044sen(x)) (-20&amp;#044 -10&amp;#044 -8&amp;#044 8).jpg" bitmapDataHRef="M 19 1319634706.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo3 - (y,x) (-5, 5, 2, 10).jpg" itemID="4ea849c4-000002cd" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo3 - (y&amp;#44x) (-5&amp;#44 5&amp;#44 2&amp;#44 10).jpg" sourceLastImported="1349288646" externalFileSize="90820" quality="50" href="JPGCampos/Campo3 - (y&amp;#044x) (-5&amp;#044 5&amp;#044 2&amp;#044 10).jpg" bitmapDataHRef="M 22 1319634854.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo4 - (y,x) (-5, 5, -10, -2).jpg" itemID="4ea849c4-000002ce" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo4 - (y&amp;#44x) (-5&amp;#44 5&amp;#44 -10&amp;#44 -2).jpg" sourceLastImported="1349288646" externalFileSize="90843" quality="50" href="JPGCampos/Campo4 - (y&amp;#044x) (-5&amp;#044 5&amp;#044 -10&amp;#044 -2).jpg" bitmapDataHRef="M 23 1319634893.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo5 - (xy,x+y) (-20, -10, -10, 10).jpg" itemID="4ea849c4-000002cf" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo5 - (xy&amp;#44x+y) (-20&amp;#44 -10&amp;#44 -10&amp;#44 10).jpg" sourceLastImported="1349288646" externalFileSize="91868" quality="50" href="JPGCampos/Campo5 - (xy&amp;#044x+y) (-20&amp;#044 -10&amp;#044 -10&amp;#044 10).jpg" bitmapDataHRef="M 24 1319634926.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo6 - (1,1).jpg" itemID="4ea849c4-000002d0" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo6 - (1&amp;#441).jpg" sourceLastImported="1349288646" externalFileSize="183284" quality="50" href="JPGCampos/Campo6 - (1&amp;#0441).jpg" bitmapDataHRef="M 26 1319635045.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo7 - (-1,-1).jpg" itemID="4ea849c4-000002d1" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo7 - (-1&amp;#44-1).jpg" sourceLastImported="1349288646" externalFileSize="162105" quality="50" href="JPGCampos/Campo7 - (-1&amp;#044-1).jpg" bitmapDataHRef="M 27 1319635087.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo8 - (-1,1).jpg" itemID="4ea849c4-000002d2" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo8 - (-1&amp;#441).jpg" sourceLastImported="1349288646" externalFileSize="164030" quality="50" href="JPGCampos/Campo8 - (-1&amp;#0441).jpg" bitmapDataHRef="M 28 1319635119.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
+          <DOMBitmapItem name="JPGCampos/Campo9 - (1,-1).jpg" itemID="4ea849c4-000002d3" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo9 - (1&amp;#44-1).jpg" sourceLastImported="1349288646" externalFileSize="104824" quality="50" href="JPGCampos/Campo9 - (1&amp;#044-1).jpg" bitmapDataHRef="M 29 1319635149.dat" frameRight="13200" frameBottom="10840" isJPEG="true"/>
           <DOMBitmapItem name="Fundo.jpg" itemID="4ea6b273-000007c4" sourceExternalFilepath="../../Fundo.jpg" sourceLastImported="1319547467" quality="50" href="Fundo.jpg" bitmapDataHRef="M 1 1319547507.dat" frameRight="12800" frameBottom="9600" isJPEG="true"/>
           <DOMBitmapItem name="logocepa.png" itemID="4c913bb5-0000029a" sourceExternalFilepath="../../../Desktop/logocepa.png" sourceLastImported="1284586376" originalCompressionType="lossless" quality="50" href="logocepa.png" bitmapDataHRef="M 1 1284586421.dat" frameRight="6000" frameBottom="3860"/>
      </media>
      <symbols>
           <Include href="AboutScreen131.xml" itemID="506c79bf-000003bd" lastModified="1349286581"/>
-          <Include href="Background.xml" itemID="4ea6b348-000007c9" lastModified="1320083169"/>
-          <Include href="Base/Board.xml" itemIcon="1" loadImmediate="false" itemID="4cae755c-000000d7" lastModified="1319804942"/>
+          <Include href="Background.xml" itemID="4ea6b348-000007c9" lastModified="1350495230"/>
+          <Include href="Base/Board.xml" itemIcon="1" loadImmediate="false" itemID="4cae755c-000000d7" lastModified="1350497785"/>
           <Include href="Base/Ondas.xml" itemIcon="1" loadImmediate="false" itemID="4cafa98e-0000004f" lastModified="1298036295"/>
-          <Include href="Botões/Botões/BtAvaliar.xml" itemID="507c4425-0000024d" lastModified="1350416573"/>
-          <Include href="Botões/Botões/BtValNota.xml" itemID="507c4425-0000024e" lastModified="1350416608"/>
+          <Include href="Botões/Botões/Botões/BtAvaliar.xml" itemID="507c4425-0000024d" lastModified="1350416573"/>
+          <Include href="Botões/Botões/Botões/BtValNota.xml" itemID="507c4425-0000024e" lastModified="1350416608"/>
           <Include href="Buttons/BtDel.xml" itemID="4ea1cc98-00000269" lastModified="1319722706"/>
           <Include href="Buttons/BtNovamente.xml" itemID="4e9f0828-00000227" lastModified="1350321996"/>
           <Include href="Buttons/BtVerResposta.xml" itemID="4ea06365-000001e3" lastModified="1319722666"/>
@@ -52,19 +53,19 @@
           <Include href="Objetos/SprDipolo.xml" itemID="4ea6fa35-000002c3" lastModified="1320082110"/>
           <Include href="PointingArrow.xml" itemID="4ea985e6-00000338" lastModified="1320077849"/>
           <Include href="Pontuacao.xml" itemID="4e9f08c3-0000022f" lastModified="1319477910"/>
-          <Include href="SpritesCampos/Spr_Campo1.xml" itemID="4ea70750-000002d1" lastModified="1349288483"/>
-          <Include href="SpritesCampos/Spr_Campo2.xml" itemID="4ea7086a-000002da" lastModified="1320077988"/>
-          <Include href="SpritesCampos/Spr_Campo3.xml" itemID="4ea7087a-000002df" lastModified="1320078020"/>
-          <Include href="SpritesCampos/Spr_Campo4.xml" itemID="4ea70884-000002e4" lastModified="1320078121"/>
-          <Include href="SpritesCampos/Spr_Campo5.xml" itemID="4ea7088f-000002e9" lastModified="1320080474"/>
-          <Include href="SpritesCampos/Spr_Campo6.xml" itemID="4ea70897-000002ee" lastModified="1320078236"/>
-          <Include href="SpritesCampos/Spr_Campo7.xml" itemID="4ea7089c-000002f3" lastModified="1320078267"/>
-          <Include href="SpritesCampos/Spr_Campo8.xml" itemID="4ea708a0-000002f8" lastModified="1320078377"/>
-          <Include href="SpritesCampos/Spr_Campo9.xml" itemID="4ea708a4-000002fd" lastModified="1320078433"/>
-          <Include href="SpritesCampos/Spr_Campo10.xml" itemID="4ea708af-00000302" lastModified="1320078476"/>
-          <Include href="SpritesCampos/Spr_Campo11.xml" itemID="4ea708b5-00000307" lastModified="1320078498"/>
-          <Include href="SpritesCampos/Spr_Campo12.xml" itemID="4ea708ba-0000030c" lastModified="1320078525"/>
-          <Include href="SpritesCampos/Spr_Campo13.xml" itemID="4ea708be-00000311" lastModified="1320078560"/>
+          <Include href="SpritesCampos/Spr_Campo1.xml" itemID="4ea70750-000002d1" lastModified="1350495318"/>
+          <Include href="SpritesCampos/Spr_Campo2.xml" itemID="4ea7086a-000002da" lastModified="1350495386"/>
+          <Include href="SpritesCampos/Spr_Campo3.xml" itemID="4ea7087a-000002df" lastModified="1350495404"/>
+          <Include href="SpritesCampos/Spr_Campo4.xml" itemID="4ea70884-000002e4" lastModified="1350495411"/>
+          <Include href="SpritesCampos/Spr_Campo5.xml" itemID="4ea7088f-000002e9" lastModified="1350495418"/>
+          <Include href="SpritesCampos/Spr_Campo6.xml" itemID="4ea70897-000002ee" lastModified="1350495425"/>
+          <Include href="SpritesCampos/Spr_Campo7.xml" itemID="4ea7089c-000002f3" lastModified="1350495431"/>
+          <Include href="SpritesCampos/Spr_Campo8.xml" itemID="4ea708a0-000002f8" lastModified="1350495437"/>
+          <Include href="SpritesCampos/Spr_Campo9.xml" itemID="4ea708a4-000002fd" lastModified="1350495442"/>
+          <Include href="SpritesCampos/Spr_Campo10.xml" itemID="4ea708af-00000302" lastModified="1350495329"/>
+          <Include href="SpritesCampos/Spr_Campo11.xml" itemID="4ea708b5-00000307" lastModified="1350495346"/>
+          <Include href="SpritesCampos/Spr_Campo12.xml" itemID="4ea708ba-0000030c" lastModified="1350495358"/>
+          <Include href="SpritesCampos/Spr_Campo13.xml" itemID="4ea708be-00000311" lastModified="1350495396"/>
           <Include href="Superficies/FormasGrandes/Forma1.xml" itemID="4e9ec70c-000001d5" lastModified="1320082745"/>
           <Include href="Superficies/FormasGrandes/Forma2.xml" itemID="4e9ece4b-000001f8" lastModified="1320082745"/>
           <Include href="Superficies/FormasGrandes/Forma3.xml" itemID="4e9ece51-000001fd" lastModified="1320082745"/>
@@ -115,7 +116,7 @@
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Botões/Botões/BtAvaliar" name="btAvaliar" centerPoint3DX="138.5" centerPoint3DY="465.35">
+                                        <DOMSymbolInstance libraryItemName="Botões/Botões/Botões/BtAvaliar" name="btAvaliar" centerPoint3DX="138.5" centerPoint3DY="465.35">
                                              <matrix>
                                                   <Matrix tx="161.55" ty="465.4"/>
                                              </matrix>
@@ -123,12 +124,20 @@
                                                   <Point x="-23" y="-0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Botões/Botões/BtValNota" name="btnValNota" centerPoint3DX="234.2" centerPoint3DY="465.35">
+                                        <DOMSymbolInstance libraryItemName="Botões/Botões/Botões/BtValNota" name="btnValNota" centerPoint3DX="234.2" centerPoint3DY="465.35">
                                              <matrix>
                                                   <Matrix tx="257.25" ty="465.4"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="-23" y="-0.05"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtVerResposta" name="btVerResposta" centerPoint3DX="169.35" centerPoint3DY="427.3">
+                                             <matrix>
+                                                  <Matrix tx="139.35" ty="427.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="29.8" y="-0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
                                    </elements>
@@ -441,25 +450,25 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="510598" publishTime="1350325535"/>
-          <PublishItem publishSize="95545" publishTime="1350325190"/>
-          <PublishItem publishSize="95546" publishTime="1350325004"/>
-          <PublishItem publishSize="95546" publishTime="1350324941"/>
-          <PublishItem publishSize="95548" publishTime="1350324886"/>
-          <PublishItem publishSize="379937" publishTime="1350323529"/>
-          <PublishItem publishSize="95548" publishTime="1350323405"/>
-          <PublishItem publishSize="381103" publishTime="1350323238"/>
-          <PublishItem publishSize="381212" publishTime="1350323146"/>
-          <PublishItem publishSize="379346" publishTime="1350323001"/>
-          <PublishItem publishSize="379344" publishTime="1350322761"/>
-          <PublishItem publishSize="95533" publishTime="1350322704"/>
-          <PublishItem publishSize="381096" publishTime="1350322295"/>
-          <PublishItem publishSize="380929" publishTime="1350321738"/>
-          <PublishItem publishSize="95284" publishTime="1350321668"/>
-          <PublishItem publishSize="95286" publishTime="1350321234"/>
-          <PublishItem publishSize="380696" publishTime="1349290769"/>
-          <PublishItem publishSize="380722" publishTime="1349290599"/>
-          <PublishItem publishSize="380689" publishTime="1349290419"/>
-          <PublishItem publishSize="380699" publishTime="1349290317"/>
+          <PublishItem publishSize="514899" publishTime="1350498431"/>
+          <PublishItem publishSize="515122" publishTime="1350498315"/>
+          <PublishItem publishSize="515105" publishTime="1350498027"/>
+          <PublishItem publishSize="515113" publishTime="1350497910"/>
+          <PublishItem publishSize="514840" publishTime="1350497811"/>
+          <PublishItem publishSize="514759" publishTime="1350497632"/>
+          <PublishItem publishSize="514977" publishTime="1350497600"/>
+          <PublishItem publishSize="514933" publishTime="1350496266"/>
+          <PublishItem publishSize="514728" publishTime="1350496214"/>
+          <PublishItem publishSize="514787" publishTime="1350496165"/>
+          <PublishItem publishSize="514950" publishTime="1350496106"/>
+          <PublishItem publishSize="515027" publishTime="1350496002"/>
+          <PublishItem publishSize="514954" publishTime="1350495933"/>
+          <PublishItem publishSize="514979" publishTime="1350495459"/>
+          <PublishItem publishSize="514994" publishTime="1350495281"/>
+          <PublishItem publishSize="514977" publishTime="1350495140"/>
+          <PublishItem publishSize="514948" publishTime="1350494826"/>
+          <PublishItem publishSize="514799" publishTime="1350494807"/>
+          <PublishItem publishSize="514741" publishTime="1350494646"/>
+          <PublishItem publishSize="99517" publishTime="1350494533"/>
      </publishHistory>
 </DOMDocument>

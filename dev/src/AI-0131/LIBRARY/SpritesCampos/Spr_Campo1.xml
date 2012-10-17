@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo1" itemID="4ea70750-000002d1" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo1" lastModified="1349288483" isSpriteSubclass="true">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo1" itemID="4ea70750-000002d1" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo1" lastModified="1350495318" isSpriteSubclass="true">
   <timeline>
     <DOMTimeline name="Spr_Campo1">
       <layers>
@@ -6,12 +6,12 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMRectangleObject objectWidth="639.95" objectHeight="479.95" x="0" y="0" selected="true" lockFlag="true">
+                <DOMRectangleObject objectWidth="711.1" objectHeight="507.95" x="0" y="0" lockFlag="true">
                   <matrix>
                     <Matrix a="0.984405517578125" d="0.984405517578125" tx="5" ty="3.75"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="319.8" y="239.95"/>
+                    <Point x="355.35" y="253.95"/>
                   </transformationPoint>
                   <fill>
                     <SolidColor color="#FFFFFF"/>

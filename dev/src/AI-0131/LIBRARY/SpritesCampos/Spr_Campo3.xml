@@ -1,17 +1,17 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo3" itemID="4ea7087a-000002df" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo3" lastModified="1320078020" isSpriteSubclass="true">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo3" itemID="4ea7087a-000002df" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo3" lastModified="1350495404" isSpriteSubclass="true">
   <timeline>
     <DOMTimeline name="Spr_Campo3">
       <layers>
-        <DOMLayer name="Layer 2" color="#9933CC" locked="true" visible="false" layerType="mask">
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true" layerType="mask">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMRectangleObject objectWidth="639.95" objectHeight="479.95" x="0" y="0" selected="true" lockFlag="true">
+                <DOMRectangleObject objectWidth="711.1" objectHeight="507.95" x="0" y="0" selected="true" lockFlag="true">
                   <matrix>
                     <Matrix a="0.984405517578125" d="0.984405517578125" tx="5" ty="3.75"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="319.75" y="239.95"/>
+                    <Point x="354.85" y="253.95"/>
                   </transformationPoint>
                   <fill>
                     <SolidColor color="#FFFFFF"/>
@@ -21,13 +21,13 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Isolation Mode" color="#FF00FF" parentLayerIndex="0" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="Isolation Mode" color="#FF00FF" parentLayerIndex="0" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMGroup selected="true">
+                <DOMGroup>
                   <members>
-                    <DOMShape selected="true">
+                    <DOMShape>
                       <strokes>
                         <StrokeStyle index="1">
                           <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">

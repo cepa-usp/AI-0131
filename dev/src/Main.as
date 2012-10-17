@@ -69,7 +69,7 @@ package{
 		private var dipoloDrag:Dipolo;
 		
 		//Testes apenas:
-		private var testando:Boolean = false;
+		private var testando:Boolean = true;
 		private var drawCampo:DrawCampo;
 		
 		//Tela de aviso:
@@ -248,10 +248,11 @@ package{
 				//case 114://r
 					//reset();
 					//break;
-				//case 83: //S
-				//case 115://s
+				case 83: //S
+				case 115://s
 					//aval();
-					//break;
+					showHideAnswer();
+					break;
 				//case 87: //W
 				//case 119://w
 					//unmarshalObjects(mementoSerialized);
@@ -322,7 +323,7 @@ package{
 		}
 		
 		private var btNovamente:BtNovamente;
-		private var btVerResposta:BtVerResposta;
+		//private var btVerResposta:BtVerResposta;
 		
 		/**
 		 * Adiciona os botões à barra de menu e event listeners aos botões, inclusive o botão reset.
@@ -410,6 +411,7 @@ package{
 		{
 			//Cria um novo campo:
 			var sort:int = Math.ceil(Math.random() * 13);
+			//var sort:int = 5;
 			var classe:Class = getClass(sort);
 			field = new classe();
 			coord = new Coord(field.xmin, field.xmax, 700, field.ymin, field.ymax, 500);
@@ -420,6 +422,7 @@ package{
 				spr_field = null;
 			}
 			spr_field = field.image;
+			//spr_field = new Sprite(); //Sprite vazio
 			field_layer.addChild(spr_field);
 			field_layer.alpha = 0.3;
 			

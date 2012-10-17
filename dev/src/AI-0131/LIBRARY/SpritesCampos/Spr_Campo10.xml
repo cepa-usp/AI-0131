@@ -1,17 +1,17 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo10" itemID="4ea708af-00000302" linkageExportForAS="true" linkageIdentifier="Spr_Campo10" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo10" lastModified="1320078476" isSpriteSubclass="true">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo10" itemID="4ea708af-00000302" linkageExportForAS="true" linkageIdentifier="Spr_Campo10" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo10" lastModified="1350495329" isSpriteSubclass="true">
   <timeline>
     <DOMTimeline name="Spr_Campo10">
       <layers>
-        <DOMLayer name="Layer 2" color="#9933CC" locked="true" visible="false" layerType="mask">
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true" layerType="mask">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMRectangleObject objectWidth="639.95" objectHeight="479.95" x="0" y="0" selected="true" lockFlag="true">
+                <DOMRectangleObject objectWidth="711.1" objectHeight="507.95" x="0" y="0" selected="true" lockFlag="true">
                   <matrix>
                     <Matrix a="0.984405517578125" d="0.984405517578125" tx="5" ty="3.75"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="319.5" y="239.95"/>
+                    <Point x="355.05" y="253.95"/>
                   </transformationPoint>
                   <fill>
                     <SolidColor color="#FFFFFF"/>
@@ -21,7 +21,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#FF800A" parentLayerIndex="0" current="true" isSelected="true">
+        <DOMLayer name="Layer 3" color="#FF800A" parentLayerIndex="0">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -36,8 +36,8 @@
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge strokeStyle="1" edges="!-40 2401|12863 2401!-40 3001|12863 3001!-40 1801|12863 1801!-40 7802|12863 7802!-40 7202|12863 7202!-40 6602|12863 6602!-40 6002|12863 6002!-40 5402|12863 5402!-40 4802|12863 4802!-40 4201|12863 4201!-40 3601|12863 3601!-40 1201|12863
- 1201!-40 600|12863 600!-40 9003|12863 9003!-40 8402|12863 8402"/>
+                    <Edge strokeStyle="1" edges="!-40 8402|12863 8402!-40 9003|12863 9003!-40 600|12863 600!-40 1201|12863 1201!-40 3601|12863 3601!-40 4201|12863 4201!-40 4802|12863 4802!-40 5402|12863 5402!-40 6002|12863 6002!-40 6602|12863 6602!-40 7202|12863 7202!-40 7802|12863
+ 7802!-40 1801|12863 1801!-40 3001|12863 3001!-40 2401|12863 2401"/>
                   </edges>
                 </DOMShape>
                 <DOMGroup>
