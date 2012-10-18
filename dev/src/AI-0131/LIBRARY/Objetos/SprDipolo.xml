@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMGroup selected="true">
+                <DOMGroup>
                   <members>
                     <DOMRectangleObject objectWidth="37.75" objectHeight="18.25" x="-33.25" y="30.75" lockFlag="true" topLeftRadius="9.1" topRightRadius="9.1" bottomLeftRadius="9.1" bottomRightRadius="9.1">
                       <matrix>

@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Botões/Botões/Botões/BtAvaliar" itemID="507c4425-0000024d" linkageExportForAS="true" linkageClassName="BtAvaliar" lastModified="1350416573">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Botões/Botões/Botões/Botões/BtValNota" itemID="507c4425-0000024e" linkageExportForAS="true" linkageClassName="BtValNota" lastModified="1350584379">
   <timeline>
-    <DOMTimeline name="Botões/BtAvaliar">
+    <DOMTimeline name="Botões/BtValNota">
       <layers>
-        <DOMLayer name="Layer 1" color="#4FFF4F">
+        <DOMLayer name="Layer 2" color="#9933CC" locked="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <Actionscript>
@@ -12,7 +12,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -109,18 +109,18 @@
                         </DOMGroup>
                       </members>
                     </DOMGroup>
-                    <DOMStaticText left="54.4" width="35.2" height="12" autoExpand="true" includeOutlines="true" isSelectable="false">
+                    <DOMStaticText left="40.55" width="62.9" height="11.4" autoExpand="true" includeOutlines="true" isSelectable="false">
                       <matrix>
-                        <Matrix a="1.34432983398438" d="1.34432983398438" tx="-96.8" ty="-8.05"/>
+                        <Matrix a="1.34432983398438" d="1.34432983398438" tx="-96.8" ty="-6.25"/>
                       </matrix>
                       <transformationPoint>
-                        <Point x="71.95" y="8.75"/>
+                        <Point x="72" y="8.75"/>
                       </transformationPoint>
                       <textRuns>
                         <DOMTextRun>
-                          <characters>Avaliar</characters>
+                          <characters>Valendo nota</characters>
                           <textAttrs>
-                            <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" size="10.5" bitmapSize="210" face="Arial-BoldMT"/>
+                            <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" size="10" bitmapSize="200" face="Arial-BoldMT"/>
                           </textAttrs>
                         </DOMTextRun>
                       </textRuns>

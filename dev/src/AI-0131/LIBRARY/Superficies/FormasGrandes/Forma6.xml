@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Superficies/FormasGrandes/Forma6" itemID="4ea6e538-00000816" linkageExportForAS="true" linkageBaseClass="Forma" linkageClassName="Forma6" lastModified="1320082746" lastUniqueIdentifier="3" isSpriteSubclass="true">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Superficies/FormasGrandes/Forma6" itemID="4ea6e538-00000816" linkageExportForAS="true" linkageBaseClass="Forma" linkageClassName="Forma6" lastModified="1350585036" lastUniqueIdentifier="3" isSpriteSubclass="true">
   <timeline>
     <DOMTimeline name="Forma6">
       <layers>
-        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+        <DOMLayer name="Layer 2" color="#9933CC">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Condutor" selected="true" centerPoint3DX="124.5" centerPoint3DY="-194.55">
+                <DOMSymbolInstance libraryItemName="Condutor" centerPoint3DX="124.5" centerPoint3DY="-194.55">
                   <matrix>
                     <Matrix tx="66" ty="-162.3"/>
                   </matrix>
@@ -18,7 +18,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#FF800A">
+        <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -30,7 +30,7 @@
                           <Matrix a="0.35125732421875" d="0.35125732421875" tx="-32" ty="45"/>
                         </matrix>
                         <GradientEntry color="#FFFFFF" alpha="0.694117647058824" ratio="0"/>
-                        <GradientEntry color="#FFFFFF" alpha="0.4" ratio="1"/>
+                        <GradientEntry color="#FFFF00" alpha="0.6" ratio="1"/>
                       </RadialGradient>
                     </FillStyle>
                   </fills>
