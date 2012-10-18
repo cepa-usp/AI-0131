@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo1" itemID="4ea70750-000002d1" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo1" lastModified="1350495318" isSpriteSubclass="true">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SpritesCampos/Spr_Campo1" itemID="4ea70750-000002d1" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="Spr_Campo1" lastModified="1350502197" isSpriteSubclass="true">
   <timeline>
     <DOMTimeline name="Spr_Campo1">
       <layers>
-        <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true" layerType="mask">
+        <DOMLayer name="Layer 3" color="#FF800A" visible="false" layerType="mask">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -21,13 +21,13 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#FF0000" parentLayerIndex="0" autoNamed="false">
+        <DOMLayer name="Layer 2" color="#FF0000" parentLayerIndex="0" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMGroup>
+                <DOMGroup selected="true">
                   <members>
-                    <DOMShape>
+                    <DOMShape selected="true">
                       <strokes>
                         <StrokeStyle index="1">
                           <SolidStroke scaleMode="normal" caps="none" joints="miter" miterLimit="10">

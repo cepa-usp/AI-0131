@@ -1,0 +1,44 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Objetos/MoveForm" itemID="50101d67-000001fe" linkageExportForAS="true" linkageClassName="MoveForm" lastModified="1343233608">
+  <timeline>
+    <DOMTimeline name="MoveForm">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="2">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!-72 -112|0 -199!0 -199|72 -121!-108 -72|-200 -4!-200 -4|-195 0!-195 0|0 0!0 0|0 -199!-195 0|-108 72!108 76|200 0!200 0|0 0!0 0|0 195!0 195|4 200!4 200|72 108!0 195|-72 108!200 0|108 -68"/>
+                    <Edge cubics="!-195 0(;-195,0 0,0 0,0q-195 0 0 0);"/>
+                    <Edge cubics="!0 0(;0,0 200,0 200,0q0 0 200 0);"/>
+                    <Edge cubics="!0 0(;0,0 0,195 0,195q0 0 0 195);"/>
+                    <Edge cubics="!200 0(;200,0 108,76 108,76q200 0 108 76);"/>
+                    <Edge cubics="!200 0(;200,0 108,-68 108,-68q200 0 108 -68);"/>
+                    <Edge cubics="!-200 -4(;-200,-4 -195,0 -195,0q-200 -4 -195 0);"/>
+                    <Edge cubics="!-195 0(;-195,0 -108,72 -108,72q-195 0 -108 72);"/>
+                    <Edge cubics="!-200 -4(;-200,-4 -108,-72 -108,-72q-200 -4 -108 -72);"/>
+                    <Edge cubics="!4 200(;4,200 0,195 0,195q4 200 0 195);"/>
+                    <Edge cubics="!0 195(;0,195 -72,108 -72,108q0 195 -72 108);"/>
+                    <Edge cubics="!4 200(;4,200 72,108 72,108q4 200 72 108);"/>
+                    <Edge cubics="!0 0(;0,0 0,-199 0,-199q0 0 0 -199);"/>
+                    <Edge cubics="!-72 -112(;-72,-112 0,-199 0,-199q-72 -112 0 -199);"/>
+                    <Edge cubics="!0 -203(;0,-203 72,-121 72,-121q0 -203 72 -121);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

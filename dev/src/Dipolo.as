@@ -5,6 +5,7 @@ package
 	import flash.events.MouseEvent;
 	import flash.filters.GlowFilter;
 	import flash.geom.Point;
+	import flash.ui.Mouse;
 	
 	/**
 	 * ...
@@ -18,14 +19,58 @@ package
 		private var antAngle:Number;
 		private var ant_angle;
 		
+		private var movingSpr:Sprite;
+		private var rotatingSpr:Sprite;
+		
 		public var locked:Boolean = false;
 		
-		public function Dipolo() 
+		public function Dipolo(movingSpr:Sprite, rotatingSpr:Sprite) 
 		{
+			this.movingSpr = movingSpr;
+			this.rotatingSpr = rotatingSpr;
+			
+			this.mouseChildren = false;
+			
 			this.addChild(sprDipolo);
 			this.graphics.beginFill(0x00FF00, 0);
 			this.graphics.drawCircle(0, 0, 12);
 			this.addEventListener(MouseEvent.MOUSE_DOWN, initDrag);
+			this.addEventListener(MouseEvent.MOUSE_OVER, mouseOver);
+		}
+		
+		private function mouseOver(e:MouseEvent):void 
+		{
+			if (locked) return;
+			if (rotatingSpr.visible || movingSpr.visible) return;
+			
+			Mouse.hide();
+			stage.addEventListener(MouseEvent.MOUSE_MOVE, movingMouse);
+			stage.addEventListener(MouseEvent.MOUSE_OUT, outMouse);
+		}
+		
+		private function movingMouse(e:MouseEvent):void 
+		{
+			if (Point.distance(new Point(this.mouseX, this.mouseY), new Point(0,0)) <= 10) {
+				rotatingSpr.visible = false;
+				movingSpr.x = stage.mouseX;
+				movingSpr.y = stage.mouseY;
+				movingSpr.visible = true;
+			}else {
+				movingSpr.visible = false;
+				rotatingSpr.x = stage.mouseX;
+				rotatingSpr.y = stage.mouseY;
+				rotatingSpr.rotation = Math.atan2(stage.mouseY - this.y, stage.mouseX - this.x) * 180/Math.PI + 90;
+				rotatingSpr.visible = true;
+			}
+		}
+		
+		private function outMouse(e:MouseEvent):void 
+		{
+			stage.removeEventListener(MouseEvent.MOUSE_MOVE, movingMouse);
+			stage.removeEventListener(MouseEvent.MOUSE_OUT, outMouse);
+			rotatingSpr.visible = false;
+			movingSpr.visible = false;
+			Mouse.show();
 		}
 		
 		private var posClick:Point;
@@ -34,7 +79,8 @@ package
 			if(!locked){
 				posClick = new Point(stage.mouseX, stage.mouseY);
 				stage.addEventListener(MouseEvent.MOUSE_UP, verifySelection);
-				if (Point.distance(new Point(this.mouseX, this.mouseY), new Point(0, 0)) < 15) {
+				this.parent.setChildIndex(this, this.parent.numChildren - 1);
+				if (Point.distance(new Point(this.mouseX, this.mouseY), new Point(0, 0)) < 10) {
 					this.startDrag();
 					stage.addEventListener(MouseEvent.MOUSE_UP, stopDragging);
 				}else {

@@ -1,19 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Objetos/SprDipolo" itemID="4ea6fa35-000002c3" linkageExportForAS="true" linkageClassName="SprDipolo" lastModified="1320082110">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Objetos/SprDipolo" itemID="4ea6fa35-000002c3" linkageExportForAS="true" linkageClassName="SprDipolo" lastModified="1350568452">
   <timeline>
     <DOMTimeline name="SprDipolo">
       <layers>
-        <DOMLayer name="Layer 3" color="#FF800A">
-          <frames>
-            <DOMFrame index="0" keyMode="9728">
-              <elements/>
-            </DOMFrame>
-          </frames>
-        </DOMLayer>
-        <DOMLayer name="Layer 4" color="#FF4FFF" current="true" isSelected="true">
+        <DOMLayer name="Layer 4" color="#FF4FFF" locked="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMGroup>
+                <DOMGroup selected="true">
                   <members>
                     <DOMRectangleObject objectWidth="37.75" objectHeight="18.25" x="-33.25" y="30.75" lockFlag="true" topLeftRadius="9.1" topRightRadius="9.1" bottomLeftRadius="9.1" bottomRightRadius="9.1">
                       <matrix>
@@ -125,6 +118,24 @@
                     </DOMGroup>
                   </members>
                 </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CCCCCC" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!212 -213[300 -125 300 0!300 0[300 124 212 212!212 212[124 300 0 300!0 300[-124 300 -212 212!-212 212[-300 124 -300 0!-300 0[-300 -125 -212 -213!-212 -213[-124 -300 0 -300!0 -300[124 -300 212 -213"/>
+                  </edges>
+                </DOMShape>
               </elements>
             </DOMFrame>
           </frames>

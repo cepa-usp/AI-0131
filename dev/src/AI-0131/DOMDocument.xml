@@ -50,10 +50,12 @@
           <Include href="ContainerNota.xml" itemID="4ea1ca7a-00000264" lastModified="1319478658"/>
           <Include href="Nota.xml" itemID="4e9f19bb-00000247" lastModified="1319478628"/>
           <Include href="NotaNova.xml" itemID="4ea6ed03-0000020a" lastModified="1320079689"/>
-          <Include href="Objetos/SprDipolo.xml" itemID="4ea6fa35-000002c3" lastModified="1320082110"/>
+          <Include href="Objetos/MoveForm.xml" itemID="50101d67-000001fe" lastModified="1343233608"/>
+          <Include href="Objetos/RotateForm.xml" itemID="508002e3-0000039e" lastModified="1350567434"/>
+          <Include href="Objetos/SprDipolo.xml" itemID="4ea6fa35-000002c3" lastModified="1350568452"/>
           <Include href="PointingArrow.xml" itemID="4ea985e6-00000338" lastModified="1320077849"/>
           <Include href="Pontuacao.xml" itemID="4e9f08c3-0000022f" lastModified="1319477910"/>
-          <Include href="SpritesCampos/Spr_Campo1.xml" itemID="4ea70750-000002d1" lastModified="1350495318"/>
+          <Include href="SpritesCampos/Spr_Campo1.xml" itemID="4ea70750-000002d1" lastModified="1350502197"/>
           <Include href="SpritesCampos/Spr_Campo2.xml" itemID="4ea7086a-000002da" lastModified="1350495386"/>
           <Include href="SpritesCampos/Spr_Campo3.xml" itemID="4ea7087a-000002df" lastModified="1350495404"/>
           <Include href="SpritesCampos/Spr_Campo4.xml" itemID="4ea70884-000002e4" lastModified="1350495411"/>
@@ -450,25 +452,25 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="514899" publishTime="1350498431"/>
-          <PublishItem publishSize="515122" publishTime="1350498315"/>
-          <PublishItem publishSize="515105" publishTime="1350498027"/>
-          <PublishItem publishSize="515113" publishTime="1350497910"/>
-          <PublishItem publishSize="514840" publishTime="1350497811"/>
-          <PublishItem publishSize="514759" publishTime="1350497632"/>
-          <PublishItem publishSize="514977" publishTime="1350497600"/>
-          <PublishItem publishSize="514933" publishTime="1350496266"/>
-          <PublishItem publishSize="514728" publishTime="1350496214"/>
-          <PublishItem publishSize="514787" publishTime="1350496165"/>
-          <PublishItem publishSize="514950" publishTime="1350496106"/>
-          <PublishItem publishSize="515027" publishTime="1350496002"/>
-          <PublishItem publishSize="514954" publishTime="1350495933"/>
-          <PublishItem publishSize="514979" publishTime="1350495459"/>
-          <PublishItem publishSize="514994" publishTime="1350495281"/>
-          <PublishItem publishSize="514977" publishTime="1350495140"/>
-          <PublishItem publishSize="514948" publishTime="1350494826"/>
-          <PublishItem publishSize="514799" publishTime="1350494807"/>
-          <PublishItem publishSize="514741" publishTime="1350494646"/>
-          <PublishItem publishSize="99517" publishTime="1350494533"/>
+          <PublishItem publishSize="515487" publishTime="1350568375"/>
+          <PublishItem publishSize="515434" publishTime="1350568295"/>
+          <PublishItem publishSize="515690" publishTime="1350568260"/>
+          <PublishItem publishSize="515412" publishTime="1350568220"/>
+          <PublishItem publishSize="515748" publishTime="1350568080"/>
+          <PublishItem publishSize="515724" publishTime="1350568019"/>
+          <PublishItem publishSize="515721" publishTime="1350567975"/>
+          <PublishItem publishSize="515708" publishTime="1350567921"/>
+          <PublishItem publishSize="515739" publishTime="1350567861"/>
+          <PublishItem publishSize="515403" publishTime="1350567803"/>
+          <PublishItem publishSize="514965" publishTime="1350565691"/>
+          <PublishItem publishSize="515112" publishTime="1350565664"/>
+          <PublishItem publishSize="514955" publishTime="1350565421"/>
+          <PublishItem publishSize="515136" publishTime="1350565264"/>
+          <PublishItem publishSize="514889" publishTime="1350564973"/>
+          <PublishItem publishSize="515129" publishTime="1350564899"/>
+          <PublishItem publishSize="515169" publishTime="1350564817"/>
+          <PublishItem publishSize="99625" publishTime="1350564778"/>
+          <PublishItem publishSize="514932" publishTime="1350564658"/>
+          <PublishItem publishSize="514836" publishTime="1350505143"/>
      </publishHistory>
 </DOMDocument>

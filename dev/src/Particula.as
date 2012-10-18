@@ -59,9 +59,13 @@ package
 		private var faderTimer:Timer;
 		private function timerComplete(e:TimerEvent):void 
 		{
+			/*
 			faderTimer = new Timer(100);
 			faderTimer.addEventListener(TimerEvent.TIMER, removeParticula);
 			faderTimer.start();
+			*/
+			stopMoving();
+			removeParticula(null);
 		}
 		
 		

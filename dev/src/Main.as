@@ -69,7 +69,7 @@ package{
 		private var dipoloDrag:Dipolo;
 		
 		//Testes apenas:
-		private var testando:Boolean = true;
+		private var testando:Boolean = false;
 		private var drawCampo:DrawCampo;
 		
 		//Tela de aviso:
@@ -79,6 +79,9 @@ package{
 		private var nota:NotaNova;
 		private var txPontos:TextField = new TextField();
 		private var txNota:TextField = new TextField();
+		
+		private var rotSpr:RotateForm;
+		private var movSpr:MoveForm;
 		
 		public function Main() 
 		{
@@ -311,6 +314,16 @@ package{
 			stage.setChildIndex(field_layer, 0);
 			stage.setChildIndex(background_layer, 0);
 			
+			rotSpr = new RotateForm();
+			movSpr = new MoveForm();
+			rotSpr.visible = false;
+			movSpr.visible = false;
+			rotSpr.mouseEnabled = false;
+			movSpr.mouseEnabled = false;
+			
+			stage.addChild(rotSpr);
+			stage.addChild(movSpr);
+			
 			warningScreen = new WarningScreen();
 			addChild(warningScreen);
 			
@@ -365,7 +378,7 @@ package{
 		 */
 		private function initAddDipolo(e:MouseEvent):void 
 		{
-			dipoloDrag = new Dipolo();
+			dipoloDrag = new Dipolo(movSpr, rotSpr);
 			dipoloDrag.x = stage.mouseX;
 			dipoloDrag.y = stage.mouseY;
 			dipolo_layer.addChild(dipoloDrag);
