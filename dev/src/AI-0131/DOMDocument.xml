@@ -1,14 +1,10 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000066" width="700" height="500" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" viewAngle3D="59.3117946966027" vanishingPoint3DX="320" vanishingPoint3DY="240" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true">
      <folders>
           <DOMFolderItem name="Base" itemID="4cafb00f-000001ee"/>
-          <DOMFolderItem name="Botões" itemID="506c7f76-000003cd" isExpanded="true"/>
-          <DOMFolderItem name="Botões/Botões" itemID="507ee91c-000002bb" isExpanded="true"/>
-          <DOMFolderItem name="Botões/Botões/Botões" itemID="5080462d-0000008e" isExpanded="true"/>
-          <DOMFolderItem name="Botões/Botões/Botões/Botões" itemID="50804987-0000013a"/>
           <DOMFolderItem name="Buttons" itemID="4d3b4b7d-000004c3" isExpanded="true"/>
           <DOMFolderItem name="JPGCampos" itemID="4ea849aa-000002c5"/>
           <DOMFolderItem name="Objetos" itemID="4ea84a11-000002db" isExpanded="true"/>
-          <DOMFolderItem name="SpritesCampos" itemID="4ea708e8-00000315"/>
+          <DOMFolderItem name="SpritesCampos" itemID="4ea708e8-00000315" isExpanded="true"/>
           <DOMFolderItem name="Superficies" itemID="4ea94a2a-00000201" isExpanded="true"/>
           <DOMFolderItem name="Superficies/FormasGrandes" itemID="4ea94a45-00000245" isExpanded="true"/>
           <DOMFolderItem name="Telas" itemID="4ea849d2-000002d7" isExpanded="true"/>
@@ -39,17 +35,14 @@
           <Include href="Background.xml" itemID="4ea6b348-000007c9" lastModified="1350495230"/>
           <Include href="Base/Board.xml" itemIcon="1" loadImmediate="false" itemID="4cae755c-000000d7" lastModified="1350497785"/>
           <Include href="Base/Ondas.xml" itemIcon="1" loadImmediate="false" itemID="4cafa98e-0000004f" lastModified="1298036295"/>
-          <Include href="Botões/Botões/Botões/Botões-BtTentar.xml" itemIcon="0" loadImmediate="false" itemID="50804987-00000141" lastModified="1350584810"/>
-          <Include href="Botões/Botões/Botões/Botões/BtAvaliar.xml" itemIcon="0" itemID="507c4425-0000024d" lastModified="1350584807"/>
-          <Include href="Botões/Botões/Botões/Botões/BtValNota.xml" itemID="507c4425-0000024e" lastModified="1350584379"/>
-          <Include href="Buttons/BtDel.xml" itemID="4ea1cc98-00000269" lastModified="1319722706"/>
-          <Include href="Buttons/BtNovamente.xml" itemID="4e9f0828-00000227" lastModified="1350321996"/>
-          <Include href="Buttons/BtOcuResposta.xml" itemIcon="0" itemID="508048d5-0000012a" lastModified="1350584533"/>
+          <Include href="Buttons/Botões-BtTentar.xml" itemIcon="0" loadImmediate="false" itemID="50804987-00000141" lastModified="1350584810"/>
+          <Include href="Buttons/Botões/BtAvaliar.xml" itemIcon="0" itemID="507c4425-0000024d" lastModified="1350584807"/>
+          <Include href="Buttons/Botões/BtValNota.xml" itemIcon="0" itemID="507c4425-0000024e" lastModified="1350585841"/>
+          <Include href="Buttons/BtDel.xml" itemIcon="0" itemID="4ea1cc98-00000269" lastModified="1350585813"/>
+          <Include href="Buttons/BtOcuResposta.xml" itemIcon="0" itemID="508048d5-0000012a" lastModified="1350585813"/>
           <Include href="Buttons/BtVerResposta.xml" itemIcon="0" loadImmediate="false" itemID="508048db-0000012b" lastModified="1350584586"/>
           <Include href="Buttons/CloseButton.xml" itemIcon="0" loadImmediate="false" itemID="4ce0455e-000009c0" lastModified="1298036208"/>
           <Include href="Buttons/DipoloBtn.xml" itemIcon="0" itemID="4ea84a3a-000002e1" lastModified="1320080367"/>
-          <Include href="Buttons/VerExerc.xml" itemID="4ea1ce7c-00000273" lastModified="1350584439"/>
-          <Include href="Buttons/VerResposta.xml" itemID="4ea1ce70-0000026f" lastModified="1319226992"/>
           <Include href="Condutor.xml" itemID="4eaaa60a-0000076c" lastModified="1320078868"/>
           <Include href="ContainerNota.xml" itemID="4ea1ca7a-00000264" lastModified="1319478658"/>
           <Include href="Nota.xml" itemID="4e9f19bb-00000247" lastModified="1319478628"/>
@@ -59,7 +52,7 @@
           <Include href="Objetos/SprDipolo.xml" itemID="4ea6fa35-000002c3" lastModified="1350568452"/>
           <Include href="PointingArrow.xml" itemID="4ea985e6-00000338" lastModified="1320077849"/>
           <Include href="Pontuacao.xml" itemID="4e9f08c3-0000022f" lastModified="1319477910"/>
-          <Include href="SpritesCampos/Spr_Campo1.xml" itemID="4ea70750-000002d1" lastModified="1350583898"/>
+          <Include href="SpritesCampos/Spr_Campo1.xml" itemID="4ea70750-000002d1" lastModified="1350587318"/>
           <Include href="SpritesCampos/Spr_Campo2.xml" itemID="4ea7086a-000002da" lastModified="1350583920"/>
           <Include href="SpritesCampos/Spr_Campo3.xml" itemID="4ea7087a-000002df" lastModified="1350583939"/>
           <Include href="SpritesCampos/Spr_Campo4.xml" itemID="4ea70884-000002e4" lastModified="1350583952"/>
@@ -106,7 +99,7 @@
                                                   <Edge fillStyle0="1" edges="!264 9485[264 9734 508 9734!508 9734|8500 9734!8500 9734[8745 9734 8745 9485!8745 9485|8745 9122!8745 9122[8745 8874 8500 8874!8500 8874|508 8874!508 8874[264 8874 264 9122!264 9122|264 9485"/>
                                              </edges>
                                         </DOMShape>
-                                        <DOMSymbolInstance libraryItemName="Botões/Botões/Botões/Botões-BtTentar" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="Buttons/Botões-BtTentar" name="btNovamente" symbolType="button">
                                              <matrix>
                                                   <Matrix tx="161.75" ty="465.55"/>
                                              </matrix>
@@ -122,7 +115,7 @@
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Buttons/BtDel" name="btDel" centerPoint3DX="95.35" centerPoint3DY="465.8">
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtDel" name="btDel" symbolType="button">
                                              <matrix>
                                                   <Matrix a="1.239990234375" d="1.239990234375" tx="95.35" ty="465.8"/>
                                              </matrix>
@@ -130,33 +123,33 @@
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Botões/Botões/Botões/Botões/BtAvaliar" name="btAvaliar" centerPoint3DX="138.5" centerPoint3DY="465.35">
+                                        <DOMSymbolInstance libraryItemName="Buttons/Botões/BtAvaliar" name="btAvaliar" symbolType="button">
                                              <matrix>
-                                                  <Matrix tx="161.55" ty="465.4"/>
+                                                  <Matrix tx="161.75" ty="465.55"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="-23" y="-0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Botões/Botões/Botões/Botões/BtValNota" name="btnValNota" centerPoint3DX="230.9" centerPoint3DY="465.35">
+                                        <DOMSymbolInstance libraryItemName="Buttons/Botões/BtValNota" name="btnValNota" symbolType="button">
                                              <matrix>
-                                                  <Matrix tx="253.95" ty="465.4"/>
+                                                  <Matrix tx="386.35" ty="465.6"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="-23" y="-0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Buttons/BtOcuResposta" name="btVerResposta" centerPoint3DX="373.3" centerPoint3DY="465.55">
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtOcuResposta" name="btOcultar" symbolType="button">
                                              <matrix>
-                                                  <Matrix tx="343.3" ty="465.6"/>
+                                                  <Matrix tx="251.3" ty="465.6"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="29.8" y="-0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Buttons/BtVerResposta" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtVerResposta" name="btVer" symbolType="button">
                                              <matrix>
-                                                  <Matrix tx="343.3" ty="465.55"/>
+                                                  <Matrix tx="251.3" ty="465.6"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point/>
@@ -472,6 +465,19 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="516893" publishTime="1350588767"/>
+          <PublishItem publishSize="517162" publishTime="1350588734"/>
+          <PublishItem publishSize="517153" publishTime="1350587338"/>
+          <PublishItem publishSize="516888" publishTime="1350587270"/>
+          <PublishItem publishSize="517166" publishTime="1350587216"/>
+          <PublishItem publishSize="516829" publishTime="1350587048"/>
+          <PublishItem publishSize="516997" publishTime="1350586924"/>
+          <PublishItem publishSize="517322" publishTime="1350586846"/>
+          <PublishItem publishSize="101658" publishTime="1350586810"/>
+          <PublishItem publishSize="517301" publishTime="1350585925"/>
+          <PublishItem publishSize="101658" publishTime="1350585884"/>
+          <PublishItem publishSize="517769" publishTime="1350585777"/>
+          <PublishItem publishSize="102399" publishTime="1350585622"/>
           <PublishItem publishSize="515487" publishTime="1350568375"/>
           <PublishItem publishSize="515434" publishTime="1350568295"/>
           <PublishItem publishSize="515690" publishTime="1350568260"/>
@@ -479,18 +485,5 @@
           <PublishItem publishSize="515748" publishTime="1350568080"/>
           <PublishItem publishSize="515724" publishTime="1350568019"/>
           <PublishItem publishSize="515721" publishTime="1350567975"/>
-          <PublishItem publishSize="515708" publishTime="1350567921"/>
-          <PublishItem publishSize="515739" publishTime="1350567861"/>
-          <PublishItem publishSize="515403" publishTime="1350567803"/>
-          <PublishItem publishSize="514965" publishTime="1350565691"/>
-          <PublishItem publishSize="515112" publishTime="1350565664"/>
-          <PublishItem publishSize="514955" publishTime="1350565421"/>
-          <PublishItem publishSize="515136" publishTime="1350565264"/>
-          <PublishItem publishSize="514889" publishTime="1350564973"/>
-          <PublishItem publishSize="515129" publishTime="1350564899"/>
-          <PublishItem publishSize="515169" publishTime="1350564817"/>
-          <PublishItem publishSize="99625" publishTime="1350564778"/>
-          <PublishItem publishSize="514932" publishTime="1350564658"/>
-          <PublishItem publishSize="514836" publishTime="1350505143"/>
      </publishHistory>
 </DOMDocument>

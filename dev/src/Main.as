@@ -17,6 +17,7 @@ package{
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
 	import flash.external.ExternalInterface;
+	import flash.filters.ColorMatrixFilter;
 	import flash.filters.GlowFilter;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
@@ -335,41 +336,68 @@ package{
 			background_layer.addChild(new Background());
 		}
 		
-		private var btNovamente:BtNovamente;
-		//private var btVerResposta:BtVerResposta;
-		
 		/**
 		 * Adiciona os botões à barra de menu e event listeners aos botões, inclusive o botão reset.
 		 */
 		private function addButtons():void 
 		{
+			var ttAddDipolo:ToolTip = new ToolTip(dipoloBtn, "Adicionar dipolo elétrico", 12, 0.8, 200, 0.6, 0.6);
 			var ttDel:ToolTip = new ToolTip(btDel, "Remover selecionados", 12, 0.8, 200, 0.6, 0.6);
 			var ttAvaliar:ToolTip = new ToolTip(btAvaliar, "Avaliar exercício", 12, 0.8, 200, 0.6, 0.6);
-			var ttAddDipolo:ToolTip = new ToolTip(dipoloBtn, "Adicionar dipolo elétrico", 12, 0.8, 200, 0.6, 0.6);
+			var ttNovamente:ToolTip = new ToolTip(btNovamente, "Novo exercício", 12, 0.8, 200, 0.6, 0.6);
+			var ttValendo:ToolTip = new ToolTip(btnValNota, "Exercício valendo nota", 12, 0.8, 200, 0.6, 0.6);
+			var ttVer:ToolTip = new ToolTip(btVer, "Ver respostas", 12, 0.8, 200, 0.6, 0.6);
+			var ttOcultar:ToolTip = new ToolTip(btOcultar, "Ocultar respostas", 12, 0.8, 200, 0.6, 0.6);
+			
+			stage.addChild(ttAddDipolo);
 			stage.addChild(ttDel);
 			stage.addChild(ttAvaliar);
-			stage.addChild(ttAddDipolo);
-			btDel.buttonMode = true;
-			btAvaliar.buttonMode = true;
-			btnValNota.buttonMode = true;
-			
-			btDel.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btDel.gotoAndStop(2) } );
-			btDel.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btDel.gotoAndStop(1) } );
-			btAvaliar.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent):void { btAvaliar.gotoAndStop(2) } );
-			btAvaliar.addEventListener(MouseEvent.MOUSE_OUT, function(e:MouseEvent):void { btAvaliar.gotoAndStop(1) } );
-			
-			btnValNota.addEventListener(MouseEvent.MOUSE_DOWN, onValendoNotaClick);
+			stage.addChild(ttNovamente);
+			stage.addChild(ttValendo);
+			stage.addChild(ttVer);
+			stage.addChild(ttOcultar);
 			
 			dipoloBtn.addEventListener(MouseEvent.MOUSE_DOWN, initAddDipolo);
 			btDel.addEventListener(MouseEvent.MOUSE_DOWN, deleteSelected);
 			btAvaliar.addEventListener(MouseEvent.MOUSE_DOWN, aval);
+			btNovamente.addEventListener(MouseEvent.CLICK, reset);
+			btnValNota.addEventListener(MouseEvent.CLICK, onValendoNotaClick);
+			btVer.addEventListener(MouseEvent.CLICK, showHideAnswer);
+			btOcultar.addEventListener(MouseEvent.CLICK, showHideAnswer);
+			
+			btOcultar.visible = false;
+			btNovamente.visible = false;
+			lock(btVer);
+		}
+		
+		/*
+		 * Filtro de conversão para tons de cinza.
+		 */
+		protected const GRAYSCALE_FILTER:ColorMatrixFilter = new ColorMatrixFilter([
+			0.2225, 0.7169, 0.0606, 0, 0,
+			0.2225, 0.7169, 0.0606, 0, 0,
+			0.2225, 0.7169, 0.0606, 0, 0,
+			0.0000, 0.0000, 0.0000, 1, 0
+		]);
+		
+		private function lock(bt:*):void 
+		{
+			bt.mouseEnabled = false;
+			bt.alpha = 0.5;
+			bt.filters = [GRAYSCALE_FILTER];
+		}
+		
+		private function unlock(bt:*):void 
+		{
+			bt.mouseEnabled = true;
+			bt.alpha = 1;
+			bt.filters = [];
 		}
 		
 		private function onValendoNotaClick(e:MouseEvent):void 
 		{
 			valendoNota = true; 
-			btnValNota.alpha = 0.5; 
-			btnValNota.buttonMode = false;
+			lock(btnValNota);
 			eval.currentPlayMode = AIConstants.PLAYMODE_EVALUATE;
 		}
 		
@@ -424,7 +452,7 @@ package{
 		{
 			//Cria um novo campo:
 			var sort:int = Math.ceil(Math.random() * 13);
-			//var sort:int = 5;
+			//sort = 1;
 			var classe:Class = getClass(sort);
 			field = new classe();
 			coord = new Coord(field.xmin, field.xmax, 700, field.ymin, field.ymax, 500);
@@ -531,14 +559,24 @@ package{
 			dipolosAnswer.splice(0, dipolosAnswer.length);
 			
 			configAi();
+			
 			answer_layer.alpha = 0;
-			btAvaliar.visible = true;
 			dipolo_layer.alpha = 1;
 			answer_layer.alpha = 0;
-			btDel.mouseEnabled = true;
-			btDel.alpha = 1;
-			dipoloBtn.mouseEnabled = true;
-			dipoloBtn.alpha = 1;
+			
+			btAvaliar.visible = true;
+			btNovamente.visible = false;
+			btVer.visible = true;
+			btOcultar.visible = false;
+			lock(btVer);
+			
+			unlock(btDel);
+			unlock(dipoloBtn);
+			
+			//btDel.mouseEnabled = true;
+			//btDel.alpha = 1;
+			//dipoloBtn.mouseEnabled = true;
+			//dipoloBtn.alpha = 1;
 			
 			scoreAtual = 0;
 			txPontos.text = "0,0";
@@ -561,10 +599,8 @@ package{
 			if (dipolos.length < 5) {
 				warningScreen.openScreen();
 			}else {
-				btDel.mouseEnabled = false;
-				btDel.alpha = 0.5;
-				dipoloBtn.mouseEnabled = false;
-				dipoloBtn.alpha = 0.5;
+				lock(btDel);
+				lock(dipoloBtn);
 				
 				for each (var item2:DipoloAnswer in dipolosAnswer) 
 				{
@@ -577,9 +613,7 @@ package{
 				
 				var play:Play131 = new Play131()
 				
-				
-				
-				scoreAtual  0;
+				scoreAtual = 0;
 				for each (var item:Dipolo in dipolos) 
 				{
 					var dipAnswer:DipoloAnswer = new DipoloAnswer(field, coord);
@@ -599,6 +633,8 @@ package{
 				txPontos.text = scoreAtual.toFixed(1).replace(".",",");
 				
 				btAvaliar.visible = false;
+				btNovamente.visible = true;
+				unlock(btVer);
 				
 /*				if(valendoNota && ExternalInterface.available){
 					if (scoreAtual > score) {
@@ -621,15 +657,15 @@ package{
 				if (alphaTweenExe.isPlaying) alphaTweenExe.stop();
 			}
 			
-			if (btVerResposta.verresp.visible) {
-				btVerResposta.verexerc.visible = true;
-				btVerResposta.verresp.visible = false;
+			if (btVer.visible) {
+				btVer.visible = false;
+				btOcultar.visible = true;
 				alphaTweenAnswer = new Tween(answer_layer, "alpha", None.easeNone, answer_layer.alpha, 1, 0.5, true);
 				alphaTweenExe = new Tween(dipolo_layer, "alpha", None.easeNone, dipolo_layer.alpha, 0, 0.5, true);
 			}
 			else {
-				btVerResposta.verexerc.visible = false;
-				btVerResposta.verresp.visible = true;
+				btVer.visible = true;
+				btOcultar.visible = false;
 				alphaTweenAnswer = new Tween(answer_layer, "alpha", None.easeNone, answer_layer.alpha, 0, 0.5, true);
 				alphaTweenExe = new Tween(dipolo_layer, "alpha", None.easeNone, dipolo_layer.alpha, 1, 0.5, true);
 			}

@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/BtDel" itemID="4ea1cc98-00000269" linkageExportForAS="true" linkageClassName="BtDel" lastModified="1319722706">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/BtDel" itemID="4ea1cc98-00000269" linkageExportForAS="true" linkageClassName="BtDel" symbolType="button" lastModified="1350585813">
   <timeline>
     <DOMTimeline name="BtDel">
       <layers>

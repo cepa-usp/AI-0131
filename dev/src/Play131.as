@@ -34,17 +34,19 @@ package
 		{
 			var o:Object = new Object();
 			o.score = this.score;
+			o.playMode = _playMode;
 			return o;
 		}
 		
 		public function bind(obj:Object):void 
 		{
 			this.score = obj.score;
+			this._playMode = obj.playMode;
 		}
 		
 		public function getScore():Number 
 		{
-				return score;
+			return score;
 		}
 		
 		public function setScore(score:Number):void {
