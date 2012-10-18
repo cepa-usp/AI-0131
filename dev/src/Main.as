@@ -1,4 +1,4 @@
-package{
+﻿package{
 	import cepa.ai.AI;
 	import cepa.ai.AIConstants;
 	import cepa.ai.AIInstance;
@@ -70,7 +70,7 @@ package{
 		private var dipoloDrag:Dipolo;
 		
 		//Testes apenas:
-		private var testando:Boolean = false;
+		private var testando:Boolean = true;
 		private var drawCampo:DrawCampo;
 		
 		//Tela de aviso:
@@ -452,7 +452,7 @@ package{
 		{
 			//Cria um novo campo:
 			var sort:int = Math.ceil(Math.random() * 13);
-			//sort = 1;
+			sort = 5;
 			var classe:Class = getClass(sort);
 			field = new classe();
 			coord = new Coord(field.xmin, field.xmax, 700, field.ymin, field.ymax, 500);
