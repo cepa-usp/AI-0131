@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/BtVerResposta" itemID="508048db-0000012b" symbolType="button" lastModified="1350584586" lastUniqueIdentifier="4">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/BtVerResposta" itemID="508048db-0000012b" symbolType="button" lastModified="1350648914" lastUniqueIdentifier="4">
   <timeline>
     <DOMTimeline name="BtVerResposta" currentFrame="1">
       <layers>
@@ -26,9 +26,9 @@
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMStaticText left="32.5" width="79" height="14.5" autoExpand="true" isSelectable="false">
+                <DOMStaticText left="31.05" width="81.9" height="15.05" autoExpand="true" isSelectable="false">
                   <matrix>
-                    <Matrix a="1.10710144042969" d="1.10488891601563" tx="-56.05" ty="-7.55"/>
+                    <Matrix a="1.10710144042969" d="1.10488891601563" tx="-56.05" ty="-8"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="72" y="8.6"/>
@@ -37,7 +37,7 @@
                     <DOMTextRun>
                       <characters>Ver resposta</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" size="13" bitmapSize="260" face="Arial-BoldMT"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" size="13.5" bitmapSize="270" face="Arial-BoldMT"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Botões/Botões/BtAvaliar" itemID="507c4425-0000024d" linkageExportForAS="true" linkageClassName="BtAvaliar" symbolType="button" lastModified="1350584807">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Botões/Botões/Botões/BtAvaliar" itemID="507c4425-0000024d" linkageExportForAS="true" linkageClassName="BtAvaliar" symbolType="button" lastModified="1350648837">
   <timeline>
-    <DOMTimeline name="Botões/BtAvaliar">
+    <DOMTimeline name="Botões/BtAvaliar" currentFrame="1">
       <layers>
-        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+        <DOMLayer name="Layer 1" color="#4FFF4F">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <Actionscript>
@@ -12,7 +12,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#9933CC">
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -226,7 +226,7 @@
                     </DOMGroup>
                     <DOMStaticText left="51.95" width="40.1" height="13.7" autoExpand="true" isSelectable="false">
                       <matrix>
-                        <Matrix a="1.34432983398438" d="1.34432983398438" tx="-96.8" ty="-8.05"/>
+                        <Matrix a="1.34432983398438" d="1.34432983398438" tx="-96.8" ty="-9.2"/>
                       </matrix>
                       <transformationPoint>
                         <Point x="71.95" y="8.75"/>
