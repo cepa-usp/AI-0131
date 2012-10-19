@@ -18,7 +18,7 @@ package
 		{
 			super(graph, campo);
 			addChild(sprDipolo);
-			this.addEventListener(MouseEvent.MOUSE_DOWN, initDrag);
+			//this.addEventListener(MouseEvent.MOUSE_DOWN, initDrag);
 		}
 		
 		public function rotate():void {

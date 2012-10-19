@@ -254,11 +254,11 @@
 				//case 114://r
 					//reset();
 					//break;
-				case 83: //S
-				case 115://s
+				//case 83: //S
+				//case 115://s
 					//aval();
-					showHideAnswer();
-					break;
+					//showHideAnswer();
+					//break;
 				//case 87: //W
 				//case 119://w
 					//unmarshalObjects(mementoSerialized);
