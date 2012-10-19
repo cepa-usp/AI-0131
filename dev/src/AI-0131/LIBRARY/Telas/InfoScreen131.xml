@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Telas/InfoScreen131" itemID="506c79f4-000003be" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="InfoScreen131" sourceFlashFilepath="../AI-0131/LAL.fla" sourceLibraryItemHRef="InstructionScreen" sourceLastModified="1286502021" lastModified="1350654661" isSpriteSubclass="true" sourceItemID="00000000-7fffffff">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Telas/InfoScreen131" itemID="506c79f4-000003be" linkageExportForAS="true" linkageBaseClass="flash.display.Sprite" linkageClassName="InfoScreen131" sourceFlashFilepath="../AI-0131/LAL.fla" sourceLibraryItemHRef="InstructionScreen" sourceLastModified="1286502021" lastModified="1350658256" isSpriteSubclass="true" sourceItemID="00000000-7fffffff">
   <timeline>
     <DOMTimeline name="InfoScreen131">
       <layers>
@@ -14,13 +14,13 @@
                     <Point/>
                   </transformationPoint>
                 </DOMSymbolInstance>
-                <DOMStaticText left="63.45" width="476.4" height="15.6" isSelectable="false">
+                <DOMStaticText left="63.45" width="506" height="368.4" isSelectable="false">
                   <matrix>
-                    <Matrix tx="-301.65" ty="-137.1"/>
+                    <Matrix tx="-316.45" ty="-164.1"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
-                      <characters>Algo sobre a AI-0131.</characters>
+                      <characters>Diferentemente dos condutores, nos materiais isolantes os elétrons de valência estão fortemente ligados ao núcleo. Deste modo, um campo elétrico externo, quando aplicado neste material, geralmente não é capaz de separá-los do núcleo. Ainda assim, os elétrons tendem a seguir as linhas do campo elétrico, mas permanecem nas imediações do núcleo. Como consequência, ocorre um ligeiro desequilíbrio de cargas elétricas ao longo das linhas de campo, formando pequenos dipolos elétricos por todo o material, alinhados com as linhas do campo.&#xD;&#xD;Sua tarefa nesta atividade interativa é posicionar e orientar ao menos cinco dipolos elétricos em posições diferentes no material isolante. Onde colocá-los é uma escolha sua, mas você deve prestar atenção para a orientação dos dipolos, que devem seguir a orientação do campo elétrico naquela posição (para movê-los, arraste-os pelo centro; para girá-los, arraste-os pelas bordas).&#xD;&#xD;Quando você tiver terminado, pressione o botão "avaliar" para conferir sua pontuação. Caso você tenha errado, o botão "ver resposta" mostra como você deveria ter orientado os dipolos. Após terminar um exercício, você pode pressionar o botão "tentar novamente" para criar um novo exercício. Além disso, você pode fazer quantos exercícios (tentativas) quiser sem valer nota e, quando achar que já está pronto(a) para ser avaliado(a), pressione o botão "valendo nota". A partir deste momento, sua pontuação valerá nota.</characters>
                       <textAttrs>
                         <DOMTextAttrs alignment="justify" aliasText="false" autoKern="false" rotation="true" lineSpacing="1.2" size="14" bitmapSize="280" face="ArialMT"/>
                       </textAttrs>
@@ -29,7 +29,7 @@
                 </DOMStaticText>
                 <DOMStaticText width="390.55" height="22.35" isSelectable="false">
                   <matrix>
-                    <Matrix tx="-195.25" ty="-188.25"/>
+                    <Matrix tx="-195.25" ty="-202.25"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>

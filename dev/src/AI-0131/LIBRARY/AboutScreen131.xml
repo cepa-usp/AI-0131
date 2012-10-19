@@ -125,40 +125,25 @@
                   </textRuns>
                 </DOMStaticText>
                 <DOMGroup>
-                  <matrix>
-                    <Matrix tx="0.05" ty="16.2"/>
-                  </matrix>
                   <members>
                     <DOMGroup>
-                      <matrix>
-                        <Matrix tx="0.05" ty="16.2"/>
-                      </matrix>
                       <members>
                         <DOMGroup>
-                          <matrix>
-                            <Matrix tx="0.05" ty="16.2"/>
-                          </matrix>
                           <members>
                             <DOMGroup>
-                              <matrix>
-                                <Matrix tx="0.05" ty="16.2"/>
-                              </matrix>
                               <members>
                                 <DOMShape>
-                                  <matrix>
-                                    <Matrix tx="0.05" ty="16.2"/>
-                                  </matrix>
                                   <fills>
                                     <FillStyle index="1">
                                       <BitmapFill bitmapPath="Telas/TelasLogos/logoCEPA" bitmapIsClipped="false">
                                         <matrix>
-                                          <Matrix a="5.49577331542969" d="5.492919921875" tx="-23" ty="-201.1"/>
+                                          <Matrix a="5.49577331542969" d="5.492919921875" tx="-22.95" ty="-184.9"/>
                                         </matrix>
                                       </BitmapFill>
                                     </FillStyle>
                                   </fills>
                                   <edges>
-                                    <Edge fillStyle1="1" edges="!1189 -3164|-460 -3164!-460 -3164|-460 -4022!-460 -4022|1189 -4022!1189 -4022|1189 -3164"/>
+                                    <Edge fillStyle1="1" edges="!1190 -2840|-459 -2840!-459 -2840|-459 -3698!-459 -3698|1190 -3698!1190 -3698|1190 -2840"/>
                                   </edges>
                                 </DOMShape>
                               </members>
@@ -198,21 +183,15 @@
                           </textRuns>
                         </DOMStaticText>
                         <DOMGroup>
-                          <matrix>
-                            <Matrix tx="0.05" ty="16.2"/>
-                          </matrix>
                           <members>
                             <DOMShape>
-                              <matrix>
-                                <Matrix tx="0.05" ty="16.2"/>
-                              </matrix>
                               <strokes>
                                 <StrokeStyle index="1">
                                   <SolidStroke scaleMode="normal" weight="0.5">
                                     <fill>
                                       <LinearGradient>
                                         <matrix>
-                                          <Matrix a="0.05303955078125" d="0.000335693359375" tx="18.9" ty="-156.55"/>
+                                          <Matrix a="0.05303955078125" d="0.000335693359375" tx="18.95" ty="-140.35"/>
                                         </matrix>
                                         <GradientEntry color="#050505" ratio="0"/>
                                         <GradientEntry color="#AEAEAE" ratio="0.486274509803922"/>
@@ -223,7 +202,7 @@
                                 </StrokeStyle>
                               </strokes>
                               <edges>
-                                <Edge strokeStyle="1" edges="!-486 -3131|1241 -3131"/>
+                                <Edge strokeStyle="1" edges="!-485 -2807|1242 -2807"/>
                               </edges>
                             </DOMShape>
                           </members>
@@ -279,14 +258,8 @@
                       </textRuns>
                     </DOMStaticText>
                     <DOMGroup>
-                      <matrix>
-                        <Matrix tx="0.05" ty="16.2"/>
-                      </matrix>
                       <members>
                         <DOMGroup selected="true">
-                          <matrix>
-                            <Matrix tx="0.05" ty="16.2"/>
-                          </matrix>
                           <members>
                             <DOMShape selected="true" isDrawingObject="true">
                               <matrix>
@@ -422,26 +395,20 @@
                       </members>
                     </DOMGroup>
                     <DOMGroup>
-                      <matrix>
-                        <Matrix tx="0.05" ty="16.2"/>
-                      </matrix>
                       <members>
                         <DOMShape>
-                          <matrix>
-                            <Matrix tx="0.05" ty="16.2"/>
-                          </matrix>
                           <fills>
                             <FillStyle index="1">
                               <BitmapFill bitmapPath="Telas/TelasLogos/Bitmap 8" bitmapIsClipped="false">
                                 <matrix>
-                                  <Matrix a="14.39697265625" d="14.39697265625" tx="-247.55" ty="-205.6"/>
+                                  <Matrix a="14.39697265625" d="14.39697265625" tx="-247.5" ty="-189.4"/>
                                 </matrix>
                               </BitmapFill>
                             </FillStyle>
                           </fills>
                           <edges>
                             <Edge fillStyle0="1" edges="
-!-4919 -2831|-2489 -2831!-2489 -2831|-2489 -4112!-2489 -4112|-4919 -4112!-4919 -4112|-4919 -2831"/>
+!-4918 -2507|-2488 -2507!-2488 -2507|-2488 -3788!-2488 -3788|-4918 -3788!-4918 -3788|-4918 -2507"/>
                           </edges>
                         </DOMShape>
                       </members>
