@@ -165,7 +165,7 @@
 			
 			ai.container.setAboutScreen(new AboutScreen131());
 			ai.container.setInfoScreen(new InfoScreen131());
-			
+			ai.initialize();
 			cretaeLayers();
 			addButtons();
 			criarPontuacoes();
