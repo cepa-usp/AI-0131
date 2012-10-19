@@ -70,7 +70,7 @@
 		private var dipoloDrag:Dipolo;
 		
 		//Testes apenas:
-		private var testando:Boolean = true;
+		private var testando:Boolean = false;
 		private var drawCampo:DrawCampo;
 		
 		//Tela de aviso:
@@ -114,7 +114,7 @@
 		
 		public function onTutorialClick():void 
 		{
-			
+			iniciaTutorial();
 		}
 		
 		public function onScormConnected():void 
@@ -153,7 +153,7 @@
 			
 			this.scrollRect = new Rectangle(0, 0, 700, 500);
 			
-			btnValNota.visible = false;
+			//lock(btnValNota);
 			
 			ai = new AI(this);
 			ai.container.messageLabel.visible = false;
@@ -177,7 +177,9 @@
 			}
 			
 			stage.addEventListener(KeyboardEvent.KEY_UP, bindKeys);
-			if (!completed) btnValNota.visible = true;
+			
+			if (completed) lock(btnValNota);
+			else iniciaTutorial();
 		}
 		
 		private var pointingArrow:PointingArrow;
@@ -205,7 +207,7 @@
 			var def2:TextFormat = new TextFormat("arial", 12, 0x000000, true, null, null, null, null, TextFormatAlign.CENTER, null, null, null, null)
 			txPontos.defaultTextFormat = def;			
 			txNota.defaultTextFormat = def2;			
-			shape_layer.addChild(nota);
+			//shape_layer.addChild(nota);
 			nota.x = 10;
 			nota.y = 10;
 			nota.addChild(txPontos);
@@ -342,15 +344,15 @@
 		private function addButtons():void 
 		{
 			var ttAddDipolo:ToolTip = new ToolTip(dipoloBtn, "Adicionar dipolo elétrico", 12, 0.8, 200, 0.6, 0.6);
-			var ttDel:ToolTip = new ToolTip(btDel, "Remover selecionados", 12, 0.8, 200, 0.6, 0.6);
+			//var ttDel:ToolTip = new ToolTip(btDel, "Remover selecionados", 12, 0.8, 200, 0.6, 0.6);
 			var ttAvaliar:ToolTip = new ToolTip(btAvaliar, "Avaliar exercício", 12, 0.8, 200, 0.6, 0.6);
 			var ttNovamente:ToolTip = new ToolTip(btNovamente, "Novo exercício", 12, 0.8, 200, 0.6, 0.6);
-			var ttValendo:ToolTip = new ToolTip(btnValNota, "Exercício valendo nota", 12, 0.8, 200, 0.6, 0.6);
+			var ttValendo:ToolTip = new ToolTip(btnValNota, "Pressione para valer nota.", 12, 0.8, 200, 0.6, 0.6);
 			var ttVer:ToolTip = new ToolTip(btVer, "Ver respostas", 12, 0.8, 200, 0.6, 0.6);
 			var ttOcultar:ToolTip = new ToolTip(btOcultar, "Ocultar respostas", 12, 0.8, 200, 0.6, 0.6);
 			
 			stage.addChild(ttAddDipolo);
-			stage.addChild(ttDel);
+			//stage.addChild(ttDel);
 			stage.addChild(ttAvaliar);
 			stage.addChild(ttNovamente);
 			stage.addChild(ttValendo);
@@ -358,7 +360,7 @@
 			stage.addChild(ttOcultar);
 			
 			dipoloBtn.addEventListener(MouseEvent.MOUSE_DOWN, initAddDipolo);
-			btDel.addEventListener(MouseEvent.MOUSE_DOWN, deleteSelected);
+			//btDel.addEventListener(MouseEvent.MOUSE_DOWN, deleteSelected);
 			btAvaliar.addEventListener(MouseEvent.MOUSE_DOWN, aval);
 			btNovamente.addEventListener(MouseEvent.CLICK, reset);
 			btnValNota.addEventListener(MouseEvent.CLICK, onValendoNotaClick);
@@ -452,7 +454,7 @@
 		{
 			//Cria um novo campo:
 			var sort:int = Math.ceil(Math.random() * 13);
-			sort = 5;
+			//sort = 5;
 			var classe:Class = getClass(sort);
 			field = new classe();
 			coord = new Coord(field.xmin, field.xmax, 700, field.ymin, field.ymax, 500);
@@ -570,7 +572,7 @@
 			btOcultar.visible = false;
 			lock(btVer);
 			
-			unlock(btDel);
+			//unlock(btDel);
 			unlock(dipoloBtn);
 			
 			//btDel.mouseEnabled = true;
@@ -599,7 +601,7 @@
 			if (dipolos.length < 5) {
 				warningScreen.openScreen();
 			}else {
-				lock(btDel);
+				//lock(btDel);
 				lock(dipoloBtn);
 				
 				for each (var item2:DipoloAnswer in dipolosAnswer) 
@@ -622,7 +624,7 @@
 					dipAnswer.alpha = 0.5;
 					dipolosAnswer.push(dipAnswer);
 					answer_layer.addChild(dipAnswer);
-					if (compareDipolos(item, dipAnswer)) scoreAtual += 1 / dipolos.length;
+					if (compareDipolos(item, dipAnswer)) scoreAtual += Math.round(100 / dipolos.length);
 				}
 				play.setScore(scoreAtual);
 				play.evaluate();
@@ -710,7 +712,102 @@
 		private var completed:Boolean;
 
 		
+		//---------------- Tutorial -----------------------
 		
+		private var balao:CaixaTexto;
+		private var pointsTuto:Array;
+		private var tutoBaloonPos:Array;
+		private var tutoPos:int;
+		private var tutoSequence:Array;
+		private var layerBlock:Sprite;
+		
+		private function iniciaTutorial(e:MouseEvent = null):void  
+		{
+			blockAI();
+			
+			tutoPos = 0;
+			if(balao == null){
+				balao = new CaixaTexto();
+				stage.addChild(balao);
+				balao.visible = false;
+				
+				tutoSequence = ["Veja aqui as orientações.",
+								"A região clara representa um isolante.",
+								"Este isolante está sujeito a um campo elétrico EXTERNO, representado pelas linhas de campo.",
+								"Arraste ao menos 5 dipolos elétricos para dentro do isolante (a posição fica à sua escolha). Eles representam os dipolos induzidos no isolante pelo campo elétrico externo.",
+								"Arraste os dipolos pelas extremidades para girá-los (use para alinhá-los com o campo elétrico).",
+								"Quando tiver terminado, pressione este botão.",
+								"Após terminar clique aqui para exibir/ocultar a resposta correta.",
+								"Para começar um NOVO exercício, pressione este botão.",
+								"Quando você estiver pronto(a) para ser avaliado(a), pressione este botão.",
+								"Veja o seu desempenho aqui."];
+				
+				pointsTuto = 	[new Point(650, 400),
+								new Point(350 , 200),
+								new Point(350 , 300),
+								new Point(50 , 450),
+								new Point(50 , 450),
+								new Point(130 , 450),
+								new Point(250 , 450),
+								new Point(650 , 430),
+								new Point(360 , 450),
+								new Point(650 , 320)];
+								
+				tutoBaloonPos = [[CaixaTexto.RIGHT, CaixaTexto.CENTER],
+								["", ""],
+								["", ""],
+								[CaixaTexto.BOTTON, CaixaTexto.FIRST],
+								[CaixaTexto.BOTTON, CaixaTexto.FIRST],
+								[CaixaTexto.BOTTON, CaixaTexto.FIRST],
+								[CaixaTexto.BOTTON, CaixaTexto.CENTER],
+								[CaixaTexto.RIGHT, CaixaTexto.LAST],
+								[CaixaTexto.BOTTON, CaixaTexto.CENTER],
+								[CaixaTexto.RIGHT, CaixaTexto.FIRST]];
+			}
+			balao.removeEventListener(BaseEvent.NEXT_BALAO, closeBalao);
+			
+			balao.setText(tutoSequence[tutoPos], tutoBaloonPos[tutoPos][0], tutoBaloonPos[tutoPos][1]);
+			balao.setPosition(pointsTuto[tutoPos].x, pointsTuto[tutoPos].y);
+			balao.addEventListener(BaseEvent.NEXT_BALAO, closeBalao);
+			balao.addEventListener(BaseEvent.CLOSE_BALAO, iniciaAi);
+		}
+		
+		private function closeBalao(e:Event):void 
+		{
+			tutoPos++;
+			if (tutoPos >= tutoSequence.length) {
+				balao.removeEventListener(BaseEvent.NEXT_BALAO, closeBalao);
+				balao.visible = false;
+				iniciaAi(null);
+			}else {
+				balao.setText(tutoSequence[tutoPos], tutoBaloonPos[tutoPos][0], tutoBaloonPos[tutoPos][1]);
+				balao.setPosition(pointsTuto[tutoPos].x, pointsTuto[tutoPos].y);
+			}
+		}
+		
+		private function iniciaAi(e:BaseEvent):void 
+		{
+			balao.removeEventListener(BaseEvent.CLOSE_BALAO, iniciaAi);
+			balao.removeEventListener(BaseEvent.NEXT_BALAO, closeBalao);
+			unblockAI();
+		}
+		
+		protected function blockAI():void
+		{
+			if (layerBlock == null) {
+				layerBlock = new Sprite();
+				layerBlock.name = "block";
+				layerBlock.graphics.beginFill(0xFFFFFF, 0.4);
+				layerBlock.graphics.drawRect(0, 0, 700, 500);
+				stage.addChild(layerBlock);
+			}
+			layerBlock.visible = true;
+		}
+		
+		protected function unblockAI():void
+		{
+			layerBlock.visible = false;
+		}
 
 		
 	}

@@ -80,9 +80,6 @@
                         <DOMGroup selected="true">
                           <members>
                             <DOMGroup>
-                              <matrix>
-                                <Matrix a="1.05755615234375" d="1.05755615234375" tx="5.85" ty="-7.5"/>
-                              </matrix>
                               <members>
                                 <DOMShape selected="true" isDrawingObject="true">
                                   <matrix>
@@ -105,9 +102,6 @@
                               </members>
                             </DOMGroup>
                             <DOMGroup>
-                              <matrix>
-                                <Matrix a="1.05755615234375" d="1.05755615234375" tx="5.85" ty="-8.75"/>
-                              </matrix>
                               <members>
                                 <DOMShape selected="true" isDrawingObject="true">
                                   <matrix>
@@ -130,9 +124,6 @@
                               </members>
                             </DOMGroup>
                             <DOMGroup>
-                              <matrix>
-                                <Matrix a="1.05755615234375" d="1.05755615234375" tx="5.85" ty="-8.75"/>
-                              </matrix>
                               <members>
                                 <DOMShape selected="true" isDrawingObject="true">
                                   <matrix>
@@ -155,9 +146,6 @@
                               </members>
                             </DOMGroup>
                             <DOMGroup>
-                              <matrix>
-                                <Matrix a="1.05755615234375" d="1.05755615234375" tx="5.85" ty="-8.75"/>
-                              </matrix>
                               <members>
                                 <DOMShape selected="true" isDrawingObject="true">
                                   <matrix>
@@ -180,9 +168,6 @@
                               </members>
                             </DOMGroup>
                             <DOMGroup>
-                              <matrix>
-                                <Matrix a="1.05755615234375" d="1.05755615234375" tx="5.85" ty="-10"/>
-                              </matrix>
                               <members>
                                 <DOMShape selected="true" isDrawingObject="true">
                                   <matrix>

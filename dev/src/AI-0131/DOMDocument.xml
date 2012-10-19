@@ -1,6 +1,6 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#000066" width="700" height="500" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" viewAngle3D="59.3117946966027" vanishingPoint3DX="320" vanishingPoint3DY="240" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true">
      <folders>
-          <DOMFolderItem name="Base" itemID="4cafb00f-000001ee"/>
+          <DOMFolderItem name="Base" itemID="4cafb00f-000001ee" isExpanded="true"/>
           <DOMFolderItem name="Buttons" itemID="4d3b4b7d-000004c3" isExpanded="true"/>
           <DOMFolderItem name="JPGCampos" itemID="4ea849aa-000002c5"/>
           <DOMFolderItem name="Objetos" itemID="4ea84a11-000002db" isExpanded="true"/>
@@ -8,12 +8,14 @@
           <DOMFolderItem name="Superficies" itemID="4ea94a2a-00000201" isExpanded="true"/>
           <DOMFolderItem name="Superficies/FormasGrandes" itemID="4ea94a45-00000245" isExpanded="true"/>
           <DOMFolderItem name="Telas" itemID="4ea849d2-000002d7" isExpanded="true"/>
+          <DOMFolderItem name="Telas/TelasLogos" itemID="50815c65-000006a0"/>
      </folders>
      <fonts>
           <DOMFontItem name="Font 1" itemID="4ea83ce0-000002bc" font="ArialMT" size="0" id="1" sourceLastImported="1319648480" embedRanges="1|2|3|4|5|17"/>
      </fonts>
      <media>
           <DOMBitmapItem name="Bitmap 16" itemID="507c4759-00000259" sourceLastImported="1350322009" originalCompressionType="lossless" quality="50" href="Bitmap 16" bitmapDataHRef="M 16 1350322009.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="Telas/TelasLogos/Bitmap 8" itemID="4fb13c97-00000542" sourceLastImported="1337015447" originalCompressionType="lossless" quality="50" href="Telas/TelasLogos/Bitmap 8" bitmapDataHRef="M 18 1350655077.dat" frameRight="3420" frameBottom="1780"/>
           <DOMBitmapItem name="JPGCampos/Campo1 - (sen(y3),2) (-5, 5, -15, 15).jpg" itemID="4ea849c4-000002c7" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo1 - (sen(y3)&amp;#442) (-5&amp;#44 5&amp;#44 -15&amp;#44 15).jpg" sourceLastImported="1349288646" externalFileSize="115983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo1 - (sen(y3)&amp;#0442) (-5&amp;#044 5&amp;#044 -15&amp;#044 15).jpg" bitmapDataHRef="M 14 1319634460.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="JPGCampos/Campo10 - (1,0).jpg" itemID="4ea849c4-000002c8" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo10 - (1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="72983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo10 - (1&amp;#0440).jpg" bitmapDataHRef="M 15 1319634513.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="JPGCampos/Campo11 - (-1,0).jpg" itemID="4ea849c4-000002c9" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo11 - (-1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="77251" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo11 - (-1&amp;#0440).jpg" bitmapDataHRef="M 16 1319634581.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
@@ -28,10 +30,11 @@
           <DOMBitmapItem name="JPGCampos/Campo8 - (-1,1).jpg" itemID="4ea849c4-000002d2" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo8 - (-1&amp;#441).jpg" sourceLastImported="1349288646" externalFileSize="164030" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo8 - (-1&amp;#0441).jpg" bitmapDataHRef="M 28 1319635119.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="JPGCampos/Campo9 - (1,-1).jpg" itemID="4ea849c4-000002d3" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo9 - (1&amp;#44-1).jpg" sourceLastImported="1349288646" externalFileSize="104824" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo9 - (1&amp;#044-1).jpg" bitmapDataHRef="M 29 1319635149.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="Fundo.jpg" itemID="4ea6b273-000007c4" sourceExternalFilepath="../../Fundo.jpg" sourceLastImported="1319547467" quality="50" href="Fundo.jpg" bitmapDataHRef="M 1 1319547507.dat" frameRight="12800" frameBottom="9600" isJPEG="true"/>
+          <DOMBitmapItem name="Telas/TelasLogos/logoCEPA" itemID="4ebaaccd-0000032d" sourceExternalFilepath="../../../../Desktop/logocepa.png" sourceLastImported="1320856781" originalCompressionType="lossless" quality="50" href="Telas/TelasLogos/logoCEPA.png" bitmapDataHRef="M 17 1350655077.dat" frameRight="6000" frameBottom="3860"/>
           <DOMBitmapItem name="logocepa.png" itemID="4c913bb5-0000029a" sourceExternalFilepath="../../../Desktop/logocepa.png" sourceLastImported="1284586376" originalCompressionType="lossless" quality="50" href="logocepa.png" bitmapDataHRef="M 1 1284586421.dat" frameRight="6000" frameBottom="3860"/>
      </media>
      <symbols>
-          <Include href="AboutScreen131.xml" itemID="506c79bf-000003bd" lastModified="1349286581"/>
+          <Include href="AboutScreen131.xml" itemID="506c79bf-000003bd" lastModified="1350655117"/>
           <Include href="Background.xml" itemID="4ea6b348-000007c9" lastModified="1350495230"/>
           <Include href="Base/Board.xml" itemIcon="1" loadImmediate="false" itemID="4cae755c-000000d7" lastModified="1350497785"/>
           <Include href="Base/Ondas.xml" itemIcon="1" loadImmediate="false" itemID="4cafa98e-0000004f" lastModified="1298036295"/>
@@ -76,7 +79,7 @@
           <Include href="Superficies/FormasGrandes/Forma9.xml" itemID="4ea6e898-00000835" lastModified="1350585061"/>
           <Include href="Superficies/FormasGrandes/Forma10.xml" itemID="4ea6e919-0000083e" lastModified="1350584985"/>
           <Include href="Telas/FeedBackScreen.xml" itemID="4ea83c39-000002ba" lastModified="1320079939"/>
-          <Include href="Telas/InfoScreen131.xml" itemID="506c79f4-000003be" lastModified="1349286604"/>
+          <Include href="Telas/InfoScreen131.xml" itemID="506c79f4-000003be" lastModified="1350654661"/>
           <Include href="Telas/WarningScreen.xml" itemID="4ea83808-000002ae" lastModified="1320079939"/>
      </symbols>
      <timelines>
@@ -457,6 +460,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="516335" publishTime="1350654305"/>
           <PublishItem publishSize="100429" publishTime="1350649142"/>
           <PublishItem publishSize="100435" publishTime="1350648991"/>
           <PublishItem publishSize="100426" publishTime="1350648961"/>
@@ -476,6 +480,5 @@
           <PublishItem publishSize="516109" publishTime="1350599648"/>
           <PublishItem publishSize="515897" publishTime="1350599630"/>
           <PublishItem publishSize="516122" publishTime="1350599590"/>
-          <PublishItem publishSize="516159" publishTime="1350599573"/>
      </publishHistory>
 </DOMDocument>
