@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Botões/Botões/Botões/BtAvaliar" itemID="507c4425-0000024d" linkageExportForAS="true" linkageClassName="BtAvaliar" symbolType="button" lastModified="1350648837">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/BtAvaliar" itemID="50814514-0000023f" linkageExportForAS="true" linkageClassName="BtAvaliar" symbolType="button" lastModified="1350649108">
   <timeline>
-    <DOMTimeline name="Botões/BtAvaliar" currentFrame="1">
+    <DOMTimeline name="BtAvaliar" currentFrame="1">
       <layers>
         <DOMLayer name="Layer 1" color="#4FFF4F">
           <frames>

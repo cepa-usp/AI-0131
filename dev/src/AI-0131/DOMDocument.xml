@@ -2,8 +2,6 @@
      <folders>
           <DOMFolderItem name="Base" itemID="4cafb00f-000001ee"/>
           <DOMFolderItem name="Buttons" itemID="4d3b4b7d-000004c3" isExpanded="true"/>
-          <DOMFolderItem name="Buttons/Botões" itemID="50805c12-0000016d"/>
-          <DOMFolderItem name="Buttons/Botões/Botões" itemID="5081420d-000001be"/>
           <DOMFolderItem name="JPGCampos" itemID="4ea849aa-000002c5"/>
           <DOMFolderItem name="Objetos" itemID="4ea84a11-000002db" isExpanded="true"/>
           <DOMFolderItem name="SpritesCampos" itemID="4ea708e8-00000315" isExpanded="true"/>
@@ -37,11 +35,11 @@
           <Include href="Background.xml" itemID="4ea6b348-000007c9" lastModified="1350495230"/>
           <Include href="Base/Board.xml" itemIcon="1" loadImmediate="false" itemID="4cae755c-000000d7" lastModified="1350497785"/>
           <Include href="Base/Ondas.xml" itemIcon="1" loadImmediate="false" itemID="4cafa98e-0000004f" lastModified="1298036295"/>
-          <Include href="Buttons/Botões-BtTentar.xml" itemIcon="0" loadImmediate="false" itemID="50804987-00000141" lastModified="1350584810"/>
-          <Include href="Buttons/Botões/Botões/Botões/BtAvaliar.xml" itemIcon="0" itemID="507c4425-0000024d" lastModified="1350648837"/>
-          <Include href="Buttons/Botões/Botões/Botões/BtValNota.xml" itemIcon="0" itemID="507c4425-0000024e" lastModified="1350648983"/>
+          <Include href="Buttons/BtAvaliar.xml" itemIcon="0" itemID="50814514-0000023f" lastModified="1350649108"/>
           <Include href="Buttons/BtDel.xml" itemIcon="0" itemID="4ea1cc98-00000269" lastModified="1350585813"/>
           <Include href="Buttons/BtOcuResposta.xml" itemIcon="0" itemID="508048d5-0000012a" lastModified="1350585813"/>
+          <Include href="Buttons/BtTentar.xml" itemIcon="0" itemID="5081452e-00000241" lastModified="1350649134"/>
+          <Include href="Buttons/BtValNota.xml" itemIcon="0" itemID="5081451f-00000240" lastModified="1350649119"/>
           <Include href="Buttons/BtVerResposta.xml" itemIcon="0" loadImmediate="false" itemID="508048db-0000012b" lastModified="1350648914"/>
           <Include href="Buttons/CloseButton.xml" itemIcon="0" loadImmediate="false" itemID="4ce0455e-000009c0" lastModified="1298036208"/>
           <Include href="Buttons/DipoloBtn.xml" itemIcon="0" itemID="4ea84a3a-000002e1" lastModified="1320080367"/>
@@ -101,7 +99,7 @@
                                                   <Edge fillStyle0="1" edges="!264 9485[264 9734 508 9734!508 9734|8020 9734!8020 9734[8265 9734 8265 9485!8265 9485|8265 9122!8265 9122[8265 8874 8020 8874!8020 8874|508 8874!508 8874[264 8874 264 9122!264 9122|264 9485"/>
                                              </edges>
                                         </DOMShape>
-                                        <DOMSymbolInstance libraryItemName="Buttons/Botões-BtTentar" name="btNovamente" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtTentar" name="btNovamente" symbolType="button">
                                              <matrix>
                                                   <Matrix tx="127.95" ty="465.55"/>
                                              </matrix>
@@ -117,7 +115,7 @@
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Buttons/Botões/Botões/Botões/BtAvaliar" name="btAvaliar" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtAvaliar" name="btAvaliar" symbolType="button">
                                              <matrix>
                                                   <Matrix tx="127.95" ty="465.55"/>
                                              </matrix>
@@ -125,7 +123,7 @@
                                                   <Point x="-23" y="-0.05"/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="Buttons/Botões/Botões/Botões/BtValNota" name="btnValNota" selected="true" symbolType="button">
+                                        <DOMSymbolInstance libraryItemName="Buttons/BtValNota" name="btnValNota" symbolType="button">
                                              <matrix>
                                                   <Matrix tx="352.55" ty="465.6"/>
                                              </matrix>
@@ -459,6 +457,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="100429" publishTime="1350649142"/>
           <PublishItem publishSize="100435" publishTime="1350648991"/>
           <PublishItem publishSize="100426" publishTime="1350648961"/>
           <PublishItem publishSize="100426" publishTime="1350648923"/>
@@ -478,6 +477,5 @@
           <PublishItem publishSize="515897" publishTime="1350599630"/>
           <PublishItem publishSize="516122" publishTime="1350599590"/>
           <PublishItem publishSize="516159" publishTime="1350599573"/>
-          <PublishItem publishSize="515874" publishTime="1350599545"/>
      </publishHistory>
 </DOMDocument>

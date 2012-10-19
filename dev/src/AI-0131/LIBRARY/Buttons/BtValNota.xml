@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Botões/Botões/Botões/BtValNota" itemID="507c4425-0000024e" linkageExportForAS="true" linkageClassName="BtValNota" symbolType="button" lastModified="1350648983">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/BtValNota" itemID="5081451f-00000240" linkageExportForAS="true" linkageClassName="BtValNota" symbolType="button" lastModified="1350649119">
   <timeline>
-    <DOMTimeline name="Botões/BtValNota" currentFrame="1">
+    <DOMTimeline name="BtValNota" currentFrame="1">
       <layers>
         <DOMLayer name="Layer 2" color="#9933CC" locked="true">
           <frames>
@@ -17,9 +17,6 @@
             <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMGroup>
-                  <matrix>
-                    <Matrix tx="3.6" ty="-0.4"/>
-                  </matrix>
                   <members>
                     <DOMStaticText left="40.55" width="62.9" height="11.4" autoExpand="true" isSelectable="false">
                       <matrix>
@@ -72,17 +69,11 @@
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
                 <DOMGroup>
-                  <matrix>
-                    <Matrix tx="0.8"/>
-                  </matrix>
                   <transformationPoint>
-                    <Point y="-15.4"/>
+                    <Point x="0.8" y="-15.4"/>
                   </transformationPoint>
                   <members>
                     <DOMGroup selected="true">
-                      <matrix>
-                        <Matrix tx="0.8"/>
-                      </matrix>
                       <members>
                         <DOMRectangleObject objectWidth="127.45" objectHeight="28" x="19.4" y="-9.9" selected="true" lockFlag="true" topLeftRadius="2.75" topRightRadius="2.75" bottomLeftRadius="2.75" bottomRightRadius="2.75">
                           <matrix>
