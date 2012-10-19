@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Objetos/RotateForm" itemID="508002e3-0000039e" linkageExportForAS="true" linkageClassName="RotateForm" lastModified="1350657629">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Objetos/RotateForm" itemID="508002e3-0000039e" linkageExportForAS="true" linkageClassName="RotateForm" lastModified="1350657872">
   <timeline>
     <DOMTimeline name="RotateForm">
       <layers>
@@ -6,9 +6,9 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMGroup>
+                <DOMGroup selected="true">
                   <members>
-                    <DOMShape>
+                    <DOMShape selected="true">
                       <fills>
                         <FillStyle index="1">
                           <SolidColor/>
@@ -18,13 +18,13 @@
                         <StrokeStyle index="1">
                           <SolidStroke scaleMode="normal" caps="none" weight="0.5" joints="miter" miterLimit="10">
                             <fill>
-                              <SolidColor color="#FFFFFF"/>
+                              <SolidColor color="#FFFF00"/>
                             </fill>
                           </SolidStroke>
                         </StrokeStyle>
                       </strokes>
                       <edges>
-                        <Edge fillStyle0="1" strokeStyle="1" edges="!53 -46S5|159 -16!159 -16|179 -124!179 -124|136 -97!136 -97[104 -145 51 -164!51 -164[-5 -182 -58 -163!-58 -163[-107.40625 #FFFF6E.63 -135.5 -101.5!-135.5 -101.5|-139 -96!-139 -96|-182 -118!-182 -118|-155 -11!-155 -11|-51 -49!-51 -49|-94.5
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!53 -46|159 -16!159 -16|179 -124!179 -124|136 -97!136 -97[104 -145 51 -164!51 -164[-5 -182 -58 -163!-58 -163[-107.40625 #FFFF6E.63 -135.5 -101.5!-135.5 -101.5|-139 -96!-139 -96|-182 -118!-182 -118|-155 -11!-155 -11|-51 -49!-51 -49|-94.5
  -71.5!-94.5 -71.5[#FFFFB5.51 #FFFF9A.7D -40 -115!-40 -115[-2 -127 35 -115!35 -115[71 -102 92 -70!92 -70|53 -46"/>
                         <Edge cubics="!92 -70(;92,-70 53,-46 53,-46q92 -70 53 -46);"/>
                         <Edge cubics="!179 -124(;179,-124 136,-97 136,-97q179 -124 136 -97);"/>

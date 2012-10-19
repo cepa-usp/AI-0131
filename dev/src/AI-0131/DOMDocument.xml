@@ -50,8 +50,8 @@
           <Include href="ContainerNota.xml" itemID="4ea1ca7a-00000264" lastModified="1319478658"/>
           <Include href="Nota.xml" itemID="4e9f19bb-00000247" lastModified="1319478628"/>
           <Include href="NotaNova.xml" itemID="4ea6ed03-0000020a" lastModified="1320079689"/>
-          <Include href="Objetos/MoveForm.xml" itemID="50101d67-000001fe" lastModified="1350657633"/>
-          <Include href="Objetos/RotateForm.xml" itemID="508002e3-0000039e" lastModified="1350657629"/>
+          <Include href="Objetos/MoveForm.xml" itemID="50101d67-000001fe" lastModified="1350657883"/>
+          <Include href="Objetos/RotateForm.xml" itemID="508002e3-0000039e" lastModified="1350657872"/>
           <Include href="Objetos/SprDipolo.xml" itemID="4ea6fa35-000002c3" lastModified="1350568452"/>
           <Include href="PointingArrow.xml" itemID="4ea985e6-00000338" lastModified="1320077849"/>
           <Include href="Pontuacao.xml" itemID="4e9f08c3-0000022f" lastModified="1319477910"/>
@@ -460,6 +460,11 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="527245" publishTime="1350657849"/>
+          <PublishItem publishSize="527554" publishTime="1350657807"/>
+          <PublishItem publishSize="527217" publishTime="1350657772"/>
+          <PublishItem publishSize="527219" publishTime="1350657732"/>
+          <PublishItem publishSize="527523" publishTime="1350657645"/>
           <PublishItem publishSize="527255" publishTime="1350657614"/>
           <PublishItem publishSize="527632" publishTime="1350657475"/>
           <PublishItem publishSize="527658" publishTime="1350657451"/>
@@ -475,10 +480,5 @@
           <PublishItem publishSize="527251" publishTime="1350656836"/>
           <PublishItem publishSize="527558" publishTime="1350656808"/>
           <PublishItem publishSize="527207" publishTime="1350656769"/>
-          <PublishItem publishSize="527223" publishTime="1350656544"/>
-          <PublishItem publishSize="527175" publishTime="1350656449"/>
-          <PublishItem publishSize="516335" publishTime="1350654305"/>
-          <PublishItem publishSize="100429" publishTime="1350649142"/>
-          <PublishItem publishSize="100435" publishTime="1350648991"/>
      </publishHistory>
 </DOMDocument>
