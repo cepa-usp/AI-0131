@@ -160,6 +160,7 @@
 			ai.addObserver(this);
 			eval = new ProgressiveEvaluator(ai);
 			ai.evaluator = eval;
+			eval.finishes = false;
 			stats = new StatsScreen(eval, ai);
 			
 			ai.container.setAboutScreen(new AboutScreen131());
