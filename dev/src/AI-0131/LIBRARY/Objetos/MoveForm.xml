@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Objetos/MoveForm" itemID="50101d67-000001fe" linkageExportForAS="true" linkageClassName="MoveForm" lastModified="1343233608">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Objetos/MoveForm" itemID="50101d67-000001fe" linkageExportForAS="true" linkageClassName="MoveForm" lastModified="1350657633">
   <timeline>
     <DOMTimeline name="MoveForm">
       <layers>
@@ -6,34 +6,58 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape>
-                  <strokes>
-                    <StrokeStyle index="1">
-                      <SolidStroke scaleMode="normal" weight="2">
-                        <fill>
-                          <SolidColor/>
-                        </fill>
-                      </SolidStroke>
-                    </StrokeStyle>
-                  </strokes>
-                  <edges>
-                    <Edge strokeStyle="1" edges="!-72 -112|0 -199!0 -199|72 -121!-108 -72|-200 -4!-200 -4|-195 0!-195 0|0 0!0 0|0 -199!-195 0|-108 72!108 76|200 0!200 0|0 0!0 0|0 195!0 195|4 200!4 200|72 108!-72 108|0 195!108 -68|200 0"/>
-                    <Edge cubics="!-195 0(;-195,0 0,0 0,0q-195 0 0 0);"/>
-                    <Edge cubics="!0 0(;0,0 200,0 200,0q0 0 200 0);"/>
-                    <Edge cubics="!0 0(;0,0 0,195 0,195q0 0 0 195);"/>
-                    <Edge cubics="!200 0(;200,0 108,76 108,76q200 0 108 76);"/>
-                    <Edge cubics="!200 0(;200,0 108,-68 108,-68q200 0 108 -68);"/>
-                    <Edge cubics="!-200 -4(;-200,-4 -195,0 -195,0q-200 -4 -195 0);"/>
-                    <Edge cubics="!-195 0(;-195,0 -108,72 -108,72q-195 0 -108 72);"/>
-                    <Edge cubics="!-200 -4(;-200,-4 -108,-72 -108,-72q-200 -4 -108 -72);"/>
-                    <Edge cubics="!4 200(;4,200 0,195 0,195q4 200 0 195);"/>
-                    <Edge cubics="!0 195(;0,195 -72,108 -72,108q0 195 -72 108);"/>
-                    <Edge cubics="!4 200(;4,200 72,108 72,108q4 200 72 108);"/>
-                    <Edge cubics="!0 0(;0,0 0,-199 0,-199q0 0 0 -199);"/>
-                    <Edge cubics="!-72 -112(;-72,-112 0,-199 0,-199q-72 -112 0 -199);"/>
-                    <Edge cubics="!0 -203(;0,-203 72,-121 72,-121q0 -203 72 -121);"/>
-                  </edges>
-                </DOMShape>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMGroup>
+                      <members>
+                        <DOMShape>
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal" caps="none" weight="0.5" joints="miter" miterLimit="10">
+                                <fill>
+                                  <SolidColor color="#FFFFFF"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle0="1" strokeStyle="1" edges="!74 -120S5|0 -202!0 -202|-74 -120!-74 -120|-26 -120!-26 -120|-26 -27!-26 -27|-119 -27!-119 -27|-119 -75!-119 -75|-201 -1!-201 -1|-119 73!-119 73|-119 25!-119 25|-26 25!-26 25|-26 119!-26 119|-74 119!-74 119|0 201!0 201|74 119!74 119|26
+ 119!26 119|26 25!26 25|120 25!120 25|120 73!120 73|202 -1!202 -1|120 -75!120 -75|120 -27!120 -27|26 -27!26 -27|26 -120!26 -120|74 -120"/>
+                            <Edge cubics="!74 -120(;74,-120 0,-202 0,-202q74 -120 0 -202);"/>
+                            <Edge cubics="!26 -120(;26,-120 74,-120 74,-120q26 -120 74 -120);"/>
+                            <Edge cubics="!74 119(;74,119 0,201 0,201q74 119 0 201);"/>
+                            <Edge cubics="!26 119(;26,119 74,119 74,119q26 119 74 119);"/>
+                            <Edge cubics="!26 119(;26,119 26,25 26,25q26 119 26 25);"/>
+                            <Edge cubics="!26 -27(;26,-27 26,-120 26,-120q26 -27 26 -120);"/>
+                            <Edge cubics="!-74 -120(;-74,-120 -26,-120 -26,-120q-74 -120 -26 -120);"/>
+                            <Edge cubics="!-74 119(;-74,119 -26,119 -26,119q-74 119 -26 119);"/>
+                            <Edge cubics="!-26 -120(;-26,-120 -26,-27 -26,-27q-26 -120 -26 -27);"/>
+                            <Edge cubics="!-26 25(;-26,25 -26,119 -26,119q-26 25 -26 119);"/>
+                            <Edge cubics="!0 -202(;0,-202 -74,-120 -74,-120q0 -202 -74 -120);"/>
+                            <Edge cubics="!0 201(;0,201 -74,119 -74,119q0 201 -74 119);"/>
+                            <Edge cubics="!202 -1(;202,-1 120,-75 120,-75q202 -1 120 -75);"/>
+                            <Edge cubics="!120 -75(;120,-75 120,-27 120,-27q120 -75 120 -27);"/>
+                            <Edge cubics="!120 -27(;120,-27 26,-27 26,-27q120 -27 26 -27);"/>
+                            <Edge cubics="!26 25(;26,25 120,25 120,25q26 25 120 25);"/>
+                            <Edge cubics="!120 25(;120,25 120,73 120,73q120 25 120 73);"/>
+                            <Edge cubics="!120 73(;120,73 202,-1 202,-1q120 73 202 -1);"/>
+                            <Edge cubics="!-26 -27(;-26,-27 -119,-27 -119,-27q-26 -27 -119 -27);"/>
+                            <Edge cubics="!-119 -27(;-119,-27 -119,-75 -119,-75q-119 -27 -119 -75);"/>
+                            <Edge cubics="!-119 -75(;-119,-75 -201,-1 -201,-1q-119 -75 -201 -1);"/>
+                            <Edge cubics="!-119 73(;-119,73 -119,25 -119,25q-119 73 -119 25);"/>
+                            <Edge cubics="!-119 25(;-119,25 -26,25 -26,25q-119 25 -26 25);"/>
+                            <Edge cubics="!-201 -1(;-201,-1 -119,73 -119,73q-201 -1 -119 73);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
               </elements>
             </DOMFrame>
           </frames>

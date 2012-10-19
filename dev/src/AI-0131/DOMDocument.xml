@@ -14,7 +14,7 @@
           <DOMFontItem name="Font 1" itemID="4ea83ce0-000002bc" font="ArialMT" size="0" id="1" sourceLastImported="1319648480" embedRanges="1|2|3|4|5|17"/>
      </fonts>
      <media>
-          <DOMBitmapItem name="Bitmap 16" itemID="507c4759-00000259" sourceLastImported="1350322009" originalCompressionType="lossless" quality="50" href="Bitmap 16" bitmapDataHRef="M 16 1350322009.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="Bitmap 16" itemID="507c4759-00000259" sourceLastImported="1350322009" originalCompressionType="lossless" quality="50" href="Bitmap 16" bitmapDataHRef="M 16 1350322009.dat" frameRight="3440" frameBottom="720"/>
           <DOMBitmapItem name="Telas/TelasLogos/Bitmap 8" itemID="4fb13c97-00000542" sourceLastImported="1337015447" originalCompressionType="lossless" quality="50" href="Telas/TelasLogos/Bitmap 8" bitmapDataHRef="M 18 1350655077.dat" frameRight="3420" frameBottom="1780"/>
           <DOMBitmapItem name="JPGCampos/Campo1 - (sen(y3),2) (-5, 5, -15, 15).jpg" itemID="4ea849c4-000002c7" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo1 - (sen(y3)&amp;#442) (-5&amp;#44 5&amp;#44 -15&amp;#44 15).jpg" sourceLastImported="1349288646" externalFileSize="115983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo1 - (sen(y3)&amp;#0442) (-5&amp;#044 5&amp;#044 -15&amp;#044 15).jpg" bitmapDataHRef="M 14 1319634460.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="JPGCampos/Campo10 - (1,0).jpg" itemID="4ea849c4-000002c8" sourceExternalFilepath="../AI-0131/LIBRARY/JPGCampos/Campo10 - (1&amp;#440).jpg" sourceLastImported="1349288646" externalFileSize="72983" originalCompressionType="lossless" quality="50" href="JPGCampos/Campo10 - (1&amp;#0440).jpg" bitmapDataHRef="M 15 1319634513.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
@@ -50,8 +50,8 @@
           <Include href="ContainerNota.xml" itemID="4ea1ca7a-00000264" lastModified="1319478658"/>
           <Include href="Nota.xml" itemID="4e9f19bb-00000247" lastModified="1319478628"/>
           <Include href="NotaNova.xml" itemID="4ea6ed03-0000020a" lastModified="1320079689"/>
-          <Include href="Objetos/MoveForm.xml" itemID="50101d67-000001fe" lastModified="1343233608"/>
-          <Include href="Objetos/RotateForm.xml" itemID="508002e3-0000039e" lastModified="1350567434"/>
+          <Include href="Objetos/MoveForm.xml" itemID="50101d67-000001fe" lastModified="1350657633"/>
+          <Include href="Objetos/RotateForm.xml" itemID="508002e3-0000039e" lastModified="1350657629"/>
           <Include href="Objetos/SprDipolo.xml" itemID="4ea6fa35-000002c3" lastModified="1350568452"/>
           <Include href="PointingArrow.xml" itemID="4ea985e6-00000338" lastModified="1320077849"/>
           <Include href="Pontuacao.xml" itemID="4e9f08c3-0000022f" lastModified="1319477910"/>
@@ -460,25 +460,25 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="527255" publishTime="1350657614"/>
+          <PublishItem publishSize="527632" publishTime="1350657475"/>
+          <PublishItem publishSize="527658" publishTime="1350657451"/>
+          <PublishItem publishSize="527688" publishTime="1350657395"/>
+          <PublishItem publishSize="527343" publishTime="1350657348"/>
+          <PublishItem publishSize="527333" publishTime="1350657327"/>
+          <PublishItem publishSize="527289" publishTime="1350657284"/>
+          <PublishItem publishSize="527350" publishTime="1350657237"/>
+          <PublishItem publishSize="527202" publishTime="1350657044"/>
+          <PublishItem publishSize="527209" publishTime="1350657007"/>
+          <PublishItem publishSize="527471" publishTime="1350656978"/>
+          <PublishItem publishSize="527176" publishTime="1350656962"/>
+          <PublishItem publishSize="527251" publishTime="1350656836"/>
+          <PublishItem publishSize="527558" publishTime="1350656808"/>
+          <PublishItem publishSize="527207" publishTime="1350656769"/>
+          <PublishItem publishSize="527223" publishTime="1350656544"/>
+          <PublishItem publishSize="527175" publishTime="1350656449"/>
           <PublishItem publishSize="516335" publishTime="1350654305"/>
           <PublishItem publishSize="100429" publishTime="1350649142"/>
           <PublishItem publishSize="100435" publishTime="1350648991"/>
-          <PublishItem publishSize="100426" publishTime="1350648961"/>
-          <PublishItem publishSize="100426" publishTime="1350648923"/>
-          <PublishItem publishSize="100421" publishTime="1350648892"/>
-          <PublishItem publishSize="100420" publishTime="1350648845"/>
-          <PublishItem publishSize="100420" publishTime="1350648761"/>
-          <PublishItem publishSize="100420" publishTime="1350648707"/>
-          <PublishItem publishSize="515810" publishTime="1350648345"/>
-          <PublishItem publishSize="516129" publishTime="1350599874"/>
-          <PublishItem publishSize="516093" publishTime="1350599850"/>
-          <PublishItem publishSize="516182" publishTime="1350599830"/>
-          <PublishItem publishSize="515805" publishTime="1350599759"/>
-          <PublishItem publishSize="516128" publishTime="1350599732"/>
-          <PublishItem publishSize="516102" publishTime="1350599689"/>
-          <PublishItem publishSize="516134" publishTime="1350599669"/>
-          <PublishItem publishSize="516109" publishTime="1350599648"/>
-          <PublishItem publishSize="515897" publishTime="1350599630"/>
-          <PublishItem publishSize="516122" publishTime="1350599590"/>
      </publishHistory>
 </DOMDocument>
