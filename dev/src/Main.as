@@ -624,14 +624,14 @@
 					dipAnswer.alpha = 0.5;
 					dipolosAnswer.push(dipAnswer);
 					answer_layer.addChild(dipAnswer);
-					if (compareDipolos(item, dipAnswer)) scoreAtual += Math.round(100 / dipolos.length);
+					if (compareDipolos(item, dipAnswer)) scoreAtual += 1 / dipolos.length;
 				}
 				play.setScore(scoreAtual);
 				play.evaluate();
 				eval.addPlayInstance(play);
 				
 				resultScreen.openScreen();
-				resultScreen.resultado = "Sua pontuação foi " + scoreAtual.toFixed(2) + "%.";
+				resultScreen.resultado = "Sua pontuação foi " + Math.round(scoreAtual * 100).toString() + "%.";
 				txPontos.text = scoreAtual.toFixed(1).replace(".",",");
 				
 				btAvaliar.visible = false;
