@@ -156,6 +156,7 @@
 			//lock(btnValNota);
 			
 			ai = new AI(this);
+			
 			ai.container.messageLabel.visible = false;
 			ai.addObserver(this);
 			eval = new ProgressiveEvaluator(ai);
@@ -179,8 +180,13 @@
 			
 			stage.addEventListener(KeyboardEvent.KEY_UP, bindKeys);
 			
-			if (completed) lock(btnValNota);
-			else iniciaTutorial();
+			//if (completed) lock(btnValNota);
+			if(eval.currentPlayMode==AIConstants.PLAYMODE_EVALUATE){
+				valendoNota = true; 
+				lock(btnValNota);
+			} else {
+				iniciaTutorial();
+			}
 		}
 		
 		private var pointingArrow:PointingArrow;
