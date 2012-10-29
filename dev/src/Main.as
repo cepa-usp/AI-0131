@@ -405,9 +405,19 @@
 		
 		private function onValendoNotaClick(e:MouseEvent):void 
 		{
-			valendoNota = true; 
-			lock(btnValNota);
-			eval.currentPlayMode = AIConstants.PLAYMODE_EVALUATE;
+			//valendoNota = true; 
+			//lock(btnValNota);
+			//eval.currentPlayMode = AIConstants.PLAYMODE_EVALUATE;
+			eval.askEvaluation(btnValNota, onEvalResponse);
+		}
+		
+		private function onEvalResponse():void 
+		{
+			if (eval.currentPlayMode == AIConstants.PLAYMODE_EVALUATE) {
+				reset();
+				valendoNota = true;
+				//lock(btnValNota);
+			}
 		}
 		
 		/**
