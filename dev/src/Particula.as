@@ -18,13 +18,18 @@ package
 		//Passo em coordenadas do gráfico de cada frame.
 		//private var step:Number = 0.02;
 		private var step:Number = 0.1;
-		private var spriteParticula:Sprite;
+		private var spriteParticula:SprDipolo;
 		private var intrv:int;
 		private var ms:int = 10;
+		private var fator:Number;
 		
 		public function Particula(coord:Coord, campo:ICampo) 
 		{
 			super(coord, campo);
+			var dx:Number = (campo.xmax - campo.xmin);
+			var dy:Number = (campo.ymax - campo.ymin);
+			
+			fator =  dx/dy;
 			createParticula();
 		}
 		
@@ -32,9 +37,10 @@ package
 		
 		private function createParticula():void 
 		{
-			spriteParticula = new Sprite();
-			spriteParticula.graphics.beginFill(0x000000, 1);
-			spriteParticula.graphics.drawCircle(0, 0, 3);
+			spriteParticula = new SprDipolo();
+			//spriteParticula = new Sprite();
+			//spriteParticula.graphics.beginFill(0x000000, 1);
+			//spriteParticula.graphics.drawCircle(0, 0, 3);
 			addChild(spriteParticula);
 		}
 		
@@ -100,13 +106,19 @@ package
 		
 		private function moving(e:Event = null):void 
 		{
-			var angle:Number = -Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y), campo.xcomp(this.mover.position.x, this.mover.position.y));
+			//var angle:Number = -Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y), campo.xcomp(this.mover.position.x, this.mover.position.y));
+			var angle:Number = -(Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y), campo.xcomp(this.mover.position.x, this.mover.position.y)));
 			
 			var xMove:Number = step * Math.cos(angle);
 			var yMove:Number = step * Math.sin(angle);
 			
 			//var positionPixels:Point = mover.returnPixelsFromPosition(mover.position);
 			mover.position = new Point(mover.position.x + xMove, mover.position.y - yMove);
+			var fatorPalco:Number = 500 / 700;
+			
+			var angloRot = -(Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y) * fator * fatorPalco, campo.xcomp(this.mover.position.x, this.mover.position.y)));
+			spriteParticula.rotation = angloRot * 180/Math.PI;
+			
 		}
 		
 		/*private function moving():void 

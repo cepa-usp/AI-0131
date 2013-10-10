@@ -13,7 +13,7 @@ package
 	public class DipoloAnswer extends ObjMoveable
 	{
 		private var sprDipolo:SprDipolo = new SprDipolo();
-		//private var
+		private var fatorPalco = 500 / 700;
 		
 		public function DipoloAnswer(campo:ICampo, graph:Coord) 
 		{
@@ -27,10 +27,13 @@ package
 			var dy:Number = (campo.ymax - campo.ymin);
 			
 			var fator:Number =  dx/dy;
-			//var fator:Number = 640/Math.abs(;
+			
 			var rot:Number;
-			if(Math.abs(dx) < Math.abs(dy)) rot = -(Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y) * fator, campo.xcomp(this.mover.position.x, this.mover.position.y))) * (180 / Math.PI);
-			else rot = -(Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y), campo.xcomp(this.mover.position.x, this.mover.position.y) * fator)) * (180 / Math.PI);
+			//if(Math.abs(dx) < Math.abs(dy)) rot = -(Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y) * fator, campo.xcomp(this.mover.position.x, this.mover.position.y))) * (180 / Math.PI);
+			//else 							rot = -(Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y), campo.xcomp(this.mover.position.x, this.mover.position.y) * fator)) * (180 / Math.PI);
+			
+			rot = -(Math.atan2(campo.ycomp(this.mover.position.x, this.mover.position.y) * fator * fatorPalco, campo.xcomp(this.mover.position.x, this.mover.position.y))) * (180 / Math.PI);
+			
 			this.rotation = rot;
 			
 			//var tPos:TextField = new TextField();

@@ -37,15 +37,15 @@ package
 				
 				olderPos.push(new Point(particulaX1.x, particulaX1.y));
 				
-				var particulaX2:Particula = new Particula(coord, field);
-				particulas.push(particulaX2);
-				particulaX2.mover.position = new Point(i, coord.ymax);
-				addChild(particulaX2);
-				
-				olderPos.push(new Point(particulaX2.x, particulaX2.y));
+				//var particulaX2:Particula = new Particula(coord, field);
+				//particulas.push(particulaX2);
+				//particulaX2.mover.position = new Point(i, coord.ymax);
+				//addChild(particulaX2);
+				//
+				//olderPos.push(new Point(particulaX2.x, particulaX2.y));
 			}
 			
-			var h:Number = 500;
+			/*var h:Number = 500;
 			for (var j:int = coord.ymin; j <= coord.ymax; j++) 
 			{
 				var particulaY1:Particula = new Particula(coord, field);
@@ -61,7 +61,7 @@ package
 				addChild(particulaY2);
 				
 				olderPos.push(new Point(particulaY2.x, particulaY2.y));
-			}
+			}*/
 			
 			addEventListener(Event.ENTER_FRAME, drawField);
 			

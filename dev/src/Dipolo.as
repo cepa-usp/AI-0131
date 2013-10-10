@@ -38,6 +38,15 @@ package
 			this.addEventListener(MouseEvent.MOUSE_OVER, mouseOver);
 		}
 		
+		public function removeAllListeners() {
+			this.removeEventListener(MouseEvent.MOUSE_OVER, mouseOver);
+			stage.removeEventListener(MouseEvent.MOUSE_MOVE, movingMouse);
+			stage.removeEventListener(MouseEvent.MOUSE_OUT, outMouse);
+			rotatingSpr.visible = false;
+			movingSpr.visible = false;
+			Mouse.show();
+		}
+		
 		private function mouseOver(e:MouseEvent):void 
 		{
 			if (locked) return;

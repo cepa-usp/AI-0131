@@ -160,13 +160,24 @@
 			ai.container.messageLabel.visible = false;
 			ai.addObserver(this);
 			eval = new ProgressiveEvaluator(ai);
+			eval.feedback.x = 700 / 2;
+			eval.feedback.y = 500 / 2;
 			ai.evaluator = eval;
 			eval.finishes = false;
+			
 			stats = new StatsScreen(eval, ai);
+			stats.stats.x = 700 / 2;
+			stats.stats.y = 500 / 2;
 			
 			ai.container.setAboutScreen(new AboutScreen131());
 			ai.container.setInfoScreen(new InfoScreen131());
 			ai.initialize();
+			//ai.container.optionButtons.addCreditosButton();
+			//ai.container.optionButtons.addCreditosButton();
+			//ai.container.optionButtons.addResetButton();
+			//ai.container.optionButtons.addOrientacoesButton();
+			ai.container.optionButtons.addAllButtons();
+			
 			cretaeLayers();
 			addButtons();
 			criarPontuacoes();
@@ -442,6 +453,7 @@
 			stage.removeEventListener(MouseEvent.MOUSE_UP, addDipolo);
 			//if (menuBar.hitTestPoint(dipoloDrag.x, dipoloDrag.y, true) || dipoloDrag.x > 640 || dipoloDrag.x < 0 || dipoloDrag.y < 0 || dipoloDrag.y > 480) {
 			if (!shape.hitTestPoint(dipoloDrag.x, dipoloDrag.y, true)) {
+				dipoloDrag.removeAllListeners();
 				dipolo_layer.removeChild(dipoloDrag);
 			}else {
 				dipolos.push(dipoloDrag);
@@ -471,10 +483,11 @@
 		{
 			//Cria um novo campo:
 			var sort:int = Math.ceil(Math.random() * 13);
-			//sort = 5;
+			//sort = 1;
 			var classe:Class = getClass(sort);
 			field = new classe();
 			coord = new Coord(field.xmin, field.xmax, 700, field.ymin, field.ymax, 500);
+			//coord.y = -100;
 
 			//Cria um novo sprite do campo:
 			if (spr_field != null) {
